@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "✔ copy.png",
+      "filename" : "grille 3 bas.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "✔ copy@2x.png",
+      "filename" : "grille 3 bas@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "✔ copy@3x.png",
+      "filename" : "grille 3 bas@3x.png",
       "scale" : "3x"
     }
   ],
