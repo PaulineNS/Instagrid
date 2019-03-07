@@ -58,19 +58,12 @@
 		5612CB2C222FFE5900E75A81 /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
+				5612CB49223166CE00E75A81 /* Model */,
 				5612CB462230082C00E75A81 /* Supporting Files */,
-				5612CB43223007AC00E75A81 /* Model */,
 				5612CB44223007CD00E75A81 /* View */,
 				5612CB45223007DE00E75A81 /* Controller */,
 			);
 			path = Instagrid;
-			sourceTree = "<group>";
-		};
-		5612CB43223007AC00E75A81 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		5612CB44223007CD00E75A81 /* View */ = {
@@ -100,6 +93,13 @@
 				5612CB2D222FFE5900E75A81 /* AppDelegate.swift */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5612CB49223166CE00E75A81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
