@@ -15,6 +15,9 @@
 		5612CB41223001AE00E75A81 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5612CB3F223001AE00E75A81 /* ThirstySoftRegular.otf */; };
 		5612CB42223001AE00E75A81 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5612CB40223001AE00E75A81 /* Delm-Medium.otf */; };
 		5612CB4C22365E3D00E75A81 /* PicturesGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5612CB4B22365E3D00E75A81 /* PicturesGridView.swift */; };
+		5612CB4E22366C5100E75A81 /* FirstGrid.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5612CB4D22366C5100E75A81 /* FirstGrid.xib */; };
+		5612CB5022366C7E00E75A81 /* SecondGrid.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5612CB4F22366C7E00E75A81 /* SecondGrid.xib */; };
+		5612CB5222366CA300E75A81 /* ThirdGrid.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5612CB5122366CA300E75A81 /* ThirdGrid.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		5612CB3F223001AE00E75A81 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ThirstySoftRegular.otf; path = "Instagrid/Supporting Files/ThirstySoftRegular.otf"; sourceTree = SOURCE_ROOT; };
 		5612CB40223001AE00E75A81 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Delm-Medium.otf"; path = "Instagrid/Supporting Files/Delm-Medium.otf"; sourceTree = SOURCE_ROOT; };
 		5612CB4B22365E3D00E75A81 /* PicturesGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesGridView.swift; sourceTree = "<group>"; };
+		5612CB4D22366C5100E75A81 /* FirstGrid.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstGrid.xib; sourceTree = "<group>"; };
+		5612CB4F22366C7E00E75A81 /* SecondGrid.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondGrid.xib; sourceTree = "<group>"; };
+		5612CB5122366CA300E75A81 /* ThirdGrid.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdGrid.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,9 @@
 			children = (
 				5612CB31222FFE5900E75A81 /* Main.storyboard */,
 				5612CB4B22365E3D00E75A81 /* PicturesGridView.swift */,
+				5612CB4D22366C5100E75A81 /* FirstGrid.xib */,
+				5612CB4F22366C7E00E75A81 /* SecondGrid.xib */,
+				5612CB5122366CA300E75A81 /* ThirdGrid.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,9 +174,12 @@
 			files = (
 				5612CB38222FFE5C00E75A81 /* LaunchScreen.storyboard in Resources */,
 				5612CB42223001AE00E75A81 /* Delm-Medium.otf in Resources */,
+				5612CB4E22366C5100E75A81 /* FirstGrid.xib in Resources */,
+				5612CB5022366C7E00E75A81 /* SecondGrid.xib in Resources */,
 				5612CB35222FFE5C00E75A81 /* Assets.xcassets in Resources */,
 				5612CB41223001AE00E75A81 /* ThirstySoftRegular.otf in Resources */,
 				5612CB33222FFE5900E75A81 /* Main.storyboard in Resources */,
+				5612CB5222366CA300E75A81 /* ThirdGrid.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
