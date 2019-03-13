@@ -23,6 +23,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    func gridDisplay(grid: ContentView ) {
+        self.picturesGrid.subviews.forEach({ $0.removeFromSuperview() })
+        picturesGrid.addSubview(grid)
+        picturesGrid.autoresizesSubviews = true
+    }
 
     @IBAction func didTapFirstGridButton() {
         selectFirstGrid()
@@ -35,9 +41,7 @@ class ViewController: UIViewController {
         thirdGridSelected.isHidden = true
         
         let firstGrid = FirstGrid(frame: picturesGrid.bounds)
-        self.picturesGrid.subviews.forEach({ $0.removeFromSuperview() })
-        picturesGrid.addSubview(firstGrid)
-        picturesGrid.autoresizesSubviews = true
+        gridDisplay(grid: firstGrid)
         
     }
     
@@ -49,6 +53,9 @@ class ViewController: UIViewController {
         firstGridSelected.isHidden = true
         secondGridSelected.isHidden = false
         thirdGridSelected.isHidden = true
+        
+        let secondGrid = SecondGrid(frame: picturesGrid.bounds)
+        gridDisplay(grid: secondGrid)
     }
     
     @IBAction func didTapThirdGridButton() {
@@ -59,6 +66,9 @@ class ViewController: UIViewController {
         firstGridSelected.isHidden = true
         secondGridSelected.isHidden = true
         thirdGridSelected.isHidden = false
+        
+        let thirdGrid = ThirdGrid(frame: picturesGrid.bounds)
+        gridDisplay(grid: thirdGrid)
     }
     
 }
