@@ -28,8 +28,11 @@ class GeneralView: UIView {
     private func setStyle(_ style: Style) {
         switch style {
         case .firstGrid:
+            break
         case .secondGrid:
+            break
         case .thirdGrid:
+            break
         }
     }
 

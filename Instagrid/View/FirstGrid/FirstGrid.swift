@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstGrid: UIView {
+class FirstGrid: ContentView {
     
     @IBOutlet weak var gridView: UIView!
     @IBOutlet weak var firstPicture: UIView!
@@ -18,11 +18,14 @@ class FirstGrid: UIView {
     @IBOutlet weak var addingSecondPicture: UIImageView!
     @IBOutlet weak var addingThirdPicture: UIImageView!
     
-    required init?(coder aDecoder: NSCoder) {
+    /* required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         UINib(nibName: "FirstGrid", bundle: nil).instantiate(withOwner: self, options: nil)
         addSubview(gridView)
         gridView.frame = self.bounds
+    } */
+    
+    override func getNibName() -> String? {
+        return "FirstGrid"
     }
-
 }
