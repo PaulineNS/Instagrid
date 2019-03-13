@@ -29,9 +29,16 @@ class ViewController: UIViewController {
     }
     
     private func selectFirstGrid() {
+        
         firstGridSelected.isHidden = false
         secondGridSelected.isHidden = true
         thirdGridSelected.isHidden = true
+        
+        let firstGrid = FirstGrid(frame: picturesGrid.bounds)
+        self.picturesGrid.subviews.forEach({ $0.removeFromSuperview() })
+        picturesGrid.addSubview(firstGrid)
+        picturesGrid.autoresizesSubviews = true
+        
     }
     
     @IBAction func didTapSecondGridButton() {
