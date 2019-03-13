@@ -18,13 +18,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="forme" translatesAutoresizingMaskIntoConstraints="NO" id="oeb-yg-WXY">
-                                <rect key="frame" x="116" y="262" width="142" height="142"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="forme" translatesAutoresizingMaskIntoConstraints="NO" id="oeb-yg-WXY">
+                                <rect key="frame" x="116.5" y="262.5" width="142" height="142"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.14693036675453186" green="0.44647151231765747" blue="0.62582957744598389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oeb-yg-WXY" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="3v9-ge-LIu"/>
+                            <constraint firstItem="oeb-yg-WXY" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Hex-wI-p8b"/>
+                            <constraint firstItem="oeb-yg-WXY" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="PN6-9g-coB"/>
+                            <constraint firstItem="oeb-yg-WXY" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Qac-c5-dbR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3v9-ge-LIu"/>
+                                <exclude reference="Hex-wI-p8b"/>
+                                <exclude reference="PN6-9g-coB"/>
+                                <exclude reference="Qac-c5-dbR"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="PN6-9g-coB"/>
+                                <include reference="Qac-c5-dbR"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="3v9-ge-LIu"/>
+                                <include reference="Hex-wI-p8b"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
