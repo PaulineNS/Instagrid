@@ -18,10 +18,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Button Bar-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ButtonBar" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GeneralView" customModule="Instagrid" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -331,10 +331,10 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="DUh-r9-cKX"/>
-                                        <exclude reference="Jhe-7u-HhJ"/>
                                         <exclude reference="RnU-PV-1mo"/>
                                         <exclude reference="VGd-Ic-RD9"/>
                                         <exclude reference="VQG-fn-uLp"/>
+                                        <exclude reference="Jhe-7u-HhJ"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact">
@@ -342,14 +342,14 @@
                                         <include reference="DUh-r9-cKX"/>
                                         <exclude reference="MQc-B2-pZ5"/>
                                         <exclude reference="et2-h7-PRX"/>
-                                        <include reference="Jhe-7u-HhJ"/>
-                                        <exclude reference="nWx-Qu-Bup"/>
                                         <exclude reference="KfC-MW-Rdn"/>
                                         <include reference="RnU-PV-1mo"/>
                                         <include reference="VGd-Ic-RD9"/>
                                         <include reference="VQG-fn-uLp"/>
                                         <exclude reference="psf-UY-9lp"/>
                                         <exclude reference="xrq-gs-go4"/>
+                                        <include reference="Jhe-7u-HhJ"/>
+                                        <exclude reference="nWx-Qu-Bup"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -410,8 +410,16 @@
                                 <exclude reference="ko6-9t-fBb"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outlet property="buttonSpace" destination="BBa-Hd-EbA" id="Yfl-1J-gTK"/>
+                            <outlet property="buttonsSpace" destination="BBa-Hd-EbA" id="5VK-iB-Iga"/>
+                            <outletCollection property="Buttons" destination="1gT-nC-1jV" id="dUZ-7l-iH4"/>
+                            <outletCollection property="Buttons" destination="1gT-nC-1jV" id="OSN-r3-Y6V"/>
+                            <outletCollection property="selected" destination="JKw-ph-UeG" id="bGY-yq-ZKv"/>
+                        </connections>
                     </view>
                     <connections>
+                        <outlet property="buttonSpace" destination="BBa-Hd-EbA" id="8qb-6Z-nEU"/>
                         <outlet property="firstGridButton" destination="1gT-nC-1jV" id="yDL-6p-9Pt"/>
                         <outlet property="firstGridSelected" destination="JKw-ph-UeG" id="gv5-9a-X0T"/>
                         <outlet property="picturesGrid" destination="UiA-VA-EZq" id="eTp-S2-LST"/>
@@ -419,6 +427,12 @@
                         <outlet property="secondGridSelected" destination="cAS-4Z-COS" id="X8p-Er-RCA"/>
                         <outlet property="thirdGridButton" destination="d4A-Sy-FEf" id="n98-wF-2se"/>
                         <outlet property="thirdGridSelected" destination="Twy-4Y-l9c" id="E6F-rQ-W0x"/>
+                        <outletCollection property="Buttons" destination="9Zy-Re-nnC" collectionClass="NSMutableArray" id="1e7-eU-teH"/>
+                        <outletCollection property="Buttons" destination="1gT-nC-1jV" collectionClass="NSMutableArray" id="qtd-zh-4nx"/>
+                        <outletCollection property="Buttons" destination="d4A-Sy-FEf" collectionClass="NSMutableArray" id="Nna-AG-Bxm"/>
+                        <outletCollection property="selected" destination="JKw-ph-UeG" collectionClass="NSMutableArray" id="nue-b4-zHt"/>
+                        <outletCollection property="selected" destination="cAS-4Z-COS" collectionClass="NSMutableArray" id="12g-Yk-ZUf"/>
+                        <outletCollection property="selected" destination="Twy-4Y-l9c" collectionClass="NSMutableArray" id="fxh-tu-OcV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

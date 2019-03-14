@@ -18,10 +18,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var secondGridSelected: UIImageView!
     @IBOutlet weak var thirdGridSelected: UIImageView!
     
+    let buttonBar = ButtonBar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        buttonBar.delegate = self
     }
     
     func gridDisplay(grid: ContentView ) {
@@ -73,6 +74,15 @@ class ViewController: UIViewController {
     
 }
 
+extension ViewController: ButtonBarDelegate {
+    func didReceiveData() {
+        <#code#>
+    }
+    
+    func didReceiveData(_ data: String) {
+        print(data)
+    }
+}
 
 
 

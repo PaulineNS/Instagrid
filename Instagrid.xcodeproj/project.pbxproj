@@ -21,6 +21,9 @@
 		5612CB5F2236B39000E75A81 /* SecondGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5612CB5E2236B39000E75A81 /* SecondGrid.swift */; };
 		5612CB612237AE3200E75A81 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5612CB602237AE3200E75A81 /* ContentView.swift */; };
 		5612CB632239820300E75A81 /* ThirdGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5612CB622239820300E75A81 /* ThirdGrid.swift */; };
+		56E4A58F223A9D60001ED7D4 /* ButtonBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E4A58E223A9D60001ED7D4 /* ButtonBar.swift */; };
+		56E4A592223A9DA6001ED7D4 /* ButtonBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E4A591223A9DA6001ED7D4 /* ButtonBarDelegate.swift */; };
+		56E4A594223AADDC001ED7D4 /* CameraHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E4A593223AADDC001ED7D4 /* CameraHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		5612CB5E2236B39000E75A81 /* SecondGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondGrid.swift; sourceTree = "<group>"; };
 		5612CB602237AE3200E75A81 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5612CB622239820300E75A81 /* ThirdGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdGrid.swift; sourceTree = "<group>"; };
+		56E4A58E223A9D60001ED7D4 /* ButtonBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBar.swift; sourceTree = "<group>"; };
+		56E4A591223A9DA6001ED7D4 /* ButtonBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBarDelegate.swift; sourceTree = "<group>"; };
+		56E4A593223AADDC001ED7D4 /* CameraHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +89,11 @@
 		5612CB44223007CD00E75A81 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				56E4A593223AADDC001ED7D4 /* CameraHandler.swift */,
 				5612CB602237AE3200E75A81 /* ContentView.swift */,
 				5612CB31222FFE5900E75A81 /* Main.storyboard */,
+				56E4A591223A9DA6001ED7D4 /* ButtonBarDelegate.swift */,
+				56E4A58E223A9D60001ED7D4 /* ButtonBar.swift */,
 				5612CB5B2236B2F400E75A81 /* FirstGrid */,
 				5612CB5C2236B31100E75A81 /* SecondGrid */,
 				5612CB5D2236B32A00E75A81 /* ThirdGrid */,
@@ -226,8 +235,11 @@
 				5612CB30222FFE5900E75A81 /* ViewController.swift in Sources */,
 				5612CB632239820300E75A81 /* ThirdGrid.swift in Sources */,
 				5612CB612237AE3200E75A81 /* ContentView.swift in Sources */,
+				56E4A58F223A9D60001ED7D4 /* ButtonBar.swift in Sources */,
 				5612CB5F2236B39000E75A81 /* SecondGrid.swift in Sources */,
 				5612CB2E222FFE5900E75A81 /* AppDelegate.swift in Sources */,
+				56E4A594223AADDC001ED7D4 /* CameraHandler.swift in Sources */,
+				56E4A592223A9DA6001ED7D4 /* ButtonBarDelegate.swift in Sources */,
 				5612CB4C22365E3D00E75A81 /* FirstGrid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
