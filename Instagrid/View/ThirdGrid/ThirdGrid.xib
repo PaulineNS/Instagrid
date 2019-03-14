@@ -22,6 +22,14 @@
                 <outlet property="gridView" destination="n9u-K4-k52" id="NOf-6O-Yx5"/>
                 <outlet property="secondPicture" destination="9qS-M2-bBY" id="PZu-mP-G3e"/>
                 <outlet property="thirdPicture" destination="7se-2a-wJY" id="dPo-Kf-AXx"/>
+                <outletCollection property="picturesPosition" destination="1d7-z1-GiT" collectionClass="NSMutableArray" id="wKZ-N4-ofK"/>
+                <outletCollection property="picturesPosition" destination="9qS-M2-bBY" collectionClass="NSMutableArray" id="Kp8-si-5SI"/>
+                <outletCollection property="picturesPosition" destination="7se-2a-wJY" collectionClass="NSMutableArray" id="eci-t4-Ybm"/>
+                <outletCollection property="picturesPosition" destination="fus-63-xDy" collectionClass="NSMutableArray" id="r35-XA-EXu"/>
+                <outletCollection property="addingPictures" destination="AN2-Zy-A3F" collectionClass="NSMutableArray" id="AmP-m5-buP"/>
+                <outletCollection property="addingPictures" destination="VkP-4H-ftJ" collectionClass="NSMutableArray" id="u7t-dq-mil"/>
+                <outletCollection property="addingPictures" destination="nVe-hk-Ju2" collectionClass="NSMutableArray" id="fRW-aM-Z1K"/>
+                <outletCollection property="addingPictures" destination="SY4-ng-nWb" collectionClass="NSMutableArray" id="SkM-Ok-J6o"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

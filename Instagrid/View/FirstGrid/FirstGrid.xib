@@ -19,6 +19,12 @@
                 <outlet property="gridView" destination="ycS-yR-L9v" id="pqa-Sy-VsG"/>
                 <outlet property="secondPicture" destination="Bp9-LP-Qbb" id="Zd8-Ce-bel"/>
                 <outlet property="thirdPicture" destination="NQP-QM-Q7o" id="mok-2N-HHQ"/>
+                <outletCollection property="picturesPosition" destination="GHB-5b-mWH" collectionClass="NSMutableArray" id="zaE-gA-81N"/>
+                <outletCollection property="picturesPosition" destination="Bp9-LP-Qbb" collectionClass="NSMutableArray" id="OcP-pu-tbp"/>
+                <outletCollection property="picturesPosition" destination="NQP-QM-Q7o" collectionClass="NSMutableArray" id="AdW-Db-myc"/>
+                <outletCollection property="addingPictures" destination="JfT-gn-8mR" collectionClass="NSMutableArray" id="ek4-pT-Ffo"/>
+                <outletCollection property="addingPictures" destination="nCe-oI-ZfK" collectionClass="NSMutableArray" id="jHZ-jt-ijS"/>
+                <outletCollection property="addingPictures" destination="Pub-YV-apJ" collectionClass="NSMutableArray" id="gcZ-AP-ybP"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

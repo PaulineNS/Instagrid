@@ -11,12 +11,10 @@ import UIKit
 class FirstGrid: ContentView {
     
     @IBOutlet weak var gridView: UIView!
-    @IBOutlet weak var firstPicture: UIView!
-    @IBOutlet weak var secondPicture: UIView!
-    @IBOutlet weak var thirdPicture: UIView!
-    @IBOutlet weak var addingFirstPicture: UIImageView!
-    @IBOutlet weak var addingSecondPicture: UIImageView!
-    @IBOutlet weak var addingThirdPicture: UIImageView!
+    @IBOutlet var picturesPosition: [UIView]!
+    @IBOutlet var addingPictures: [UIImageView]!
+    
+    
     
     override func getNibName() -> String? {
         return "FirstGrid"
