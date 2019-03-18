@@ -8,15 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var picturesGrid: UIView!
-    @IBOutlet weak var firstGridButton: UIButton!
-    @IBOutlet weak var secondGridButton: UIButton!
-    @IBOutlet weak var thirdGridButton: UIButton!
-    @IBOutlet weak var firstGridSelected: UIImageView!
-    @IBOutlet weak var secondGridSelected: UIImageView!
-    @IBOutlet weak var thirdGridSelected: UIImageView!
     
     let buttonBar = ButtonBar()
     
@@ -31,58 +25,56 @@ class ViewController: UIViewController {
         picturesGrid.autoresizesSubviews = true
     }
 
-    @IBAction func didTapFirstGridButton() {
-        selectFirstGrid()
-    }
     
     private func selectFirstGrid() {
-        
-        firstGridSelected.isHidden = false
-        secondGridSelected.isHidden = true
-        thirdGridSelected.isHidden = true
         
         let firstGrid = FirstGrid(frame: picturesGrid.bounds)
         gridDisplay(grid: firstGrid)
         
     }
     
-    @IBAction func didTapSecondGridButton() {
-        selectSecondGrid()
-    }
-    
     private func selectSecondGrid() {
-        firstGridSelected.isHidden = true
-        secondGridSelected.isHidden = false
-        thirdGridSelected.isHidden = true
         
         let secondGrid = SecondGrid(frame: picturesGrid.bounds)
         gridDisplay(grid: secondGrid)
     }
     
-    @IBAction func didTapThirdGridButton() {
-        selectThirdGrid()
-    }
-    
     private func selectThirdGrid() {
-        firstGridSelected.isHidden = true
-        secondGridSelected.isHidden = true
-        thirdGridSelected.isHidden = false
-        
         let thirdGrid = ThirdGrid(frame: picturesGrid.bounds)
         gridDisplay(grid: thirdGrid)
     }
     
+    
+    func getImageFromLibrary() {
+        let image = UIImagePickerController()
+        image.sourceType = .photoLibrary
+        image.allowsEditing = false
+        self.present(image, animated: true, completion: {image.delegate = self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate })
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.originalImage] as? UIImage {
+//
+            
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
 }
 
 extension ViewController: ButtonBarDelegate {
-    func didReceiveData() {
-        <#code#>
+    func onButtonClick(buttonType: ButtonType) {
+        switch buttonType {
+        case .button1:
+            selectFirstGrid()
+        case .button2:
+            selectSecondGrid()
+        case .button3:
+            selectThirdGrid()
+        }
     }
     
-    func didReceiveData(_ data: String) {
-        print(data)
     }
-}
+
 
 
 

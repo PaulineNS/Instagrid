@@ -34,7 +34,7 @@
                                     <constraint firstAttribute="width" secondItem="UiA-VA-EZq" secondAttribute="height" multiplier="1:1" id="k3J-GR-0lg"/>
                                 </constraints>
                             </view>
-                            <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBa-Hd-EbA" userLabel="Buttons Space">
+                            <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBa-Hd-EbA" userLabel="Buttons Space" customClass="ButtonBar" customModule="Instagrid" customModuleProvider="target">
                                 <rect key="frame" x="38" y="537" width="299" height="110"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Zy-Re-nnC" userLabel="Grid 3 bottom">
@@ -419,14 +419,6 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="buttonSpace" destination="BBa-Hd-EbA" id="8qb-6Z-nEU"/>
-                        <outlet property="firstGridButton" destination="1gT-nC-1jV" id="yDL-6p-9Pt"/>
-                        <outlet property="firstGridSelected" destination="JKw-ph-UeG" id="gv5-9a-X0T"/>
-                        <outlet property="picturesGrid" destination="UiA-VA-EZq" id="eTp-S2-LST"/>
-                        <outlet property="secondGridButton" destination="9Zy-Re-nnC" id="qJI-iG-Rdl"/>
-                        <outlet property="secondGridSelected" destination="cAS-4Z-COS" id="X8p-Er-RCA"/>
-                        <outlet property="thirdGridButton" destination="d4A-Sy-FEf" id="n98-wF-2se"/>
-                        <outlet property="thirdGridSelected" destination="Twy-4Y-l9c" id="E6F-rQ-W0x"/>
                         <outletCollection property="Buttons" destination="9Zy-Re-nnC" collectionClass="NSMutableArray" id="1e7-eU-teH"/>
                         <outletCollection property="Buttons" destination="1gT-nC-1jV" collectionClass="NSMutableArray" id="qtd-zh-4nx"/>
                         <outletCollection property="Buttons" destination="d4A-Sy-FEf" collectionClass="NSMutableArray" id="Nna-AG-Bxm"/>

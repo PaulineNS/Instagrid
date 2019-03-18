@@ -6,10 +6,8 @@
 //  Copyright © 2019 PaulineNomballais. All rights reserved.
 //
 
-import UIKit
+protocol ButtonBarDelegate {
 
-protocol ButtonBarDelegate: class {
-
-    func didReceiveData()
+    func onButtonClick(buttonType: ButtonType)
 
 }

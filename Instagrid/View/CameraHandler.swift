@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CameraHandler: NSObject {
+class CameraHandler {
     
     static let shared = CameraHandler()
     
@@ -26,7 +26,6 @@ class CameraHandler: NSObject {
     }
     
     func photoLibrary() {
-        
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
             let myPickerController = UIImagePickerController()
             myPickerController.delegate = self;

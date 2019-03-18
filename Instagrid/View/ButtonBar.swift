@@ -8,47 +8,32 @@
 
 import UIKit
 
-class ButtonBar: UIViewController {
+class ButtonBar: UIView {
     
-    @IBOutlet weak var buttonSpace: UIView!
-    @IBOutlet var buttons: [UIButton]!
     @IBOutlet var selected: [UIImageView]!
     
-    weak var delegate: ButtonBarDelegate?
+    var delegate: ButtonBarDelegate?
     
-    
-    @IBAction func didTapFirstGridButton() {
-        selectFirstGrid()
-        delegate?.didReceiveData()
+    private func unselectButton() {
+        selected.forEach({ $0.isHidden = true })
     }
     
-    private func selectFirstGrid() {
-        
-        buttons[0].isHidden = true
-        buttons[1].isHidden = true
-        buttons[2].isHidden = true
+    @IBAction func didTapFirstGridButton() {
+        unselectButton()
+        selected[0].isHidden = false
+        delegate?.onButtonClick(buttonType: .button1)
     }
     
     @IBAction func didTapSecondGridButton() {
-        selectSecondGrid()
-        delegate?.didReceiveData()
-    }
-    
-    private func selectSecondGrid() {
-        buttons[0].isHidden = true
-        buttons[1].isHidden = true
-        buttons[2].isHidden = true
+        unselectButton()
+        selected[1].isHidden = false
+        delegate?.onButtonClick(buttonType: .button2)
     }
     
     @IBAction func didTapThirdGridButton() {
-        selectThirdGrid()
-        delegate?.didReceiveData()
-    }
-    
-    private func selectThirdGrid() {
-        buttons[0].isHidden = true
-        buttons[1].isHidden = true
-        buttons[2].isHidden = true
+        unselectButton()
+        selected[2].isHidden = false
+        delegate?.onButtonClick(buttonType: .button3)
     }
     
 }
