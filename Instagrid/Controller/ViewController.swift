@@ -20,6 +20,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonBar.delegate = self
+        firstGrid.delegate = self
+        secondGrid.delegate = self
+        thirdGrid.delegate = self
+        image.delegate = self
+        
     }
     
     func gridDisplay(grid: ContentView ) {
@@ -47,17 +52,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         gridDisplay(grid: thirdGrid)
     }
     
+    let image = UIImagePickerController()
     
     func getImageFromLibrary() {
-        let image = UIImagePickerController()
         image.sourceType = .photoLibrary
         image.allowsEditing = false
-        self.present(image, animated: true, completion: {image.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate })
+        self.present(image, animated: true, completion: {self.image.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate })
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[.originalImage] as? UIImage {
-// myimageview.image = image
+        if let pickedImage = info[.originalImage] as? UIImage {
+            //myimageview.contentMode = .ScaleAspectFit
+            //myimageview.image = pickedImage
         } else {
             // error message
         }
