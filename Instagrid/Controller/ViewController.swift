@@ -9,10 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
     @IBOutlet weak var picturesGrid: UIView!
     
     let buttonBar = ButtonBar()
+    let firstGrid = FirstGrid()
+    let secondGrid = SecondGrid()
+    let thirdGrid = ThirdGrid()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,14 +52,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let image = UIImagePickerController()
         image.sourceType = .photoLibrary
         image.allowsEditing = false
-        self.present(image, animated: true, completion: {image.delegate = self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate })
+        self.present(image, animated: true, completion: {image.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate })
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.originalImage] as? UIImage {
-//
-            
+// myimageview.image = image
+        } else {
+            // error message
         }
+        
         picker.dismiss(animated: true, completion: nil)
     }
 }
@@ -72,8 +77,23 @@ extension ViewController: ButtonBarDelegate {
             selectThirdGrid()
         }
     }
-    
+}
+
+extension ViewController: PicturesAddingDelegate {
+    func onPictureClick(picturePosition: PicturesPosition) {
+        switch picturePosition {
+        case .picture1:
+            getImageFromLibrary()
+            imagePickerController(UIImagePickerController, didFinishPickingMediaWithInfo: [UIImagePickerController.InfoKey : Any])
+        case .picture2:
+            getImageFromLibrary()
+        case .picture3:
+            getImageFromLibrary()
+        case .picture4:
+            getImageFromLibrary()
+        }
     }
+}
 
 
 

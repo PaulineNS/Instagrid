@@ -37,7 +37,7 @@
                             <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBa-Hd-EbA" userLabel="Buttons Space" customClass="ButtonBar" customModule="Instagrid" customModuleProvider="target">
                                 <rect key="frame" x="38" y="537" width="299" height="110"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Zy-Re-nnC" userLabel="Grid 3 bottom">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Zy-Re-nnC" userLabel="SecondGrid">
                                         <rect key="frame" x="109" y="15" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="9Zy-Re-nnC" secondAttribute="height" multiplier="1:1" id="BR3-Y6-8c3"/>
@@ -57,10 +57,10 @@
                                             </mask>
                                         </variation>
                                         <connections>
-                                            <action selector="didTapSecondGridButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="e2X-e8-yNN"/>
+                                            <action selector="didTapSecondGridButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="YJl-bn-gLt"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gT-nC-1jV" userLabel="Grid 3 Top">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gT-nC-1jV" userLabel="FirstGrid">
                                         <rect key="frame" x="12" y="15" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="1gT-nC-1jV" secondAttribute="height" multiplier="1:1" id="7tC-AS-nZw"/>
@@ -80,10 +80,10 @@
                                             </mask>
                                         </variation>
                                         <connections>
-                                            <action selector="didTapFirstGridButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rxf-Uo-1QH"/>
+                                            <action selector="didTapFirstGridButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="KKC-CP-4Jz"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4A-Sy-FEf" userLabel="Grid 4">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4A-Sy-FEf" userLabel="ThirdGrid">
                                         <rect key="frame" x="210" y="15" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="d4A-Sy-FEf" secondAttribute="height" multiplier="1:1" id="VI4-D1-5eD"/>
@@ -103,24 +103,24 @@
                                             </mask>
                                         </variation>
                                         <connections>
-                                            <action selector="didTapThirdGridButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="LHf-MV-dWP"/>
+                                            <action selector="didTapThirdGridButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Oa-pj-GPK"/>
                                         </connections>
                                     </button>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Selected Copy" translatesAutoresizingMaskIntoConstraints="NO" id="JKw-ph-UeG">
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Selected Copy" translatesAutoresizingMaskIntoConstraints="NO" id="JKw-ph-UeG" userLabel="SelectedFirstGrid">
                                         <rect key="frame" x="12" y="15" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="JKw-ph-UeG" secondAttribute="height" multiplier="1:1" id="E9L-gz-asW"/>
                                             <constraint firstAttribute="width" constant="80" id="N4r-Ip-cMJ"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Selected Copy" translatesAutoresizingMaskIntoConstraints="NO" id="Twy-4Y-l9c">
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Selected Copy" translatesAutoresizingMaskIntoConstraints="NO" id="Twy-4Y-l9c" userLabel="SelectedThirdGrid">
                                         <rect key="frame" x="210" y="15" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="2PC-KF-3Q9"/>
                                             <constraint firstAttribute="width" secondItem="Twy-4Y-l9c" secondAttribute="height" multiplier="1:1" id="naw-XS-3R4"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Selected Copy" translatesAutoresizingMaskIntoConstraints="NO" id="cAS-4Z-COS">
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Selected Copy" translatesAutoresizingMaskIntoConstraints="NO" id="cAS-4Z-COS" userLabel="SelectedSecondGrid">
                                         <rect key="frame" x="109" y="15" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="cAS-4Z-COS" secondAttribute="height" multiplier="1:1" id="JDW-hx-pq8"/>
@@ -411,20 +411,13 @@
                             </mask>
                         </variation>
                         <connections>
-                            <outlet property="buttonSpace" destination="BBa-Hd-EbA" id="Yfl-1J-gTK"/>
-                            <outlet property="buttonsSpace" destination="BBa-Hd-EbA" id="5VK-iB-Iga"/>
-                            <outletCollection property="Buttons" destination="1gT-nC-1jV" id="dUZ-7l-iH4"/>
-                            <outletCollection property="Buttons" destination="1gT-nC-1jV" id="OSN-r3-Y6V"/>
-                            <outletCollection property="selected" destination="JKw-ph-UeG" id="bGY-yq-ZKv"/>
+                            <outlet property="picturesGrid" destination="UiA-VA-EZq" id="1o3-gC-n7b"/>
                         </connections>
                     </view>
                     <connections>
-                        <outletCollection property="Buttons" destination="9Zy-Re-nnC" collectionClass="NSMutableArray" id="1e7-eU-teH"/>
-                        <outletCollection property="Buttons" destination="1gT-nC-1jV" collectionClass="NSMutableArray" id="qtd-zh-4nx"/>
-                        <outletCollection property="Buttons" destination="d4A-Sy-FEf" collectionClass="NSMutableArray" id="Nna-AG-Bxm"/>
-                        <outletCollection property="selected" destination="JKw-ph-UeG" collectionClass="NSMutableArray" id="nue-b4-zHt"/>
-                        <outletCollection property="selected" destination="cAS-4Z-COS" collectionClass="NSMutableArray" id="12g-Yk-ZUf"/>
-                        <outletCollection property="selected" destination="Twy-4Y-l9c" collectionClass="NSMutableArray" id="fxh-tu-OcV"/>
+                        <outletCollection property="selectedGrid" destination="JKw-ph-UeG" collectionClass="NSMutableArray" id="72h-Rv-f4b"/>
+                        <outletCollection property="selectedGrid" destination="cAS-4Z-COS" collectionClass="NSMutableArray" id="ghF-8U-ZLM"/>
+                        <outletCollection property="selectedGrid" destination="Twy-4Y-l9c" collectionClass="NSMutableArray" id="gjm-yN-iFk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
