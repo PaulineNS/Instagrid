@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet weak var picturesGrid: UIView!
     
@@ -20,9 +20,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonBar.delegate = self
-        firstGrid.delegate = self
-        secondGrid.delegate = self
-        thirdGrid.delegate = self
         image.delegate = self
         
     }
@@ -53,23 +50,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     let image = UIImagePickerController()
-    
-    func getImageFromLibrary() {
-        image.sourceType = .photoLibrary
-        image.allowsEditing = false
-        self.present(image, animated: true, completion: {self.image.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate })
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let pickedImage = info[.originalImage] as? UIImage {
-            //myimageview.contentMode = .ScaleAspectFit
-            //myimageview.image = pickedImage
-        } else {
-            // error message
-        }
-        
-        picker.dismiss(animated: true, completion: nil)
-    }
+
 }
 
 extension ViewController: ButtonBarDelegate {
@@ -86,21 +67,14 @@ extension ViewController: ButtonBarDelegate {
 }
 
 extension ViewController: PicturesAddingDelegate {
-    func onPictureClick(picturePosition: PicturesPosition) {
-        switch picturePosition {
-        case .picture1:
-            getImageFromLibrary()
-            imagePickerController(UIImagePickerController, didFinishPickingMediaWithInfo: [UIImagePickerController.InfoKey : Any])
-        case .picture2:
-            getImageFromLibrary()
-        case .picture3:
-            getImageFromLibrary()
-        case .picture4:
-            getImageFromLibrary()
-        }
+    func onPictureClick(contentView: ContentView) {
+        image.sourceType = .photoLibrary
+        image.allowsEditing = false
+        self.present(image, animated: true, completion: {self.image.delegate = contentView as UIImagePickerControllerDelegate & UINavigationControllerDelegate })
     }
+    
+   
 }
-
 
 
 

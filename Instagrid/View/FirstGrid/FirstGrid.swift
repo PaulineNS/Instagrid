@@ -19,6 +19,7 @@ class FirstGrid: ContentView {
     }
     
     @IBAction func didTapFirstPicture() {
+        selectedImage = picturePosition[0]
         delegate?.onPictureClick(picturePosition: .picture1)
     }
     

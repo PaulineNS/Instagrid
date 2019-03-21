@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ContentView: UIView {
+class ContentView: UIView, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    var selectedImage: UIImageView?
     private var contentView: UIView!
     
     override init(frame: CGRect) {
@@ -33,5 +34,19 @@ class ContentView: UIView {
     
     func getNibName() -> String? {
         return nil
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[.originalImage] as? UIImage {
+            if let imageView = selectedImage {
+                imageView.contentMode = .scaleAspectFit
+                imageView.image = pickedImage
+                selectedImage = nil
+            }
+        } else {
+            // error message
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
     }
 }

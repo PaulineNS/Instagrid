@@ -8,6 +8,6 @@
 
 protocol PicturesAddingDelegate {
     
-    func onPictureClick(picturePosition: PicturesPosition)
+    func onPictureClick(contentView: ContentView)
     
 }

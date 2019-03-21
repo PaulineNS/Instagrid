@@ -24,7 +24,6 @@
 		56E4A58F223A9D60001ED7D4 /* ButtonBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E4A58E223A9D60001ED7D4 /* ButtonBar.swift */; };
 		56E4A592223A9DA6001ED7D4 /* ButtonBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E4A591223A9DA6001ED7D4 /* ButtonBarDelegate.swift */; };
 		56E4A596223FF2C2001ED7D4 /* ButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E4A595223FF2C2001ED7D4 /* ButtonType.swift */; };
-		56E4A5A422414B05001ED7D4 /* PicturesPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E4A5A322414B05001ED7D4 /* PicturesPosition.swift */; };
 		56E4A5A622414BFD001ED7D4 /* PicturesAddingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E4A5A522414BFD001ED7D4 /* PicturesAddingDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +47,6 @@
 		56E4A58E223A9D60001ED7D4 /* ButtonBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBar.swift; sourceTree = "<group>"; };
 		56E4A591223A9DA6001ED7D4 /* ButtonBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBarDelegate.swift; sourceTree = "<group>"; };
 		56E4A595223FF2C2001ED7D4 /* ButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonType.swift; sourceTree = "<group>"; };
-		56E4A5A322414B05001ED7D4 /* PicturesPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesPosition.swift; sourceTree = "<group>"; };
 		56E4A5A522414BFD001ED7D4 /* PicturesAddingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesAddingDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,7 +96,6 @@
 				56E4A591223A9DA6001ED7D4 /* ButtonBarDelegate.swift */,
 				56E4A595223FF2C2001ED7D4 /* ButtonType.swift */,
 				56E4A58E223A9D60001ED7D4 /* ButtonBar.swift */,
-				56E4A5A322414B05001ED7D4 /* PicturesPosition.swift */,
 				56E4A5A522414BFD001ED7D4 /* PicturesAddingDelegate.swift */,
 				5612CB5B2236B2F400E75A81 /* FirstGrid */,
 				5612CB5C2236B31100E75A81 /* SecondGrid */,
@@ -248,7 +245,6 @@
 				5612CB2E222FFE5900E75A81 /* AppDelegate.swift in Sources */,
 				56E4A592223A9DA6001ED7D4 /* ButtonBarDelegate.swift in Sources */,
 				5612CB4C22365E3D00E75A81 /* FirstGrid.swift in Sources */,
-				56E4A5A422414B05001ED7D4 /* PicturesPosition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
