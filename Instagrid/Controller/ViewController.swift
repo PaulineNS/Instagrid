@@ -13,15 +13,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var picturesGrid: UIView!
     
     let buttonBar = ButtonBar()
-    let firstGrid = FirstGrid()
-    let secondGrid = SecondGrid()
-    let thirdGrid = ThirdGrid()
+    let contentView = ContentView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonBar.delegate = self
-        image.delegate = self
-        
     }
     
     func gridDisplay(grid: ContentView ) {

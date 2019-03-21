@@ -9,5 +9,4 @@
 protocol PicturesAddingDelegate {
     
     func onPictureClick(contentView: ContentView)
-    
 }

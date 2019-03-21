@@ -19,18 +19,18 @@ class ThirdGrid: ContentView {
     }
     
     @IBAction func didTapFirstPicture() {
-        delegate?.onPictureClick(picturePosition: .picture1)
+        selectedImage = picturesPosition[0]
     }
     
     @IBAction func didTapSecondPicture() {
-        delegate?.onPictureClick(picturePosition: .picture2)
+        selectedImage = picturesPosition[1]
     }
     
     @IBAction func didTapThirdPicture() {
-        delegate?.onPictureClick(picturePosition: .picture3)
+        selectedImage = picturesPosition[2]
     }
     
     @IBAction func didTapFourthPicture() {
-        delegate?.onPictureClick(picturePosition: .picture4)
+        selectedImage = picturesPosition[3]
     }
 }
