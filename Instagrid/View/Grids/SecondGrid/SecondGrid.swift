@@ -20,14 +20,17 @@ class SecondGrid: ContentView {
     
     @IBAction func didTapFirstPicture() {
         selectedImage = picturesPosition[0]
+        delegate?.onPictureClick(contentView: SecondGrid())
     }
     
     @IBAction func didTapSecondPicture() {
         selectedImage = picturesPosition[1]
+        delegate?.onPictureClick(contentView: SecondGrid())
     }
     
     @IBAction func didTapThirdPicture() {
         selectedImage = picturesPosition[2]
+        delegate?.onPictureClick(contentView: SecondGrid())
     }
     
 }

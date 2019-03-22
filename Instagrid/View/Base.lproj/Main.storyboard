@@ -18,10 +18,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Button Bar-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ButtonBar" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GeneralView" customModule="Instagrid" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -290,7 +290,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Odw-Un-JUH" userLabel="Swipe View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Odw-Un-JUH" userLabel="Swipe View" customClass="Swipe" customModule="Instagrid" customModuleProvider="target">
                                 <rect key="frame" x="37.5" y="103" width="300" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zc-v1-S16">
@@ -315,6 +315,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="DUh-r9-cKX"/>
                                     <constraint firstItem="pua-DR-rsY" firstAttribute="centerX" secondItem="Odw-Un-JUH" secondAttribute="centerX" id="Jhe-7u-HhJ"/>
@@ -352,6 +353,10 @@
                                         <exclude reference="nWx-Qu-Bup"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="DrQ-go-SpQ" appends="YES" id="ZT7-kf-Obx"/>
+                                    <outletCollection property="gestureRecognizers" destination="8VQ-Do-kpf" appends="YES" id="3or-KV-7NI"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.7361987829208374" green="0.83996206521987915" blue="0.89303964376449585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -412,6 +417,8 @@
                         </variation>
                         <connections>
                             <outlet property="picturesGrid" destination="UiA-VA-EZq" id="1o3-gC-n7b"/>
+                            <outlet property="swipeLabel" destination="8zc-v1-S16" id="C90-EN-EpD"/>
+                            <outlet property="swipeSymbol" destination="pua-DR-rsY" id="7eL-7w-zGd"/>
                         </connections>
                     </view>
                     <connections>
@@ -421,6 +428,17 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="xU3-jM-dh1" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="up" id="DrQ-go-SpQ" userLabel="Swipe Up Gesture Recognizer">
+                    <connections>
+                        <action selector="SwipeUp:" destination="xU3-jM-dh1" id="yXY-gv-s8s"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="8VQ-Do-kpf" userLabel="Swipe Left Gesture Recognizer">
+                    <connections>
+                        <action selector="swipeLeft:" destination="xU3-jM-dh1" id="118-oc-TJH"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="140.77961019490255" y="132"/>
         </scene>

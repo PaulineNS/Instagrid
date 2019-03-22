@@ -14,10 +14,16 @@ class ViewController: UIViewController {
     
     let buttonBar = ButtonBar()
     let contentView = ContentView()
+    let firstGrid = FirstGrid()
+    let secondGrid = SecondGrid()
+    let thirdGrid = ThirdGrid()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonBar.delegate = self
+        firstGrid.delegate = self
+        secondGrid.delegate = self
+        thirdGrid.delegate = self
     }
     
     func gridDisplay(grid: ContentView ) {
@@ -68,8 +74,13 @@ extension ViewController: PicturesAddingDelegate {
         image.allowsEditing = false
         self.present(image, animated: true, completion: {self.image.delegate = contentView as UIImagePickerControllerDelegate & UINavigationControllerDelegate })
     }
-    
-   
+}
+
+extension ViewController: SwipeDelegate {
+    func onSwipeSymbol() {
+        let activityController = UIActivityViewController(activityItems: [picturesGrid], applicationActivities: nil)
+        present(activityController, animated: true, completion: nil)
+    }
 }
 
 
