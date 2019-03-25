@@ -8,7 +8,23 @@
 
 import UIKit
 
-class FifthGrid: UIView {
+class FifthGrid: ContentView {
 
-
+    @IBOutlet var picturesPosition: [UIImageView]!
+    
+    var delegate: PicturesAddingDelegate?
+    
+    override func getNibName() -> String? {
+        return "FifthGrid"
+    }
+    
+    @IBAction func didTapFirstPicture() {
+        selectedImage = picturesPosition[0]
+        delegate?.onPictureClick(contentView: FifthGrid())
+    }
+    
+    @IBAction func didTapSecondPicture() {
+        selectedImage = picturesPosition[1]
+        delegate?.onPictureClick(contentView: FifthGrid())
+    }
 }

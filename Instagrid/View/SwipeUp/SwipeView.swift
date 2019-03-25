@@ -8,12 +8,27 @@
 
 import UIKit
 
-class Swipe: UIView {
-
-    @IBOutlet weak var swipeSymbol: UIImageView!
-    @IBOutlet weak var swipeLabel: UILabel!
+class SwipeView: UIView {
     
     var delegate: SwipeDelegate?
+
+    @IBOutlet weak var swipeSymbol: UIImageView!
+    
+    @IBOutlet weak var swipeLabel: UILabel!
+    
+    @IBAction func swipeUp(_ sender: UISwipeGestureRecognizer) {
+        if UIDevice.current.orientation.isLandscape && sender.direction == .left {
+            delegate?.onSwipeSymbol()
+        }
+    }
+    
+    
+    @IBAction func swipeLeft(_ sender: UISwipeGestureRecognizer) {
+        if UIDevice.current.orientation.isLandscape && sender.direction == .left {
+            delegate?.onSwipeSymbol()
+        }
+    }
+    
     
     func swipeOrientation() {
         if UIDevice.current.orientation.isLandscape {
@@ -23,23 +38,4 @@ class Swipe: UIView {
             swipeLabel.text = "Swipe up to share"
         }
     }
-    
-    
-    @IBAction func swipeUp(_ sender: UISwipeGestureRecognizer) {
-        if UIDevice.current.orientation.isLandscape && sender.direction == .left {
-            delegate?.onSwipeSymbol()
-        } else {
-            return
-        }
-    }
-    
-    
-    @IBAction func swipeLeft(_ sender: UISwipeGestureRecognizer) {
-        if UIDevice.current.orientation.isLandscape && sender.direction == .left {
-            delegate?.onSwipeSymbol()
-        } else {
-            return
-        }
-    }
-    
 }

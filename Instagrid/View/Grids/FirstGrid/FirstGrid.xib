@@ -12,16 +12,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstGrid" customModule="Instagrid" customModuleProvider="target">
             <connections>
-                <outletCollection property="gridPictures" destination="GHB-5b-mWH" collectionClass="NSMutableArray" id="PkV-QC-al5"/>
-                <outletCollection property="gridPictures" destination="Bp9-LP-Qbb" collectionClass="NSMutableArray" id="9ea-8A-kRN"/>
-                <outletCollection property="gridPictures" destination="NQP-QM-Q7o" collectionClass="NSMutableArray" id="87i-vj-DnY"/>
                 <outletCollection property="picturesPosition" destination="GHB-5b-mWH" collectionClass="NSMutableArray" id="lFF-hO-1fF"/>
                 <outletCollection property="picturesPosition" destination="Bp9-LP-Qbb" collectionClass="NSMutableArray" id="qiu-Ew-vPe"/>
                 <outletCollection property="picturesPosition" destination="NQP-QM-Q7o" collectionClass="NSMutableArray" id="aCs-2k-Bia"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="FirstGrid">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="FirstGrid" customClass="FirstGrid" customModule="Instagrid" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="420" height="520"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>

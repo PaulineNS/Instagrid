@@ -12,31 +12,37 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FifthGrid" customModule="Instagrid" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="306" height="314"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eFD-CK-AVo">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eFD-CK-AVo" userLabel="Grid">
                     <rect key="frame" x="0.0" y="0.0" width="306" height="314"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDP-XO-GTq" userLabel="First Picture">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDP-XO-GTq" userLabel="First Picture" customClass="UIImageView">
                             <rect key="frame" x="15" y="15" width="276" height="134.5"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqG-vT-iri" userLabel="ButtonFirstPic">
                                     <rect key="frame" x="0.0" y="0.0" width="276" height="134.5"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="Blue Cross"/>
+                                    <connections>
+                                        <action selector="didTapFirstPicture" destination="iN0-l3-epB" eventType="touchUpInside" id="Rfh-hl-Gfg"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="0.84697777029999999" green="0.84711736439999996" blue="0.84694808720000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oZe-Yc-8Z7" userLabel="Second Picture">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oZe-Yc-8Z7" userLabel="Second Picture" customClass="UIImageView">
                             <rect key="frame" x="15" y="164.5" width="276" height="134.5"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puu-nj-m2d" userLabel="ButtonSecondPic">
                                     <rect key="frame" x="0.0" y="-0.5" width="276" height="134.5"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="Blue Cross"/>
+                                    <connections>
+                                        <action selector="didTapSecondPicture" destination="iN0-l3-epB" eventType="touchUpInside" id="RFS-44-duU"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="0.84697777029999999" green="0.84711736439999996" blue="0.84694808720000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -67,6 +73,10 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outletCollection property="picturesPosition" destination="nDP-XO-GTq" collectionClass="NSMutableArray" id="zyO-ok-gbg"/>
+                <outletCollection property="picturesPosition" destination="oZe-Yc-8Z7" collectionClass="NSMutableArray" id="yc7-JT-KYb"/>
+            </connections>
             <point key="canvasLocation" x="156.80000000000001" y="291.45427286356824"/>
         </view>
     </objects>

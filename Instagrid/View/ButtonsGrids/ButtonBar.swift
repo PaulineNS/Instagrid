@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ButtonBar: UIView {
-
+class ButtonBar: UIScrollView {
+    
     @IBOutlet var selectedGrid: [UIImageView]!
     
-    var delegate: ButtonBarDelegate?
+    var buttonDelegate: ButtonBarDelegate?
     
     private func unselectButton() {
         selectedGrid.forEach({ $0.isHidden = true })
@@ -21,19 +21,19 @@ class ButtonBar: UIView {
     @IBAction func didTapFirstGridButton() {
         unselectButton()
         selectedGrid[0].isHidden = false
-        delegate?.onButtonClick(buttonType: .button1)
+        buttonDelegate?.onButtonClick(buttonType: .button1)
     }
     
     @IBAction func didTapSecondGridButton() {
         unselectButton()
         selectedGrid[1].isHidden = false
-        delegate?.onButtonClick(buttonType: .button2)
+        buttonDelegate?.onButtonClick(buttonType: .button2)
     }
     
     @IBAction func didTapThirdGridButton() {
         unselectButton()
         selectedGrid[2].isHidden = false
-        delegate?.onButtonClick(buttonType: .button3)
+        buttonDelegate?.onButtonClick(buttonType: .button3)
     }
     
 }

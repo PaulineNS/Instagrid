@@ -8,6 +8,24 @@
 
 import UIKit
 
-class FourthGrid: UIView {
+class FourthGrid: ContentView {
 
+    @IBOutlet var picturesPosition: [UIImageView]!
+    
+    var delegate: PicturesAddingDelegate?
+    
+    override func getNibName() -> String? {
+        return "FourthGrid"
+    }
+    
+    @IBAction func didTapFirstPicture() {
+        selectedImage = picturesPosition[0]
+        delegate?.onPictureClick(contentView: FourthGrid())
+    }
+    
+    @IBAction func didTapSecondPicture() {
+        selectedImage = picturesPosition[1]
+        delegate?.onPictureClick(contentView: FourthGrid())
+    }
+    
 }
