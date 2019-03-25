@@ -31,7 +31,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHB-5b-mWH" userLabel="First Picture" customClass="UIImageView">
                             <rect key="frame" x="15" y="15" width="390" height="227.5"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXh-IS-yAc">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXh-IS-yAc" userLabel="ButtonFirstPic">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="227.5"/>
                                     <state key="normal" image="Blue Cross"/>
                                     <connections>
@@ -50,7 +50,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bp9-LP-Qbb" userLabel="Second Picture" customClass="UIImageView">
                             <rect key="frame" x="15" y="257.5" width="187.5" height="227.5"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6r-Zg-eFU">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6r-Zg-eFU" userLabel="ButtonSecondPic">
                                     <rect key="frame" x="0.0" y="0.0" width="187.5" height="227.5"/>
                                     <state key="normal" image="Blue Cross"/>
                                     <connections>
@@ -69,7 +69,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQP-QM-Q7o" userLabel="Third Picture" customClass="UIImageView">
                             <rect key="frame" x="218" y="257.5" width="187" height="227.5"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlK-sd-mUv">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlK-sd-mUv" userLabel="ButtonThirdPic">
                                     <rect key="frame" x="0.0" y="0.0" width="187" height="227.5"/>
                                     <state key="normal" image="Blue Cross"/>
                                     <connections>

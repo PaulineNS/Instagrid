@@ -360,6 +360,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.7361987829208374" green="0.83996206521987915" blue="0.89303964376449585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="UiA-VA-EZq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1ZD-Ne-nY8"/>
                             <constraint firstItem="kdX-qk-rZk" firstAttribute="bottom" secondItem="UiA-VA-EZq" secondAttribute="bottom" constant="15" id="7Wb-dW-27Q"/>
@@ -419,6 +420,7 @@
                             <outlet property="picturesGrid" destination="UiA-VA-EZq" id="1o3-gC-n7b"/>
                             <outlet property="swipeLabel" destination="8zc-v1-S16" id="C90-EN-EpD"/>
                             <outlet property="swipeSymbol" destination="pua-DR-rsY" id="7eL-7w-zGd"/>
+                            <outletCollection property="gestureRecognizers" destination="p7i-hU-egk" appends="YES" id="aD8-Zs-oDR"/>
                         </connections>
                     </view>
                     <connections>
@@ -439,6 +441,11 @@
                         <action selector="swipeLeft:" destination="xU3-jM-dh1" id="118-oc-TJH"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="p7i-hU-egk" userLabel="Double Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="didDoubleTapToChangeGridColour:" destination="BYZ-38-t0r" id="xDV-Ir-gJ6"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="140.77961019490255" y="132"/>
         </scene>

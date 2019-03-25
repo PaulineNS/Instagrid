@@ -29,7 +29,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1d7-z1-GiT" userLabel="First Picture" customClass="UIImageView">
                             <rect key="frame" x="15" y="15" width="127.5" height="137.5"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LxP-tj-fcC">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LxP-tj-fcC" userLabel="ButtonFirstPic">
                                     <rect key="frame" x="0.0" y="0.0" width="127.5" height="137.5"/>
                                     <state key="normal" image="Blue Cross"/>
                                     <connections>
@@ -48,7 +48,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9qS-M2-bBY" userLabel="Second Picture" customClass="UIImageView">
                             <rect key="frame" x="157.5" y="15" width="127.5" height="137.5"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sw-GV-cpG">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sw-GV-cpG" userLabel="ButtonSecondPic">
                                     <rect key="frame" x="0.0" y="0.0" width="127.5" height="137.5"/>
                                     <state key="normal" image="Blue Cross"/>
                                     <connections>
@@ -67,7 +67,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7se-2a-wJY" userLabel="Third Picture" customClass="UIImageView">
                             <rect key="frame" x="15" y="167.5" width="127.5" height="137.5"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PdS-Cl-bYc">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PdS-Cl-bYc" userLabel="ButtonThirdPic">
                                     <rect key="frame" x="0.0" y="0.0" width="127.5" height="137.5"/>
                                     <state key="normal" image="Blue Cross"/>
                                     <connections>
@@ -86,7 +86,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fus-63-xDy" userLabel="Fourth Picture" customClass="UIImageView">
                             <rect key="frame" x="157.5" y="167.5" width="127.5" height="137.5"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMv-j4-8Bo">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMv-j4-8Bo" userLabel="ButtonFourthPic">
                                     <rect key="frame" x="0.0" y="0.0" width="127.5" height="137.5"/>
                                     <state key="normal" image="Blue Cross"/>
                                     <connections>

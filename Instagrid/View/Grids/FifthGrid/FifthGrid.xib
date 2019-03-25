@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="306" height="314"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eFD-CK-AVo">
+                    <rect key="frame" x="0.0" y="0.0" width="306" height="314"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDP-XO-GTq" userLabel="First Picture">
+                            <rect key="frame" x="15" y="15" width="276" height="134.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqG-vT-iri" userLabel="ButtonFirstPic">
+                                    <rect key="frame" x="0.0" y="0.0" width="276" height="134.5"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="Blue Cross"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.84697777029999999" green="0.84711736439999996" blue="0.84694808720000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oZe-Yc-8Z7" userLabel="Second Picture">
+                            <rect key="frame" x="15" y="164.5" width="276" height="134.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puu-nj-m2d" userLabel="ButtonSecondPic">
+                                    <rect key="frame" x="0.0" y="-0.5" width="276" height="134.5"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="Blue Cross"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.84697777029999999" green="0.84711736439999996" blue="0.84694808720000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="nDP-XO-GTq" firstAttribute="width" secondItem="oZe-Yc-8Z7" secondAttribute="width" id="0qD-Xl-W7T"/>
+                        <constraint firstItem="nDP-XO-GTq" firstAttribute="top" secondItem="eFD-CK-AVo" secondAttribute="top" constant="15" id="2oM-Q8-N8c"/>
+                        <constraint firstItem="oZe-Yc-8Z7" firstAttribute="leading" secondItem="eFD-CK-AVo" secondAttribute="leading" constant="15" id="7Ph-wO-4bF"/>
+                        <constraint firstItem="oZe-Yc-8Z7" firstAttribute="top" secondItem="nDP-XO-GTq" secondAttribute="bottom" constant="15" id="99e-T6-Idd"/>
+                        <constraint firstAttribute="bottom" secondItem="oZe-Yc-8Z7" secondAttribute="bottom" constant="15" id="CeS-dI-Di2"/>
+                        <constraint firstAttribute="trailing" secondItem="oZe-Yc-8Z7" secondAttribute="trailing" constant="15" id="RM8-6x-ImW"/>
+                        <constraint firstItem="nDP-XO-GTq" firstAttribute="leading" secondItem="eFD-CK-AVo" secondAttribute="leading" constant="15" id="TXT-Lt-54L"/>
+                        <constraint firstItem="nDP-XO-GTq" firstAttribute="centerX" secondItem="eFD-CK-AVo" secondAttribute="centerX" id="Yhm-hE-vHb"/>
+                        <constraint firstItem="nDP-XO-GTq" firstAttribute="height" secondItem="oZe-Yc-8Z7" secondAttribute="height" id="Z8E-Sf-rbJ"/>
+                        <constraint firstItem="oZe-Yc-8Z7" firstAttribute="centerX" secondItem="eFD-CK-AVo" secondAttribute="centerX" id="dsl-gh-TID"/>
+                        <constraint firstAttribute="trailing" secondItem="nDP-XO-GTq" secondAttribute="trailing" constant="15" id="ve2-ze-MUl"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="eFD-CK-AVo" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="0gY-oF-qgb"/>
+                <constraint firstItem="eFD-CK-AVo" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Qkf-J8-6bM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eFD-CK-AVo" secondAttribute="trailing" id="Yhg-xO-3oa"/>
+                <constraint firstItem="eFD-CK-AVo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="iMy-ri-pWT"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="156.80000000000001" y="291.45427286356824"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Blue Cross" width="40" height="40"/>
+    </resources>
+</document>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="304" height="316"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTN-MA-Nvw">
+                    <rect key="frame" x="0.0" y="0.0" width="304" height="316"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fKD-05-wJa" userLabel="First Picture">
+                            <rect key="frame" x="15" y="15" width="129.5" height="286"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EB5-0q-wpx" userLabel="ButtonFirstPic">
+                                    <rect key="frame" x="0.0" y="0.0" width="129.5" height="286"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="Blue Cross"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.84697777029999999" green="0.84711736439999996" blue="0.84694808720000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEU-tY-pg9" userLabel="Second Picture">
+                            <rect key="frame" x="159.5" y="15" width="129.5" height="286"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHS-nA-0wB" userLabel="ButtonSecondPic">
+                                    <rect key="frame" x="-0.5" y="0.0" width="129.5" height="286"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="Blue Cross"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.84697777029999999" green="0.84711736439999996" blue="0.84694808720000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="eEU-tY-pg9" secondAttribute="trailing" constant="15" id="2hC-vV-7tm"/>
+                        <constraint firstItem="eEU-tY-pg9" firstAttribute="leading" secondItem="fKD-05-wJa" secondAttribute="trailing" constant="15" id="Bkq-TB-89h"/>
+                        <constraint firstAttribute="bottom" secondItem="eEU-tY-pg9" secondAttribute="bottom" constant="15" id="HJ2-Za-Uqn"/>
+                        <constraint firstItem="fKD-05-wJa" firstAttribute="top" secondItem="YTN-MA-Nvw" secondAttribute="top" constant="15" id="OIr-Ln-zht"/>
+                        <constraint firstItem="eEU-tY-pg9" firstAttribute="centerY" secondItem="YTN-MA-Nvw" secondAttribute="centerY" id="SU5-rn-w3s"/>
+                        <constraint firstItem="fKD-05-wJa" firstAttribute="width" secondItem="eEU-tY-pg9" secondAttribute="width" id="WQi-Vi-Q1X"/>
+                        <constraint firstItem="fKD-05-wJa" firstAttribute="leading" secondItem="YTN-MA-Nvw" secondAttribute="leading" constant="15" id="fcq-0f-AlO"/>
+                        <constraint firstItem="eEU-tY-pg9" firstAttribute="top" secondItem="YTN-MA-Nvw" secondAttribute="top" constant="15" id="rqb-O8-lDI"/>
+                        <constraint firstItem="fKD-05-wJa" firstAttribute="height" secondItem="eEU-tY-pg9" secondAttribute="height" id="so7-2N-qr8"/>
+                        <constraint firstAttribute="bottom" secondItem="fKD-05-wJa" secondAttribute="bottom" constant="15" id="xtN-LA-6gQ"/>
+                        <constraint firstItem="fKD-05-wJa" firstAttribute="centerY" secondItem="YTN-MA-Nvw" secondAttribute="centerY" id="ycc-mO-IfL"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="YTN-MA-Nvw" secondAttribute="bottom" id="JmR-Mb-dgA"/>
+                <constraint firstItem="YTN-MA-Nvw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="OAo-Pc-vAL"/>
+                <constraint firstItem="YTN-MA-Nvw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="cnZ-FC-5Um"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="YTN-MA-Nvw" secondAttribute="trailing" id="lWQ-lZ-LCs"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="280" y="80.059970014992516"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Blue Cross" width="40" height="40"/>
+    </resources>
+</document>

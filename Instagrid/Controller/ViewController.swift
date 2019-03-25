@@ -18,6 +18,10 @@ class ViewController: UIViewController {
     let secondGrid = SecondGrid()
     let thirdGrid = ThirdGrid()
     
+    @IBAction func didDoubleTapToChangeGridColour(_ sender: UITapGestureRecognizer) {
+        picturesGrid.backgroundColor = UIColor (red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1.0)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonBar.delegate = self
@@ -30,6 +34,7 @@ class ViewController: UIViewController {
         self.picturesGrid.subviews.forEach({ $0.removeFromSuperview() })
         picturesGrid.addSubview(grid)
         picturesGrid.autoresizesSubviews = true
+        
     }
 
     
