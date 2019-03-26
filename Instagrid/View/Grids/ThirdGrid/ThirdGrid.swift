@@ -20,21 +20,21 @@ class ThirdGrid: GridHandler {
     
     @IBAction func didTapFirstPicture() {
         selectedImage = picturesPosition[0]
-        delegate?.onPictureClick(contentView: ThirdGrid())
+        delegate?.onPictureClick(grid: ThirdGrid())
     }
     
     @IBAction func didTapSecondPicture() {
         selectedImage = picturesPosition[1]
-        delegate?.onPictureClick(contentView: ThirdGrid())
+        delegate?.onPictureClick(grid: ThirdGrid())
     }
     
     @IBAction func didTapThirdPicture() {
         selectedImage = picturesPosition[2]
-        delegate?.onPictureClick(contentView: ThirdGrid())
+        delegate?.onPictureClick(grid: ThirdGrid())
     }
     
     @IBAction func didTapFourthPicture() {
         selectedImage = picturesPosition[3]
-        delegate?.onPictureClick(contentView: ThirdGrid())
+        delegate?.onPictureClick(grid: ThirdGrid())
     }
 }

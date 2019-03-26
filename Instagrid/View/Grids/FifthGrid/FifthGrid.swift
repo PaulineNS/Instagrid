@@ -20,11 +20,11 @@ class FifthGrid: GridHandler {
     
     @IBAction func didTapFirstPicture() {
         selectedImage = picturesPosition[0]
-        delegate?.onPictureClick(contentView: FifthGrid())
+        delegate?.onPictureClick(grid: FifthGrid())
     }
     
     @IBAction func didTapSecondPicture() {
         selectedImage = picturesPosition[1]
-        delegate?.onPictureClick(contentView: FifthGrid())
+        delegate?.onPictureClick(grid: FifthGrid())
     }
 }

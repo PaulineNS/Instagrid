@@ -68,10 +68,10 @@ extension ViewController: ButtonBarDelegate {
 }
 
 extension ViewController: PicturesAddingDelegate {
-    func onPictureClick(contentView: GridHandler) {
+    func onPictureClick(grid: GridHandler) {
         image.sourceType = .photoLibrary // how adding camera ??
         image.allowsEditing = false
-        self.present(image, animated: true, completion: {self.image.delegate = contentView as UIImagePickerControllerDelegate & UINavigationControllerDelegate })
+        self.present(image, animated: true, completion: {self.image.delegate = grid as UIImagePickerControllerDelegate & UINavigationControllerDelegate })
     }
 }
 

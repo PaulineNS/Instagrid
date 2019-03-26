@@ -20,12 +20,12 @@ class FourthGrid: GridHandler {
     
     @IBAction func didTapFirstPicture() {
         selectedImage = picturesPosition[0]
-        delegate?.onPictureClick(contentView: FourthGrid())
+        delegate?.onPictureClick(grid: FourthGrid())
     }
     
     @IBAction func didTapSecondPicture() {
         selectedImage = picturesPosition[1]
-        delegate?.onPictureClick(contentView: FourthGrid())
+        delegate?.onPictureClick(grid: FourthGrid())
     }
     
 }
