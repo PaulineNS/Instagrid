@@ -24,15 +24,15 @@ class GridHandler: UIView, UIImagePickerControllerDelegate, UINavigationControll
     }
     
     func setup() {
-        if let nibNameSafe = self.getNibName() {
-            self.gridHandler = Bundle.main.loadNibNamed(nibNameSafe, owner: self, options: nil)?.first as? UIView
+        if let xibName = self.getXibName() {
+            self.gridHandler = Bundle.main.loadNibNamed(xibName, owner: self, options: nil)?.first as? UIView
             self.gridHandler.frame = self.bounds
             self.gridHandler.autoresizingMask = [.flexibleHeight, .flexibleWidth]
             self.addSubview(gridHandler)
         }
     }
     
-    func getNibName() -> String? {
+    func getXibName() -> String? {
         return nil
     }
     

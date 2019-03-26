@@ -14,7 +14,7 @@ class SecondGrid: GridHandler {
     
     var delegate: PicturesAddingDelegate?
     
-    override func getNibName() -> String? {
+    override func getXibName() -> String? {
         return "SecondGrid"        
     }
     

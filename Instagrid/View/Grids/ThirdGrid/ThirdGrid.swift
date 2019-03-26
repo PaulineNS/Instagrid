@@ -14,7 +14,7 @@ class ThirdGrid: GridHandler {
     
     var delegate: PicturesAddingDelegate?
  
-    override func getNibName() -> String? {
+    override func getXibName() -> String? {
         return "ThirdGrid"
     }
     
