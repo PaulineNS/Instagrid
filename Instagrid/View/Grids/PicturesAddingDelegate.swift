@@ -8,5 +8,5 @@
 
 protocol PicturesAddingDelegate {
     
-    func onPictureClick(contentView: ContentView)
+    func onPictureClick(contentView: GridHandler)
 }

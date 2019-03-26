@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondGrid: ContentView {
+class SecondGrid: GridHandler {
     
     @IBOutlet var picturesPosition: [UIImageView]!
     

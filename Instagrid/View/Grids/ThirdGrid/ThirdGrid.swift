@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ThirdGrid: ContentView {
+class ThirdGrid: GridHandler {
     
     @IBOutlet var picturesPosition: [UIImageView]!
     

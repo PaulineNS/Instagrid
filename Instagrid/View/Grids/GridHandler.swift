@@ -11,7 +11,7 @@ import UIKit
 class GridHandler: UIView, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var selectedImage: UIImageView?
-    private var contentView: UIView!
+    private var gridHandler: UIView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,10 +25,10 @@ class GridHandler: UIView, UIImagePickerControllerDelegate, UINavigationControll
     
     func setup() {
         if let nibNameSafe = self.getNibName() {
-            self.contentView = Bundle.main.loadNibNamed(nibNameSafe, owner: self, options: nil)?.first as? UIView
-            self.contentView.frame = self.bounds
-            self.contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-            self.addSubview(contentView)
+            self.gridHandler = Bundle.main.loadNibNamed(nibNameSafe, owner: self, options: nil)?.first as? UIView
+            self.gridHandler.frame = self.bounds
+            self.gridHandler.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+            self.addSubview(gridHandler)
         }
     }
     

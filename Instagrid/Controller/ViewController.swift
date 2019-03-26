@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var picturesGrid: UIView!
     
     let buttonBar = ButtonBar()
-    let contentView = ContentView()
+    let gridHandler = GridHandler()
     let firstGrid = FirstGrid()
     let secondGrid = SecondGrid()
     let thirdGrid = ThirdGrid()
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    func gridDisplay(grid: ContentView ) {
+    func gridDisplay(grid: GridHandler ) {
         self.picturesGrid.subviews.forEach({ $0.removeFromSuperview() })
         picturesGrid.addSubview(grid)
         picturesGrid.autoresizesSubviews = true
@@ -68,7 +68,7 @@ extension ViewController: ButtonBarDelegate {
 }
 
 extension ViewController: PicturesAddingDelegate {
-    func onPictureClick(contentView: ContentView) {
+    func onPictureClick(contentView: GridHandler) {
         image.sourceType = .photoLibrary // how adding camera ??
         image.allowsEditing = false
         self.present(image, animated: true, completion: {self.image.delegate = contentView as UIImagePickerControllerDelegate & UINavigationControllerDelegate })

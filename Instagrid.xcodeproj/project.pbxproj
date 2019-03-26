@@ -19,7 +19,7 @@
 		5612CB5022366C7E00E75A81 /* FirstGrid.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5612CB4F22366C7E00E75A81 /* FirstGrid.xib */; };
 		5612CB5222366CA300E75A81 /* ThirdGrid.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5612CB5122366CA300E75A81 /* ThirdGrid.xib */; };
 		5612CB5F2236B39000E75A81 /* SecondGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5612CB5E2236B39000E75A81 /* SecondGrid.swift */; };
-		5612CB612237AE3200E75A81 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5612CB602237AE3200E75A81 /* ContentView.swift */; };
+		5612CB612237AE3200E75A81 /* GridHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5612CB602237AE3200E75A81 /* GridHandler.swift */; };
 		5612CB632239820300E75A81 /* ThirdGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5612CB622239820300E75A81 /* ThirdGrid.swift */; };
 		564B07A122451DCF00A244D2 /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564B07A022451DCF00A244D2 /* SwipeView.swift */; };
 		564B07A322451DF600A244D2 /* SwipeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564B07A222451DF600A244D2 /* SwipeDelegate.swift */; };
@@ -48,7 +48,7 @@
 		5612CB4F22366C7E00E75A81 /* FirstGrid.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstGrid.xib; sourceTree = "<group>"; };
 		5612CB5122366CA300E75A81 /* ThirdGrid.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdGrid.xib; sourceTree = "<group>"; };
 		5612CB5E2236B39000E75A81 /* SecondGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondGrid.swift; sourceTree = "<group>"; };
-		5612CB602237AE3200E75A81 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5612CB602237AE3200E75A81 /* GridHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridHandler.swift; sourceTree = "<group>"; };
 		5612CB622239820300E75A81 /* ThirdGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdGrid.swift; sourceTree = "<group>"; };
 		564B07A022451DCF00A244D2 /* SwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
 		564B07A222451DF600A244D2 /* SwipeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDelegate.swift; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 				5612CB5D2236B32A00E75A81 /* ThirdGrid */,
 				564B07A9224910D200A244D2 /* FourthGrid */,
 				564B07AA224910FB00A244D2 /* FifthGrid */,
-				5612CB602237AE3200E75A81 /* ContentView.swift */,
+				5612CB602237AE3200E75A81 /* GridHandler.swift */,
 				56E4A5A522414BFD001ED7D4 /* PicturesAddingDelegate.swift */,
 			);
 			path = Grids;
@@ -297,7 +297,7 @@
 			files = (
 				5612CB30222FFE5900E75A81 /* ViewController.swift in Sources */,
 				5612CB632239820300E75A81 /* ThirdGrid.swift in Sources */,
-				5612CB612237AE3200E75A81 /* ContentView.swift in Sources */,
+				5612CB612237AE3200E75A81 /* GridHandler.swift in Sources */,
 				56E4A58F223A9D60001ED7D4 /* ButtonBar.swift in Sources */,
 				56E4A5A622414BFD001ED7D4 /* PicturesAddingDelegate.swift in Sources */,
 				5612CB5F2236B39000E75A81 /* SecondGrid.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FifthGrid: ContentView {
+class FifthGrid: GridHandler {
 
     @IBOutlet var picturesPosition: [UIImageView]!
     

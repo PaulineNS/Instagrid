@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FourthGrid: ContentView {
+class FourthGrid: GridHandler {
 
     @IBOutlet var picturesPosition: [UIImageView]!
     
