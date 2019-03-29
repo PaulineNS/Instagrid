@@ -12,7 +12,6 @@ class FirstGrid: GridHandler {
     
     @IBOutlet var picturesPosition: [UIImageView]!
     
-    var delegate: PicturesAddingDelegate?
     
     override func getXibName() -> String? {
         return "FirstGrid"

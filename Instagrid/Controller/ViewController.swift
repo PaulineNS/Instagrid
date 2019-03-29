@@ -12,13 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var picturesGrid: UIView!
     
-    let buttonBar = ButtonBar()
-    let gridHandler = GridHandler()
-    let firstGrid = FirstGrid()
-    let secondGrid = SecondGrid()
-    let thirdGrid = ThirdGrid()
-    let fourthGrid = FourthGrid()
-    let fifthGrid = FifthGrid()
+    @IBOutlet weak var buttonBar: ButtonBar!
     
     @IBAction func didDoubleTapToChangeGridColour(_ sender: UITapGestureRecognizer) {
         picturesGrid.backgroundColor = UIColor (red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1.0)
@@ -26,17 +20,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        buttonBar.unselectButton()
-        buttonBar.selectedGrid[0].isHidden = false
-        buttonBar.delegate = self as? UIScrollViewDelegate
-        firstGrid.delegate = self
-        secondGrid.delegate = self
-        thirdGrid.delegate = self
-        fourthGrid.delegate = self
-        fifthGrid.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        buttonBar.didTapFirstGridButton()
+        buttonBar.buttonDelegate = self
     }
     
     func gridDisplay(grid: GridHandler ) {
+        grid.delegate = self
         self.picturesGrid.subviews.forEach({ $0.removeFromSuperview() })
         picturesGrid.addSubview(grid)
         picturesGrid.autoresizesSubviews = true

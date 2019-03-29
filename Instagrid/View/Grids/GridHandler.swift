@@ -10,6 +10,7 @@ import UIKit
 
 class GridHandler: UIView, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    var delegate: PicturesAddingDelegate?
     var selectedImage: UIImageView?
     private var gridHandler: UIView!
     

@@ -11,9 +11,7 @@ import UIKit
 class FifthGrid: GridHandler {
 
     @IBOutlet var picturesPosition: [UIImageView]!
-    
-    var delegate: PicturesAddingDelegate?
-    
+        
     override func getXibName() -> String? {
         return "FifthGrid"
     }

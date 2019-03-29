@@ -849,6 +849,7 @@
                     </view>
                     <size key="freeformSize" width="550" height="667"/>
                     <connections>
+                        <outlet property="buttonBar" destination="BBa-Hd-EbA" id="DeM-bm-8u9"/>
                         <outlet property="picturesGrid" destination="UiA-VA-EZq" id="duB-8c-OFD"/>
                     </connections>
                 </viewController>

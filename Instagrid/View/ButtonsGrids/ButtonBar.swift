@@ -14,7 +14,7 @@ class ButtonBar: UIScrollView {
     
     var buttonDelegate: ButtonBarDelegate?
     
-    func unselectButton() {
+    private func unselectButton() {
         selectedGrid.forEach({ $0.isHidden = true })
     }
     
@@ -47,7 +47,4 @@ class ButtonBar: UIScrollView {
         selectedGrid[1].isHidden = false
         buttonDelegate?.onButtonClick(buttonType: .button5)
     }
-    
-    
-    
 }

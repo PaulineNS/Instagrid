@@ -12,7 +12,6 @@ class FourthGrid: GridHandler {
 
     @IBOutlet var picturesPosition: [UIImageView]!
     
-    var delegate: PicturesAddingDelegate?
     
     override func getXibName() -> String? {
         return "FourthGrid"
