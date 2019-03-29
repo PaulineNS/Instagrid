@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     let firstGrid = FirstGrid()
     let secondGrid = SecondGrid()
     let thirdGrid = ThirdGrid()
+    let fourthGrid = FourthGrid()
+    let fifthGrid = FifthGrid()
     
     @IBAction func didDoubleTapToChangeGridColour(_ sender: UITapGestureRecognizer) {
         picturesGrid.backgroundColor = UIColor (red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1.0)
@@ -24,6 +26,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        buttonBar.unselectButton()
+        buttonBar.selectedGrid[0].isHidden = false
+        buttonBar.delegate = self as? UIScrollViewDelegate
+        firstGrid.delegate = self
+        secondGrid.delegate = self
+        thirdGrid.delegate = self
+        fourthGrid.delegate = self
+        fifthGrid.delegate = self
     }
     
     func gridDisplay(grid: GridHandler ) {
@@ -50,6 +60,16 @@ class ViewController: UIViewController {
         gridDisplay(grid: thirdGrid)
     }
     
+    private func selectFourthGrid(){
+        let fourthGrid = FourthGrid(frame: picturesGrid.bounds)
+        gridDisplay(grid: fourthGrid)
+    }
+    
+    private func selectFifthGrid(){
+        let fifthGrid = FifthGrid(frame: picturesGrid.bounds)
+        gridDisplay(grid: fifthGrid)
+    }
+    
     let image = UIImagePickerController()
 
 }
@@ -63,6 +83,10 @@ extension ViewController: ButtonBarDelegate {
             selectSecondGrid()
         case .button3:
             selectThirdGrid()
+        case .button4:
+            selectFourthGrid()
+        case .button5:
+            selectFifthGrid()
         }
     }
 }

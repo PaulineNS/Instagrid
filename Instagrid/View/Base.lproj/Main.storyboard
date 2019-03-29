@@ -160,6 +160,9 @@
                                                 <include reference="uq9-X8-bU5"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="didTapFifthGridButton" destination="I6f-rr-sP6" eventType="touchUpInside" id="4Pd-5l-DrE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hR-Bw-2D0" userLabel="FourthGrid">
                                         <rect key="frame" x="300" y="15" width="80" height="80"/>
@@ -180,6 +183,9 @@
                                                 <include reference="w1G-Vm-nVJ"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="didTapFourthGridButton" destination="I6f-rr-sP6" eventType="touchUpInside" id="3Ls-VI-BrJ"/>
+                                        </connections>
                                     </button>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Selected Copy" translatesAutoresizingMaskIntoConstraints="NO" id="g1g-ag-drD" userLabel="SelectedFourthGrid">
                                         <rect key="frame" x="300" y="15" width="80" height="80"/>
@@ -710,10 +716,10 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="DUh-r9-cKX"/>
-                                        <exclude reference="Jhe-7u-HhJ"/>
                                         <exclude reference="RnU-PV-1mo"/>
                                         <exclude reference="VGd-Ic-RD9"/>
                                         <exclude reference="VQG-fn-uLp"/>
+                                        <exclude reference="Jhe-7u-HhJ"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact">
@@ -721,14 +727,14 @@
                                         <include reference="DUh-r9-cKX"/>
                                         <exclude reference="MQc-B2-pZ5"/>
                                         <exclude reference="et2-h7-PRX"/>
-                                        <include reference="Jhe-7u-HhJ"/>
-                                        <exclude reference="nWx-Qu-Bup"/>
                                         <exclude reference="KfC-MW-Rdn"/>
                                         <include reference="RnU-PV-1mo"/>
                                         <include reference="VGd-Ic-RD9"/>
                                         <include reference="VQG-fn-uLp"/>
                                         <exclude reference="psf-UY-9lp"/>
                                         <exclude reference="xrq-gs-go4"/>
+                                        <include reference="Jhe-7u-HhJ"/>
+                                        <exclude reference="nWx-Qu-Bup"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -858,6 +864,8 @@
                         <outletCollection property="selectedGrid" destination="JKw-ph-UeG" collectionClass="NSMutableArray" id="KyH-yg-0Au"/>
                         <outletCollection property="selectedGrid" destination="cAS-4Z-COS" collectionClass="NSMutableArray" id="RaJ-P7-hCL"/>
                         <outletCollection property="selectedGrid" destination="Twy-4Y-l9c" collectionClass="NSMutableArray" id="qFn-sb-w6c"/>
+                        <outletCollection property="selectedGrid" destination="g1g-ag-drD" collectionClass="NSMutableArray" id="Q57-Pa-TAO"/>
+                        <outletCollection property="selectedGrid" destination="Wg8-cN-jCb" collectionClass="NSMutableArray" id="M5Q-tn-WhF"/>
                     </connections>
                 </customObject>
                 <swipeGestureRecognizer direction="up" id="DrQ-go-SpQ" userLabel="Swipe Up Gesture Recognizer">

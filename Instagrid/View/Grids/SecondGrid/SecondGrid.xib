@@ -18,7 +18,7 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="SecondGrid" customClass="SecondGrid" customModule="Instagrid" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="SecondGrid">
             <rect key="frame" x="0.0" y="0.0" width="328" height="322"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
