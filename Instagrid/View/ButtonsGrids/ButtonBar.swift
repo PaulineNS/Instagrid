@@ -26,25 +26,25 @@ class ButtonBar: UIScrollView {
     
     @IBAction func didTapSecondGridButton() {
         unselectButton()
-        selectedGrid[3].isHidden = false
+        selectedGrid[1].isHidden = false
         buttonDelegate?.onButtonClick(buttonType: .button2)
     }
     
     @IBAction func didTapThirdGridButton() {
         unselectButton()
-        selectedGrid[4].isHidden = false
+        selectedGrid[2].isHidden = false
         buttonDelegate?.onButtonClick(buttonType: .button3)
     }
     
     @IBAction func didTapFourthGridButton() {
         unselectButton()
-        selectedGrid[2].isHidden = false
+        selectedGrid[3].isHidden = false
         buttonDelegate?.onButtonClick(buttonType: .button4)
     }
     
     @IBAction func didTapFifthGridButton() {
         unselectButton()
-        selectedGrid[1].isHidden = false
+        selectedGrid[4].isHidden = false
         buttonDelegate?.onButtonClick(buttonType: .button5)
     }
 }
