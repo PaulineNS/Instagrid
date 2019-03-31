@@ -63,7 +63,7 @@
                                             </mask>
                                         </variation>
                                         <connections>
-                                            <action selector="didTapSecondGridButton" destination="I6f-rr-sP6" eventType="touchUpInside" id="5Vs-Xq-Zha"/>
+                                            <action selector="didTapSecondGridButton" destination="BBa-Hd-EbA" eventType="touchUpInside" id="IVu-H6-NnF"/>
                                             <action selector="didTapSecondGridButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="YJl-bn-gLt"/>
                                         </connections>
                                     </button>
@@ -87,8 +87,8 @@
                                             </mask>
                                         </variation>
                                         <connections>
-                                            <action selector="didTapFirstGridButton" destination="I6f-rr-sP6" eventType="touchUpInside" id="DXO-O3-dQg"/>
                                             <action selector="didTapFirstGridButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="KKC-CP-4Jz"/>
+                                            <action selector="didTapFirstGridButton" destination="BBa-Hd-EbA" eventType="touchUpInside" id="gw0-oz-Kok"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4A-Sy-FEf" userLabel="ThirdGrid">
@@ -112,7 +112,7 @@
                                         </variation>
                                         <connections>
                                             <action selector="didTapThirdGridButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Oa-pj-GPK"/>
-                                            <action selector="didTapThirdGridButton" destination="I6f-rr-sP6" eventType="touchUpInside" id="WDb-0W-ic7"/>
+                                            <action selector="didTapThirdGridButton" destination="BBa-Hd-EbA" eventType="touchUpInside" id="dzx-Ph-Hh7"/>
                                         </connections>
                                     </button>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Selected Copy" translatesAutoresizingMaskIntoConstraints="NO" id="JKw-ph-UeG" userLabel="SelectedFirstGrid">
@@ -161,7 +161,7 @@
                                             </mask>
                                         </variation>
                                         <connections>
-                                            <action selector="didTapFifthGridButton" destination="I6f-rr-sP6" eventType="touchUpInside" id="4Pd-5l-DrE"/>
+                                            <action selector="didTapFifthGridButton" destination="BBa-Hd-EbA" eventType="touchUpInside" id="Xte-xk-ktc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hR-Bw-2D0" userLabel="FourthGrid">
@@ -184,7 +184,7 @@
                                             </mask>
                                         </variation>
                                         <connections>
-                                            <action selector="didTapFourthGridButton" destination="I6f-rr-sP6" eventType="touchUpInside" id="3Ls-VI-BrJ"/>
+                                            <action selector="didTapFourthGridButton" destination="BBa-Hd-EbA" eventType="touchUpInside" id="bse-7j-4zY"/>
                                         </connections>
                                     </button>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Selected Copy" translatesAutoresizingMaskIntoConstraints="NO" id="g1g-ag-drD" userLabel="SelectedFourthGrid">
@@ -664,6 +664,13 @@
                                         <include reference="gg4-ie-sEv"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outletCollection property="selectedGrid" destination="JKw-ph-UeG" collectionClass="NSMutableArray" id="0Cx-6Y-seh"/>
+                                    <outletCollection property="selectedGrid" destination="cAS-4Z-COS" collectionClass="NSMutableArray" id="DKv-Ym-tdC"/>
+                                    <outletCollection property="selectedGrid" destination="Twy-4Y-l9c" collectionClass="NSMutableArray" id="kw9-H1-IRE"/>
+                                    <outletCollection property="selectedGrid" destination="g1g-ag-drD" collectionClass="NSMutableArray" id="X2s-KY-p7G"/>
+                                    <outletCollection property="selectedGrid" destination="Wg8-cN-jCb" collectionClass="NSMutableArray" id="A8V-t7-gAb"/>
+                                </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBN-a9-GoC">
                                 <rect key="frame" x="225.5" y="37" width="99" height="30"/>
@@ -737,6 +744,10 @@
                                         <exclude reference="nWx-Qu-Bup"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outlet property="swipeLabel" destination="8zc-v1-S16" id="zH9-ff-d67"/>
+                                    <outlet property="swipeSymbol" destination="pua-DR-rsY" id="t3b-pX-Xcs"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.7361987829208374" green="0.83996206521987915" blue="0.89303964376449585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -854,29 +865,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="Arc-Vc-Syo" customClass="SwipeView" customModule="Instagrid" customModuleProvider="target">
-                    <connections>
-                        <outlet property="swipeLabel" destination="8zc-v1-S16" id="Xp0-4k-htd"/>
-                        <outlet property="swipeSymbol" destination="pua-DR-rsY" id="5ru-fb-GyQ"/>
-                    </connections>
-                </customObject>
-                <customObject id="I6f-rr-sP6" customClass="ButtonBar" customModule="Instagrid" customModuleProvider="target">
-                    <connections>
-                        <outletCollection property="selectedGrid" destination="JKw-ph-UeG" collectionClass="NSMutableArray" id="KyH-yg-0Au"/>
-                        <outletCollection property="selectedGrid" destination="cAS-4Z-COS" collectionClass="NSMutableArray" id="RaJ-P7-hCL"/>
-                        <outletCollection property="selectedGrid" destination="Twy-4Y-l9c" collectionClass="NSMutableArray" id="qFn-sb-w6c"/>
-                        <outletCollection property="selectedGrid" destination="g1g-ag-drD" collectionClass="NSMutableArray" id="Q57-Pa-TAO"/>
-                        <outletCollection property="selectedGrid" destination="Wg8-cN-jCb" collectionClass="NSMutableArray" id="M5Q-tn-WhF"/>
-                    </connections>
-                </customObject>
                 <swipeGestureRecognizer direction="up" id="DrQ-go-SpQ" userLabel="Swipe Up Gesture Recognizer">
                     <connections>
-                        <action selector="swipeUp:" destination="Arc-Vc-Syo" id="Dym-oO-geL"/>
+                        <action selector="swipeUp:" destination="Odw-Un-JUH" id="Fef-UX-eNs"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="8VQ-Do-kpf" userLabel="Swipe Left Gesture Recognizer">
                     <connections>
-                        <action selector="swipeLeft:" destination="Arc-Vc-Syo" id="icM-oh-enj"/>
+                        <action selector="swipeLeft:" destination="Odw-Un-JUH" id="Gj1-4S-NNN"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <tapGestureRecognizer numberOfTapsRequired="2" id="p7i-hU-egk" userLabel="Double Tap Gesture Recognizer">
