@@ -20,12 +20,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        buttonBar.didTapFirstGridButton()
         buttonBar.buttonDelegate = self
+        buttonBar.didTapFirstGridButton()
     }
     
     func gridDisplay(grid: GridHandler ) {

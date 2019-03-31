@@ -99,7 +99,6 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="ycS-yR-L9v" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ECq-kZ-36A"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ycS-yR-L9v" secondAttribute="bottom" id="Nth-z8-dmn"/>

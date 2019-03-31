@@ -53,7 +53,6 @@
                             <color key="backgroundColor" red="0.84697777029999999" green="0.84711736439999996" blue="0.84694808720000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="eEU-tY-pg9" secondAttribute="trailing" constant="15" id="2hC-vV-7tm"/>
                         <constraint firstItem="eEU-tY-pg9" firstAttribute="leading" secondItem="fKD-05-wJa" secondAttribute="trailing" constant="15" id="Bkq-TB-89h"/>
@@ -69,7 +68,6 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="YTN-MA-Nvw" secondAttribute="bottom" id="JmR-Mb-dgA"/>
                 <constraint firstItem="YTN-MA-Nvw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="OAo-Pc-vAL"/>

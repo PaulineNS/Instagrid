@@ -123,7 +123,6 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="n9u-K4-k52" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="2z7-NL-y1A"/>
                 <constraint firstItem="n9u-K4-k52" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="AWw-wr-IVk"/>

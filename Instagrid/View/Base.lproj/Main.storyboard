@@ -875,11 +875,7 @@
                         <action selector="swipeLeft:" destination="Odw-Un-JUH" id="Gj1-4S-NNN"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <tapGestureRecognizer numberOfTapsRequired="2" id="p7i-hU-egk" userLabel="Double Tap Gesture Recognizer">
-                    <connections>
-                        <action selector="didDoubleTapToChangeGridColour:" destination="BYZ-38-t0r" id="xDV-Ir-gJ6"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="p7i-hU-egk" userLabel="Double Tap Gesture Recognizer"/>
             </objects>
             <point key="canvasLocation" x="140" y="131.78410794602701"/>
         </scene>

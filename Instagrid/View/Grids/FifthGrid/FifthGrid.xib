@@ -53,7 +53,6 @@
                             <color key="backgroundColor" red="0.84697777029999999" green="0.84711736439999996" blue="0.84694808720000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="nDP-XO-GTq" firstAttribute="width" secondItem="oZe-Yc-8Z7" secondAttribute="width" id="0qD-Xl-W7T"/>
                         <constraint firstItem="nDP-XO-GTq" firstAttribute="top" secondItem="eFD-CK-AVo" secondAttribute="top" constant="15" id="2oM-Q8-N8c"/>
@@ -69,7 +68,6 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="eFD-CK-AVo" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="0gY-oF-qgb"/>
                 <constraint firstItem="eFD-CK-AVo" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Qkf-J8-6bM"/>
