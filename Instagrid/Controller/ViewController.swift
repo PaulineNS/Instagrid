@@ -18,9 +18,12 @@ class ViewController: UIViewController {
         picturesGrid.backgroundColor = UIColor (red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1.0)
     }
     
+    let image = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonBar.buttonDelegate = self
+        image.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
         buttonBar.didTapFirstGridButton()
     }
     
@@ -35,7 +38,6 @@ class ViewController: UIViewController {
         
         let firstGrid = FirstGrid(frame: picturesGrid.bounds)
         gridDisplay(grid: firstGrid)
-        
     }
     
     private func selectSecondGrid() {
@@ -58,8 +60,6 @@ class ViewController: UIViewController {
         let fifthGrid = FifthGrid(frame: picturesGrid.bounds)
         gridDisplay(grid: fifthGrid)
     }
-    
-    let image = UIImagePickerController()
 
 }
 
@@ -82,9 +82,26 @@ extension ViewController: ButtonBarDelegate {
 
 extension ViewController: PicturesAddingDelegate {
     func onPictureClick(grid: GridHandler) {
-        image.sourceType = .photoLibrary // how adding camera ??
-        image.allowsEditing = false
-        self.present(image, animated: true, completion: {self.image.delegate = grid as UIImagePickerControllerDelegate & UINavigationControllerDelegate })
+        let actionSheet = UIAlertController(title: "Photo Source", message: "Choose a source", preferredStyle: .actionSheet)
+        
+        actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action:UIAlertAction) in
+            
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                self.image.sourceType = .camera
+                self.present(self.image, animated: true, completion: nil)
+            } else {
+                print ("The Camera is not available")
+            }
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: { (action:UIAlertAction) in
+            self.image.sourceType = .photoLibrary
+            self.present(self.image, animated: true, completion: nil)
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(actionSheet, animated: true, completion: nil)
     }
 }
 
@@ -94,7 +111,6 @@ extension ViewController: SwipeDelegate {
         present(activityController, animated: true, completion: nil)
     }
 }
-
 
 
 

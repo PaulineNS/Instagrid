@@ -12,9 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondGrid" customModule="Instagrid" customModuleProvider="target">
             <connections>
-                <outletCollection property="picturesPosition" destination="MBw-fu-SfK" collectionClass="NSMutableArray" id="h4A-hu-vTQ"/>
-                <outletCollection property="picturesPosition" destination="aU9-3F-SNJ" collectionClass="NSMutableArray" id="fJt-ur-aDz"/>
-                <outletCollection property="picturesPosition" destination="K1H-3u-b69" collectionClass="NSMutableArray" id="Q6R-5O-4l8"/>
+                <outletCollection property="picturesPosition" destination="lby-kQ-nCV" collectionClass="NSMutableArray" id="379-3U-WGC"/>
+                <outletCollection property="picturesPosition" destination="xfg-Uh-ifq" collectionClass="NSMutableArray" id="xSm-qF-3Sm"/>
+                <outletCollection property="picturesPosition" destination="kir-N8-dFh" collectionClass="NSMutableArray" id="Pw5-N6-ctX"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -25,60 +25,72 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1og-eJ-2SD" userLabel="Grid">
                     <rect key="frame" x="0.0" y="0.0" width="328" height="322"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBw-fu-SfK" userLabel="First Picture" customClass="UIImageView">
+                        <view opaque="NO" clipsSubviews="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="MBw-fu-SfK" userLabel="First Picture" customClass="UIImageView">
                             <rect key="frame" x="15" y="15" width="141.5" height="138.5"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksl-Vt-bEq" userLabel="ButtonFirstPic">
                                     <rect key="frame" x="0.0" y="0.0" width="141.5" height="138.5"/>
-                                    <state key="normal" image="Blue Cross"/>
                                     <connections>
                                         <action selector="didTapFirstPicture" destination="-1" eventType="touchUpInside" id="zod-5W-Pgj"/>
                                     </connections>
                                 </button>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Blue Cross" translatesAutoresizingMaskIntoConstraints="NO" id="lby-kQ-nCV" userLabel="FirstPicturePosition">
+                                    <rect key="frame" x="51" y="49.5" width="40" height="40"/>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" red="0.84697777032852173" green="0.84711736440658569" blue="0.84694808721542358" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
+                                <constraint firstItem="lby-kQ-nCV" firstAttribute="centerY" secondItem="MBw-fu-SfK" secondAttribute="centerY" id="1hv-UK-2Zk"/>
                                 <constraint firstAttribute="trailing" secondItem="ksl-Vt-bEq" secondAttribute="trailing" id="1tZ-R9-n6r"/>
                                 <constraint firstAttribute="bottom" secondItem="ksl-Vt-bEq" secondAttribute="bottom" id="ooR-ck-xjx"/>
+                                <constraint firstItem="lby-kQ-nCV" firstAttribute="centerX" secondItem="MBw-fu-SfK" secondAttribute="centerX" id="ts4-uL-3vY"/>
                                 <constraint firstItem="ksl-Vt-bEq" firstAttribute="top" secondItem="MBw-fu-SfK" secondAttribute="top" id="um1-Jn-8z0"/>
                                 <constraint firstItem="ksl-Vt-bEq" firstAttribute="leading" secondItem="MBw-fu-SfK" secondAttribute="leading" id="zkd-Qr-yzI"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aU9-3F-SNJ" userLabel="Second Picture" customClass="UIImageView">
+                        <view opaque="NO" clipsSubviews="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="aU9-3F-SNJ" userLabel="Second Picture" customClass="UIImageView">
                             <rect key="frame" x="171.5" y="15" width="141.5" height="138.5"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScK-F4-Rfj" userLabel="ButtonSecondPic">
                                     <rect key="frame" x="0.0" y="0.0" width="141.5" height="138.5"/>
-                                    <state key="normal" image="Blue Cross"/>
                                     <connections>
                                         <action selector="didTapSecondPicture" destination="-1" eventType="touchUpInside" id="pJM-LD-uc0"/>
                                     </connections>
                                 </button>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Blue Cross" translatesAutoresizingMaskIntoConstraints="NO" id="xfg-Uh-ifq" userLabel="SecondPicturePosition">
+                                    <rect key="frame" x="51" y="49.5" width="40" height="40"/>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" red="0.84697777032852173" green="0.84711736440658569" blue="0.84694808721542358" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
+                                <constraint firstItem="xfg-Uh-ifq" firstAttribute="centerY" secondItem="aU9-3F-SNJ" secondAttribute="centerY" id="1wG-BR-kr2"/>
                                 <constraint firstItem="ScK-F4-Rfj" firstAttribute="top" secondItem="aU9-3F-SNJ" secondAttribute="top" id="Dm3-n6-afh"/>
+                                <constraint firstItem="xfg-Uh-ifq" firstAttribute="centerX" secondItem="aU9-3F-SNJ" secondAttribute="centerX" id="GZx-dW-1El"/>
                                 <constraint firstAttribute="trailing" secondItem="ScK-F4-Rfj" secondAttribute="trailing" id="Ka7-Ri-CeG"/>
                                 <constraint firstItem="ScK-F4-Rfj" firstAttribute="leading" secondItem="aU9-3F-SNJ" secondAttribute="leading" id="TjE-4s-x41"/>
                                 <constraint firstAttribute="bottom" secondItem="ScK-F4-Rfj" secondAttribute="bottom" id="cmq-3o-X5K"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K1H-3u-b69" userLabel="Third Picture" customClass="UIImageView">
+                        <view opaque="NO" clipsSubviews="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="K1H-3u-b69" userLabel="Third Picture" customClass="UIImageView">
                             <rect key="frame" x="15" y="168.5" width="298" height="138.5"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0o-Bg-f9j" userLabel="ButtonThirdPic">
                                     <rect key="frame" x="0.0" y="0.0" width="298" height="138.5"/>
-                                    <state key="normal" image="Blue Cross"/>
                                     <connections>
                                         <action selector="didTapThirdPicture" destination="-1" eventType="touchUpInside" id="bLG-sd-6D3"/>
                                     </connections>
                                 </button>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Blue Cross" translatesAutoresizingMaskIntoConstraints="NO" id="kir-N8-dFh" userLabel="ThirdPicturePosition">
+                                    <rect key="frame" x="129" y="49.5" width="40" height="40"/>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" red="0.84697777032852173" green="0.84711736440658569" blue="0.84694808721542358" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
+                                <constraint firstItem="kir-N8-dFh" firstAttribute="centerY" secondItem="K1H-3u-b69" secondAttribute="centerY" id="KCk-eL-mEu"/>
                                 <constraint firstAttribute="trailing" secondItem="d0o-Bg-f9j" secondAttribute="trailing" id="aRC-Vi-SX0"/>
                                 <constraint firstItem="d0o-Bg-f9j" firstAttribute="top" secondItem="K1H-3u-b69" secondAttribute="top" id="c5j-IA-I4Q"/>
                                 <constraint firstItem="d0o-Bg-f9j" firstAttribute="leading" secondItem="K1H-3u-b69" secondAttribute="leading" id="dDH-KE-MVD"/>
+                                <constraint firstItem="kir-N8-dFh" firstAttribute="centerX" secondItem="K1H-3u-b69" secondAttribute="centerX" id="fwm-wK-OHT"/>
                                 <constraint firstAttribute="bottom" secondItem="d0o-Bg-f9j" secondAttribute="bottom" id="v6u-qz-634"/>
                             </constraints>
                         </view>

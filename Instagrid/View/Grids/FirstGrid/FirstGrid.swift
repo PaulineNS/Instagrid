@@ -25,6 +25,7 @@ class FirstGrid: GridHandler {
     @IBAction func didTapSecondPicture() {
         selectedImage = picturesPosition[1]
         delegate?.onPictureClick(grid: FirstGrid())
+
     }
     
     @IBAction func didTapThirdPicture() {

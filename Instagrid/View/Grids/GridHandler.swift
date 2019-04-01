@@ -36,18 +36,22 @@ class GridHandler: UIView, UIImagePickerControllerDelegate, UINavigationControll
     func getXibName() -> String? {
         return nil
     }
-    
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let pickedImage = info[.originalImage] as? UIImage {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             if let imageView = selectedImage {
                 imageView.contentMode = .scaleAspectFit
                 imageView.image = pickedImage
                 selectedImage = nil
             }
         } else {
-            // error message
+            print ("Error. Please try again later")
         }
         
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
 }
