@@ -22,7 +22,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        image.delegate = self
+        self.image.delegate = self
         buttonBar.buttonDelegate = self
         buttonBar.didTapFirstGridButton()
     }
