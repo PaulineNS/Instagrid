@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var picturesGrid: UIView!
     
@@ -22,8 +22,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        image.delegate = self
         buttonBar.buttonDelegate = self
-        image.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
         buttonBar.didTapFirstGridButton()
     }
     

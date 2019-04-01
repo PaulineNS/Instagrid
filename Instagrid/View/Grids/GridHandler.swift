@@ -42,7 +42,6 @@ class GridHandler: UIView, UIImagePickerControllerDelegate, UINavigationControll
             if let imageView = selectedImage {
                 imageView.contentMode = .scaleAspectFit
                 imageView.image = pickedImage
-                selectedImage = nil
             }
         } else {
             print ("Error. Please try again later")
