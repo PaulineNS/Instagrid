@@ -27,47 +27,35 @@
                         <view opaque="NO" clipsSubviews="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="fKD-05-wJa" userLabel="First Picture" customClass="UIImageView">
                             <rect key="frame" x="15" y="15" width="129.5" height="286"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EB5-0q-wpx" userLabel="ButtonFirstPic">
-                                    <rect key="frame" x="0.0" y="0.0" width="129.5" height="286"/>
-                                    <connections>
-                                        <action selector="didTapFirstPicture" destination="-1" eventType="touchUpInside" id="4tu-5y-ewG"/>
-                                    </connections>
-                                </button>
                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Blue Cross" translatesAutoresizingMaskIntoConstraints="NO" id="GHr-zC-euL" userLabel="FirstPicturePosition">
-                                    <rect key="frame" x="45" y="123" width="40" height="40"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="129.5" height="286"/>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" red="0.84697777029999999" green="0.84711736439999996" blue="0.84694808720000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="GHr-zC-euL" firstAttribute="centerY" secondItem="fKD-05-wJa" secondAttribute="centerY" id="1Jw-G2-MTo"/>
-                                <constraint firstAttribute="bottom" secondItem="EB5-0q-wpx" secondAttribute="bottom" id="41b-Ay-bFn"/>
-                                <constraint firstAttribute="trailing" secondItem="EB5-0q-wpx" secondAttribute="trailing" id="6Eo-nH-7vg"/>
+                                <constraint firstAttribute="bottom" secondItem="GHr-zC-euL" secondAttribute="bottom" id="5Am-E7-vHX"/>
+                                <constraint firstAttribute="trailing" secondItem="GHr-zC-euL" secondAttribute="trailing" id="9h2-HW-LWr"/>
+                                <constraint firstItem="GHr-zC-euL" firstAttribute="leading" secondItem="fKD-05-wJa" secondAttribute="leading" id="Gl2-4f-At8"/>
                                 <constraint firstItem="GHr-zC-euL" firstAttribute="centerX" secondItem="fKD-05-wJa" secondAttribute="centerX" id="IHM-Bw-MEv"/>
-                                <constraint firstItem="EB5-0q-wpx" firstAttribute="leading" secondItem="fKD-05-wJa" secondAttribute="leading" id="fM7-pe-4Mv"/>
-                                <constraint firstItem="EB5-0q-wpx" firstAttribute="top" secondItem="fKD-05-wJa" secondAttribute="top" id="p5Q-uS-sNu"/>
+                                <constraint firstItem="GHr-zC-euL" firstAttribute="top" secondItem="fKD-05-wJa" secondAttribute="top" id="LOI-So-tt6"/>
                             </constraints>
                         </view>
                         <view opaque="NO" clipsSubviews="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="eEU-tY-pg9" userLabel="Second Picture" customClass="UIImageView">
                             <rect key="frame" x="159.5" y="15" width="129.5" height="286"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHS-nA-0wB" userLabel="ButtonSecondPic">
-                                    <rect key="frame" x="0.0" y="0.0" width="129.5" height="286"/>
-                                    <connections>
-                                        <action selector="didTapSecondPicture" destination="-1" eventType="touchUpInside" id="2X2-Y8-K1I"/>
-                                    </connections>
-                                </button>
                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Blue Cross" translatesAutoresizingMaskIntoConstraints="NO" id="VBJ-F2-3nZ" userLabel="SecondPicturePosition">
-                                    <rect key="frame" x="45" y="123" width="40" height="40"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="129.5" height="286"/>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" red="0.84697777029999999" green="0.84711736439999996" blue="0.84694808720000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="fHS-nA-0wB" secondAttribute="bottom" id="750-nF-6Qn"/>
-                                <constraint firstItem="fHS-nA-0wB" firstAttribute="leading" secondItem="eEU-tY-pg9" secondAttribute="leading" id="gor-IO-Gk7"/>
+                                <constraint firstItem="VBJ-F2-3nZ" firstAttribute="top" secondItem="eEU-tY-pg9" secondAttribute="top" id="5Xi-w9-vuI"/>
+                                <constraint firstAttribute="trailing" secondItem="VBJ-F2-3nZ" secondAttribute="trailing" id="aLk-dD-lHR"/>
+                                <constraint firstItem="VBJ-F2-3nZ" firstAttribute="leading" secondItem="eEU-tY-pg9" secondAttribute="leading" id="frf-Ak-M6R"/>
+                                <constraint firstAttribute="bottom" secondItem="VBJ-F2-3nZ" secondAttribute="bottom" id="hLZ-y9-pzb"/>
                                 <constraint firstItem="VBJ-F2-3nZ" firstAttribute="centerX" secondItem="eEU-tY-pg9" secondAttribute="centerX" id="il1-bb-b0s"/>
-                                <constraint firstItem="fHS-nA-0wB" firstAttribute="top" secondItem="eEU-tY-pg9" secondAttribute="top" id="kFe-cX-MLa"/>
                                 <constraint firstItem="VBJ-F2-3nZ" firstAttribute="centerY" secondItem="eEU-tY-pg9" secondAttribute="centerY" id="o8G-wy-aqK"/>
-                                <constraint firstAttribute="trailing" secondItem="fHS-nA-0wB" secondAttribute="trailing" id="yp5-VU-tcu"/>
                             </constraints>
                         </view>
                     </subviews>

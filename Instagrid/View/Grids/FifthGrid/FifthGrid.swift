@@ -16,13 +16,23 @@ class FifthGrid: GridHandler {
         return "FifthGrid"
     }
     
-    @IBAction func didTapFirstPicture() {
-        selectedImage = picturesPosition[0]
-        delegate?.onPictureClick(grid: FifthGrid())
+    override func setup() {
+        super.setup()
+        let singleTap1 = UITapGestureRecognizer(target: self, action: #selector(didTapFirstPicture))
+        picturesPosition[0].isUserInteractionEnabled = true
+        picturesPosition[0].addGestureRecognizer(singleTap1)
+        let singleTap2 = UITapGestureRecognizer(target: self, action: #selector(didTapSecondPicture))
+        picturesPosition[1].isUserInteractionEnabled = true
+        picturesPosition[1].addGestureRecognizer(singleTap2)
     }
     
-    @IBAction func didTapSecondPicture() {
+    @objc func didTapFirstPicture() {
+        selectedImage = picturesPosition[0]
+        delegate?.onPictureClick(grid: self)
+    }
+    
+    @objc func didTapSecondPicture() {
         selectedImage = picturesPosition[1]
-        delegate?.onPictureClick(grid: FifthGrid())
+        delegate?.onPictureClick(grid: self)
     }
 }
