@@ -30,9 +30,6 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksl-Vt-bEq" userLabel="ButtonFirstPic">
                                     <rect key="frame" x="0.0" y="0.0" width="141.5" height="138.5"/>
-                                    <connections>
-                                        <action selector="didTapFirstPicture" destination="-1" eventType="touchUpInside" id="zod-5W-Pgj"/>
-                                    </connections>
                                 </button>
                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Blue Cross" translatesAutoresizingMaskIntoConstraints="NO" id="lby-kQ-nCV" userLabel="FirstPicturePosition">
                                     <rect key="frame" x="51" y="49.5" width="40" height="40"/>
@@ -53,9 +50,6 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScK-F4-Rfj" userLabel="ButtonSecondPic">
                                     <rect key="frame" x="0.0" y="0.0" width="141.5" height="138.5"/>
-                                    <connections>
-                                        <action selector="didTapSecondPicture" destination="-1" eventType="touchUpInside" id="pJM-LD-uc0"/>
-                                    </connections>
                                 </button>
                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Blue Cross" translatesAutoresizingMaskIntoConstraints="NO" id="xfg-Uh-ifq" userLabel="SecondPicturePosition">
                                     <rect key="frame" x="51" y="49.5" width="40" height="40"/>
@@ -76,9 +70,6 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0o-Bg-f9j" userLabel="ButtonThirdPic">
                                     <rect key="frame" x="0.0" y="0.0" width="298" height="138.5"/>
-                                    <connections>
-                                        <action selector="didTapThirdPicture" destination="-1" eventType="touchUpInside" id="bLG-sd-6D3"/>
-                                    </connections>
                                 </button>
                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Blue Cross" translatesAutoresizingMaskIntoConstraints="NO" id="kir-N8-dFh" userLabel="ThirdPicturePosition">
                                     <rect key="frame" x="129" y="49.5" width="40" height="40"/>

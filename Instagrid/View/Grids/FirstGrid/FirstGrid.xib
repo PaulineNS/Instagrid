@@ -28,70 +28,55 @@
                         <view opaque="NO" clipsSubviews="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="GHB-5b-mWH" userLabel="First Picture" customClass="UIImageView">
                             <rect key="frame" x="15" y="15" width="390" height="227.5"/>
                             <subviews>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Blue Cross" translatesAutoresizingMaskIntoConstraints="NO" id="hzq-9A-sts" userLabel="FirstPicturePosition">
-                                    <rect key="frame" x="175" y="94" width="40" height="40"/>
-                                </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXh-IS-yAc" userLabel="ButtonFirstPic">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="Blue Cross" translatesAutoresizingMaskIntoConstraints="NO" id="hzq-9A-sts" userLabel="FirstPicturePosition">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="227.5"/>
-                                    <connections>
-                                        <action selector="didTapFirstPicture" destination="-1" eventType="touchUpInside" id="1HE-lf-mjh"/>
-                                    </connections>
-                                </button>
+                                    <accessibility key="accessibilityConfiguration">
+                                        <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                    </accessibility>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" red="0.84697777032852173" green="0.84711736440658569" blue="0.84694808721542358" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="QXh-IS-yAc" secondAttribute="bottom" id="Jpa-jq-DBP"/>
+                                <constraint firstItem="hzq-9A-sts" firstAttribute="leading" secondItem="GHB-5b-mWH" secondAttribute="leading" id="BF9-IN-yX1"/>
                                 <constraint firstItem="hzq-9A-sts" firstAttribute="centerX" secondItem="GHB-5b-mWH" secondAttribute="centerX" id="KON-OK-yBB"/>
-                                <constraint firstItem="QXh-IS-yAc" firstAttribute="leading" secondItem="GHB-5b-mWH" secondAttribute="leading" id="VYq-Uf-hEj"/>
-                                <constraint firstAttribute="trailing" secondItem="QXh-IS-yAc" secondAttribute="trailing" id="Yfc-ei-aJw"/>
+                                <constraint firstAttribute="bottom" secondItem="hzq-9A-sts" secondAttribute="bottom" id="lQJ-ks-ZIX"/>
+                                <constraint firstAttribute="trailing" secondItem="hzq-9A-sts" secondAttribute="trailing" id="m3n-Ew-oIT"/>
                                 <constraint firstItem="hzq-9A-sts" firstAttribute="centerY" secondItem="GHB-5b-mWH" secondAttribute="centerY" id="mbM-3Z-ObZ"/>
-                                <constraint firstItem="QXh-IS-yAc" firstAttribute="top" secondItem="GHB-5b-mWH" secondAttribute="top" id="tXx-nn-Edj"/>
+                                <constraint firstItem="hzq-9A-sts" firstAttribute="top" secondItem="GHB-5b-mWH" secondAttribute="top" id="tSm-5z-MS9"/>
                             </constraints>
                         </view>
                         <view opaque="NO" clipsSubviews="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Bp9-LP-Qbb" userLabel="Second Picture" customClass="UIImageView">
                             <rect key="frame" x="15" y="257.5" width="187.5" height="227.5"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6r-Zg-eFU" userLabel="ButtonSecondPic">
-                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="227.5"/>
-                                    <connections>
-                                        <action selector="didTapSecondPicture" destination="-1" eventType="touchUpInside" id="ibF-mo-B9K"/>
-                                    </connections>
-                                </button>
                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Blue Cross" translatesAutoresizingMaskIntoConstraints="NO" id="wpR-YU-32g" userLabel="SecondPicturePosition">
-                                    <rect key="frame" x="73.5" y="94" width="40" height="40"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="227.5"/>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" red="0.84697777032852173" green="0.84711736440658569" blue="0.84694808721542358" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="wpR-YU-32g" firstAttribute="centerY" secondItem="Bp9-LP-Qbb" secondAttribute="centerY" id="EFz-CU-UN7"/>
-                                <constraint firstAttribute="bottom" secondItem="k6r-Zg-eFU" secondAttribute="bottom" id="Ewu-uR-nT1"/>
-                                <constraint firstAttribute="trailing" secondItem="k6r-Zg-eFU" secondAttribute="trailing" id="IZH-vK-iDR"/>
-                                <constraint firstItem="k6r-Zg-eFU" firstAttribute="leading" secondItem="Bp9-LP-Qbb" secondAttribute="leading" id="Saa-Oz-asK"/>
-                                <constraint firstItem="k6r-Zg-eFU" firstAttribute="top" secondItem="Bp9-LP-Qbb" secondAttribute="top" id="d3u-Le-zMW"/>
+                                <constraint firstItem="wpR-YU-32g" firstAttribute="leading" secondItem="Bp9-LP-Qbb" secondAttribute="leading" id="ORY-oJ-XiX"/>
+                                <constraint firstAttribute="trailing" secondItem="wpR-YU-32g" secondAttribute="trailing" id="he9-vb-XAf"/>
+                                <constraint firstItem="wpR-YU-32g" firstAttribute="top" secondItem="Bp9-LP-Qbb" secondAttribute="top" id="nlD-dt-bhL"/>
+                                <constraint firstAttribute="bottom" secondItem="wpR-YU-32g" secondAttribute="bottom" id="qUW-iS-PfD"/>
                                 <constraint firstItem="wpR-YU-32g" firstAttribute="centerX" secondItem="Bp9-LP-Qbb" secondAttribute="centerX" id="rUg-hh-OiY"/>
                             </constraints>
                         </view>
                         <view opaque="NO" clipsSubviews="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="NQP-QM-Q7o" userLabel="Third Picture" customClass="UIImageView">
                             <rect key="frame" x="218" y="257.5" width="187" height="227.5"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlK-sd-mUv" userLabel="ButtonThirdPic">
-                                    <rect key="frame" x="0.0" y="0.0" width="187" height="227.5"/>
-                                    <connections>
-                                        <action selector="didTapThirdPicture" destination="-1" eventType="touchUpInside" id="JsY-Wj-Obf"/>
-                                    </connections>
-                                </button>
                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Blue Cross" translatesAutoresizingMaskIntoConstraints="NO" id="xgg-2s-DPr" userLabel="ThirdPicturePosition">
-                                    <rect key="frame" x="73.5" y="94" width="40" height="40"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="187" height="227.5"/>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" red="0.84697777032852173" green="0.84711736440658569" blue="0.84694808721542358" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="xgg-2s-DPr" firstAttribute="centerX" secondItem="NQP-QM-Q7o" secondAttribute="centerX" id="4hz-2u-4Xj"/>
+                                <constraint firstAttribute="bottom" secondItem="xgg-2s-DPr" secondAttribute="bottom" id="4il-LY-PI9"/>
                                 <constraint firstItem="xgg-2s-DPr" firstAttribute="centerY" secondItem="NQP-QM-Q7o" secondAttribute="centerY" id="675-ec-0nB"/>
-                                <constraint firstItem="vlK-sd-mUv" firstAttribute="top" secondItem="NQP-QM-Q7o" secondAttribute="top" id="6KQ-PI-qvp"/>
-                                <constraint firstAttribute="trailing" secondItem="vlK-sd-mUv" secondAttribute="trailing" id="8ow-TA-uhp"/>
-                                <constraint firstItem="vlK-sd-mUv" firstAttribute="leading" secondItem="NQP-QM-Q7o" secondAttribute="leading" id="ZzJ-Zs-flB"/>
-                                <constraint firstAttribute="bottom" secondItem="vlK-sd-mUv" secondAttribute="bottom" id="iIg-kS-8aI"/>
+                                <constraint firstItem="xgg-2s-DPr" firstAttribute="leading" secondItem="NQP-QM-Q7o" secondAttribute="leading" id="9Gf-Sw-cox"/>
+                                <constraint firstItem="xgg-2s-DPr" firstAttribute="top" secondItem="NQP-QM-Q7o" secondAttribute="top" id="P2a-a7-efX"/>
+                                <constraint firstAttribute="trailing" secondItem="xgg-2s-DPr" secondAttribute="trailing" id="xYS-0b-sPp"/>
                             </constraints>
                         </view>
                     </subviews>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="landscape">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -27,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UiA-VA-EZq" userLabel="Pictures Grid">
-                                <rect key="frame" x="125" y="183" width="300" height="301"/>
+                                <rect key="frame" x="125" y="183.5" width="300" height="300"/>
                                 <color key="backgroundColor" red="0.14693871140480042" green="0.40562295913696289" blue="0.5872226357460022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="fJr-JA-5Cw"/>
@@ -41,10 +41,10 @@
                                 </variation>
                             </view>
                             <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBa-Hd-EbA" userLabel="Buttons Space" customClass="ButtonBar" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="435" y="170" width="110" height="490"/>
+                                <rect key="frame" x="48" y="537" width="490" height="110"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Zy-Re-nnC" userLabel="SecondGrid">
-                                        <rect key="frame" x="15" y="110" width="80" height="80"/>
+                                        <rect key="frame" x="110" y="15" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="9Zy-Re-nnC" secondAttribute="height" multiplier="1:1" id="BR3-Y6-8c3"/>
                                             <constraint firstAttribute="height" constant="80" id="xRH-so-mC1"/>
@@ -90,7 +90,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4A-Sy-FEf" userLabel="ThirdGrid">
-                                        <rect key="frame" x="15" y="205" width="80" height="80"/>
+                                        <rect key="frame" x="205" y="15" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="d4A-Sy-FEf" secondAttribute="height" multiplier="1:1" id="VI4-D1-5eD"/>
                                             <constraint firstAttribute="height" constant="80" id="tmh-RK-Uwi"/>
@@ -120,14 +120,14 @@
                                         </constraints>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Selected Copy" translatesAutoresizingMaskIntoConstraints="NO" id="Twy-4Y-l9c" userLabel="SelectedThirdGrid">
-                                        <rect key="frame" x="15" y="205" width="80" height="80"/>
+                                        <rect key="frame" x="205" y="15" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="2PC-KF-3Q9"/>
                                             <constraint firstAttribute="width" secondItem="Twy-4Y-l9c" secondAttribute="height" multiplier="1:1" id="naw-XS-3R4"/>
                                         </constraints>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Selected Copy" translatesAutoresizingMaskIntoConstraints="NO" id="cAS-4Z-COS" userLabel="SelectedSecondGrid">
-                                        <rect key="frame" x="15" y="110" width="80" height="80"/>
+                                        <rect key="frame" x="110" y="15" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="cAS-4Z-COS" secondAttribute="height" multiplier="1:1" id="JDW-hx-pq8"/>
                                             <constraint firstAttribute="height" constant="80" id="Ryr-aS-AS6"/>
@@ -139,7 +139,7 @@
                                         </variation>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gom-Za-uwg" userLabel="FifthGrid">
-                                        <rect key="frame" x="15" y="395" width="80" height="80"/>
+                                        <rect key="frame" x="395" y="15" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="KnT-bd-Aqx"/>
                                             <constraint firstAttribute="width" secondItem="Gom-Za-uwg" secondAttribute="height" multiplier="1:1" id="uq9-X8-bU5"/>
@@ -162,7 +162,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hR-Bw-2D0" userLabel="FourthGrid">
-                                        <rect key="frame" x="15" y="300" width="80" height="80"/>
+                                        <rect key="frame" x="300" y="15" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="0hg-fz-BZM"/>
                                             <constraint firstAttribute="width" secondItem="2hR-Bw-2D0" secondAttribute="height" multiplier="1:1" id="w1G-Vm-nVJ"/>
@@ -185,7 +185,7 @@
                                         </connections>
                                     </button>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Selected Copy" translatesAutoresizingMaskIntoConstraints="NO" id="g1g-ag-drD" userLabel="SelectedFourthGrid">
-                                        <rect key="frame" x="15" y="300" width="80" height="80"/>
+                                        <rect key="frame" x="300" y="15" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="UYn-W3-tC6"/>
                                             <constraint firstAttribute="width" secondItem="g1g-ag-drD" secondAttribute="height" multiplier="1:1" id="nhL-Gj-J2A"/>
@@ -204,7 +204,7 @@
                                         </variation>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Selected Copy" translatesAutoresizingMaskIntoConstraints="NO" id="Wg8-cN-jCb" userLabel="SelectedFifthGrid">
-                                        <rect key="frame" x="15" y="395" width="80" height="80"/>
+                                        <rect key="frame" x="395" y="15" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Wg8-cN-jCb" secondAttribute="height" multiplier="1:1" id="5bw-xC-j5k"/>
                                             <constraint firstAttribute="width" constant="80" id="fdu-D9-ZWA"/>
@@ -328,9 +328,6 @@
                                     <constraint firstItem="JKw-ph-UeG" firstAttribute="top" secondItem="BBa-Hd-EbA" secondAttribute="top" constant="15" id="bB2-fy-ML1"/>
                                     <constraint firstAttribute="bottom" secondItem="d4A-Sy-FEf" secondAttribute="bottom" constant="15" id="bdJ-aM-wFK"/>
                                     <constraint firstItem="cAS-4Z-COS" firstAttribute="top" secondItem="BBa-Hd-EbA" secondAttribute="top" constant="15" id="bx3-pv-k0V"/>
-                                    <constraint firstAttribute="width" constant="500" id="cVs-bO-dpx">
-                                        <variation key="heightClass=regular" constant="490"/>
-                                    </constraint>
                                     <constraint firstItem="Wg8-cN-jCb" firstAttribute="top" secondItem="g1g-ag-drD" secondAttribute="top" id="cso-t9-aDG"/>
                                     <constraint firstItem="Wg8-cN-jCb" firstAttribute="top" secondItem="Gom-Za-uwg" secondAttribute="top" id="eA6-EC-mR6"/>
                                     <constraint firstAttribute="bottom" secondItem="g1g-ag-drD" secondAttribute="bottom" constant="15" id="eoD-vD-mAS"/>
@@ -412,7 +409,6 @@
                                         <exclude reference="885-ya-w2g"/>
                                         <exclude reference="NYD-Vp-2Cr"/>
                                         <exclude reference="TRd-Hj-ApI"/>
-                                        <exclude reference="cVs-bO-dpx"/>
                                         <exclude reference="0cH-ve-0R9"/>
                                         <exclude reference="2MD-7I-Ms0"/>
                                         <exclude reference="4r2-TD-C5S"/>
@@ -602,7 +598,6 @@
                                     <mask key="constraints">
                                         <exclude reference="1Pn-Wt-eJE"/>
                                         <include reference="885-ya-w2g"/>
-                                        <include reference="cVs-bO-dpx"/>
                                         <exclude reference="iNp-rF-AHs"/>
                                         <include reference="2MD-7I-Ms0"/>
                                         <include reference="6B0-MY-snn"/>
@@ -679,10 +674,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Odw-Un-JUH" userLabel="Swipe View" customClass="SwipeView" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="5" y="75" width="110" height="572"/>
+                                <rect key="frame" x="125" y="103" width="300" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zc-v1-S16">
-                                        <rect key="frame" x="2.5" y="276.5" width="105" height="19"/>
+                                        <rect key="frame" x="97.5" y="25" width="105" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="mkr-1E-qYt"/>
                                         </constraints>
@@ -696,7 +691,7 @@
                                         </variation>
                                     </label>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="swipe symbol" translatesAutoresizingMaskIntoConstraints="NO" id="pua-DR-rsY">
-                                        <rect key="frame" x="47.5" y="253" width="15" height="15"/>
+                                        <rect key="frame" x="142.5" y="2" width="15" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="pua-DR-rsY" secondAttribute="height" multiplier="1:1" id="3JG-9C-JXz"/>
                                             <constraint firstAttribute="width" constant="15" id="D9p-Up-5go"/>
@@ -720,10 +715,10 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="DUh-r9-cKX"/>
+                                        <exclude reference="Jhe-7u-HhJ"/>
                                         <exclude reference="RnU-PV-1mo"/>
                                         <exclude reference="VGd-Ic-RD9"/>
                                         <exclude reference="VQG-fn-uLp"/>
-                                        <exclude reference="Jhe-7u-HhJ"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact">
@@ -731,14 +726,14 @@
                                         <include reference="DUh-r9-cKX"/>
                                         <exclude reference="MQc-B2-pZ5"/>
                                         <exclude reference="et2-h7-PRX"/>
+                                        <include reference="Jhe-7u-HhJ"/>
+                                        <exclude reference="nWx-Qu-Bup"/>
                                         <exclude reference="KfC-MW-Rdn"/>
                                         <include reference="RnU-PV-1mo"/>
                                         <include reference="VGd-Ic-RD9"/>
                                         <include reference="VQG-fn-uLp"/>
                                         <exclude reference="psf-UY-9lp"/>
                                         <exclude reference="xrq-gs-go4"/>
-                                        <include reference="Jhe-7u-HhJ"/>
-                                        <exclude reference="nWx-Qu-Bup"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -767,6 +762,7 @@
                             </constraint>
                             <constraint firstItem="Odw-Un-JUH" firstAttribute="top" secondItem="IBN-a9-GoC" secondAttribute="bottom" constant="36" id="Ty2-vk-J2C"/>
                             <constraint firstItem="kdX-qk-rZk" firstAttribute="trailing" secondItem="BBa-Hd-EbA" secondAttribute="trailing" constant="12" id="a6W-mo-Cqt"/>
+                            <constraint firstItem="BBa-Hd-EbA" firstAttribute="leading" secondItem="kdX-qk-rZk" secondAttribute="leading" constant="48" id="b0R-jJ-pg0"/>
                             <constraint firstItem="UiA-VA-EZq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-31" id="bLR-pZ-Yzz"/>
                             <constraint firstItem="UiA-VA-EZq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dqC-d6-w1T"/>
                             <constraint firstItem="kdX-qk-rZk" firstAttribute="bottom" secondItem="BBa-Hd-EbA" secondAttribute="bottom" constant="15" id="fPd-8I-bkH"/>

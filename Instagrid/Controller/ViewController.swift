@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet weak var picturesGrid: UIView!
     
@@ -22,7 +22,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.image.delegate = self
+        /* image.delegate = picturesGrid */
         buttonBar.buttonDelegate = self
         buttonBar.didTapFirstGridButton()
     }
@@ -82,6 +82,7 @@ extension ViewController: ButtonBarDelegate {
 
 extension ViewController: PicturesAddingDelegate {
     func onPictureClick(grid: GridHandler) {
+        image.delegate = grid
         let actionSheet = UIAlertController(title: "Photo Source", message: "Choose a source", preferredStyle: .actionSheet)
         
         actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action:UIAlertAction) in

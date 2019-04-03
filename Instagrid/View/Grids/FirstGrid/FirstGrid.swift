@@ -17,20 +17,27 @@ class FirstGrid: GridHandler {
         return "FirstGrid"
     }
     
-    @IBAction func didTapFirstPicture() {
-        selectedImage = picturesPosition[0]
-        delegate?.onPictureClick(grid: FirstGrid())
+    override func setup() {
+        super.setup()
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(didTapFirstPicture))
+        picturesPosition[0].isUserInteractionEnabled = true
+        picturesPosition[0].addGestureRecognizer(singleTap)
+    }
+    
+    @objc func didTapFirstPicture(sender: UIButton) {
+        print ("hello")
+        selectedImage = picturesPosition[sender.tag]
+        delegate?.onPictureClick(grid: self)
     }
     
     @IBAction func didTapSecondPicture() {
         selectedImage = picturesPosition[1]
-        delegate?.onPictureClick(grid: FirstGrid())
-
+        delegate?.onPictureClick(grid: self)
     }
     
     @IBAction func didTapThirdPicture() {
+        delegate?.onPictureClick(grid: self)
         selectedImage = picturesPosition[2]
-        delegate?.onPictureClick(grid: FirstGrid())
     }
     
     
