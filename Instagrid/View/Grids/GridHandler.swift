@@ -59,6 +59,6 @@ class GridHandler: UIView, UIImagePickerControllerDelegate, UINavigationControll
     func isGridCompleted (image: UIImage) -> Bool {
         if image != emptyPicture {
         return true
-            }
+        }; return false
     }
 }

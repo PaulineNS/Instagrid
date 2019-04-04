@@ -870,6 +870,11 @@
                                 <exclude reference="ko6-9t-fBb"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="p7i-hU-egk" appends="YES" id="pqB-D0-jwK"/>
+                            <outletCollection property="gestureRecognizers" destination="8VQ-Do-kpf" appends="YES" id="ZKA-Yk-bWC"/>
+                            <outletCollection property="gestureRecognizers" destination="DrQ-go-SpQ" appends="YES" id="u3F-6Y-nf8"/>
+                        </connections>
                     </view>
                     <size key="freeformSize" width="550" height="667"/>
                     <connections>
