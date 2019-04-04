@@ -45,6 +45,12 @@ class FirstGrid: GridHandler {
         delegate?.onPictureClick(grid: self)
     }
     
-    
-    
+    override func isGridCompleted(image: UIImage) -> Bool {
+        for image in picturesPosition {
+            if image != emptyPicture {
+                return true
+            }
+        }; return false
+    }
+
 }

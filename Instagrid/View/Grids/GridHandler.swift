@@ -53,4 +53,12 @@ class GridHandler: UIView, UIImagePickerControllerDelegate, UINavigationControll
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
+    
+    let emptyPicture = UIImage(named: "Blue Cross")
+    
+    func isGridCompleted (image: UIImage) -> Bool {
+        if image != emptyPicture {
+        return true
+            }
+    }
 }
