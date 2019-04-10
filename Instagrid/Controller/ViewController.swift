@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var buttonBar: ButtonBar!
     
+    @IBOutlet weak var swipe: SwipeView!
+    
     @IBAction func didDoubleTapToChangeGridColour(_ sender: UITapGestureRecognizer) {
         picturesGrid.backgroundColor = UIColor (red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1.0)
     }
@@ -22,9 +24,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /* image.delegate = picturesGrid */
         buttonBar.buttonDelegate = self
         buttonBar.didTapFirstGridButton()
+        swipe.delegate = self
     }
     
     func gridDisplay(grid: GridHandler ) {
@@ -108,10 +110,12 @@ extension ViewController: PicturesAddingDelegate {
 
 extension ViewController: SwipeDelegate {
     func onSwipeSymbol() {
+       // if grid.isGridCompleted() {
         let activityController = UIActivityViewController(activityItems: [picturesGrid], applicationActivities: nil)
         present(activityController, animated: true, completion: nil)
+        }
     }
-}
+
 
 
 

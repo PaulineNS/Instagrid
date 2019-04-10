@@ -45,12 +45,14 @@ class FirstGrid: GridHandler {
         delegate?.onPictureClick(grid: self)
     }
     
-    override func isGridCompleted(image: UIImage) -> Bool {
-        for image in picturesPosition {
-            if image != emptyPicture {
+    override func isGridCompleted() -> Bool {
+        if picturesPosition[1] != emptyPicture && picturesPosition[2] != emptyPicture && picturesPosition[3] != emptyPicture {
                 return true
-            }
-        }; return false
+        } else {
+            let shareAlert = UIAlertController(title: "You need to set all images before sharing!", message: "", preferredStyle: .alert)
+            shareAlert.addAction(UIAlertAction(title: "Ok 👍", style: .default, handler: nil))
+            return false
+        }
     }
-
+    
 }

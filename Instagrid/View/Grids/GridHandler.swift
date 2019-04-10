@@ -56,9 +56,7 @@ class GridHandler: UIView, UIImagePickerControllerDelegate, UINavigationControll
     
     let emptyPicture = UIImage(named: "Blue Cross")
     
-    func isGridCompleted (image: UIImage) -> Bool {
-        if image != emptyPicture {
+    func isGridCompleted()  -> Bool {
         return true
-        }; return false
+        }
     }
-}

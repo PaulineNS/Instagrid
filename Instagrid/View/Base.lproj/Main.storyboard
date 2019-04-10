@@ -880,6 +880,7 @@
                     <connections>
                         <outlet property="buttonBar" destination="BBa-Hd-EbA" id="DeM-bm-8u9"/>
                         <outlet property="picturesGrid" destination="UiA-VA-EZq" id="duB-8c-OFD"/>
+                        <outlet property="swipe" destination="Odw-Un-JUH" id="lLR-cc-BpF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
