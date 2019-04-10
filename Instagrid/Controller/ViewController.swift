@@ -29,6 +29,11 @@ class ViewController: UIViewController {
         swipe.delegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        swipe.swipeOrientation()
+    }
+    
     func gridDisplay(grid: GridHandler ) {
         grid.delegate = self
         self.picturesGrid.subviews.forEach({ $0.removeFromSuperview() })
@@ -49,19 +54,25 @@ class ViewController: UIViewController {
     }
     
     private func selectThirdGrid() {
+        
         let thirdGrid = ThirdGrid(frame: picturesGrid.bounds)
         gridDisplay(grid: thirdGrid)
     }
     
-    private func selectFourthGrid(){
+    private func selectFourthGrid() {
+        
         let fourthGrid = FourthGrid(frame: picturesGrid.bounds)
         gridDisplay(grid: fourthGrid)
     }
     
-    private func selectFifthGrid(){
+    private func selectFifthGrid() {
+        
         let fifthGrid = FifthGrid(frame: picturesGrid.bounds)
         gridDisplay(grid: fifthGrid)
     }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        swipe.swipeOrientation()    }
 
 }
 
@@ -110,9 +121,10 @@ extension ViewController: PicturesAddingDelegate {
 
 extension ViewController: SwipeDelegate {
     func onSwipeSymbol() {
-       // if grid.isGridCompleted() {
+        if let grid = picturesGrid.subviews[0] as? GridHandler, grid.isGridCompleted() {
         let activityController = UIActivityViewController(activityItems: [picturesGrid], applicationActivities: nil)
         present(activityController, animated: true, completion: nil)
+            }
         }
     }
 

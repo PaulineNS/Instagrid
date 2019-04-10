@@ -30,6 +30,8 @@ class GridHandler: UIView, UIImagePickerControllerDelegate, UINavigationControll
             self.gridHandler.frame = self.bounds
             self.gridHandler.autoresizingMask = [.flexibleHeight, .flexibleWidth]
             self.addSubview(gridHandler)
+        } else {
+            print ("Missing Xib Name")
         }
     }
     
