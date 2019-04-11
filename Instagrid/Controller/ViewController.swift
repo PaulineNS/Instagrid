@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVFoundation
+import Photos
 
 class ViewController: UIViewController {
     
@@ -72,9 +74,31 @@ class ViewController: UIViewController {
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        swipe.swipeOrientation()    }
-
+        swipe.swipeOrientation()
+    }
+    
+    func openCamera(){
+        let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
+    
+        switch cameraAuthorizationStatus {
+        case .denied:
+            break
+        case .authorized:
+            break
+        case .restricted:
+            break
+        case .notDetermined:
+            AVCaptureDevice.requestAccess(for: .video) { granted in
+                if granted {
+                    print("Granted access to the camera")
+                } else {
+                    print("Denied access to the camera")
+                }
+            }
+        }
+    }
 }
+
 
 extension ViewController: ButtonBarDelegate {
     func onButtonClick(buttonType: ButtonType) {
@@ -96,6 +120,7 @@ extension ViewController: ButtonBarDelegate {
 extension ViewController: PicturesAddingDelegate {
     func onPictureClick(grid: GridHandler) {
         image.delegate = grid
+        
         let actionSheet = UIAlertController(title: "Photo Source", message: "Choose a source", preferredStyle: .actionSheet)
         
         actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action:UIAlertAction) in
@@ -109,8 +134,35 @@ extension ViewController: PicturesAddingDelegate {
         }))
         
         actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: { (action:UIAlertAction) in
-            self.image.sourceType = .photoLibrary
-            self.present(self.image, animated: true, completion: nil)
+            
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+                PHPhotoLibrary.requestAuthorization { (status) in
+                    switch status {
+                    case .authorized:
+                        self.image.sourceType = .photoLibrary
+                        self.present(self.image, animated: true, completion: nil)
+                    case .notDetermined:
+                        if status == PHAuthorizationStatus.authorized {
+                            self.image.sourceType = .photoLibrary
+                            self.present(self.image, animated: true, completion: nil)
+                        }
+                    case .restricted:
+                        let alert = UIAlertController(title: "Photo Library Restricted", message: "Photo Library access is restricted and cannot be accessed", preferredStyle: .alert)
+                        let okAction = UIAlertAction(title: "OK", style: .default)
+                        alert.addAction(okAction)
+                    case .denied:
+                        let alert = UIAlertController(title: "Photo Library Denied", message: "Photo Library access was previously denied. Please update your Settings if you wish to change this.", preferredStyle: .alert)
+                        let goToSettingsAction = UIAlertAction(title: "Go to Settings", style: .default) { (action) in
+                            DispatchQueue.main.async {
+                                let url = URL(string: UIApplication.openSettingsURLString)!
+                                UIApplication.shared.open(url, options: [:])
+                            }
+                        }
+                        alert.addAction(goToSettingsAction)
+                        
+                    }
+                }
+            }
         }))
         
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
@@ -118,6 +170,7 @@ extension ViewController: PicturesAddingDelegate {
         self.present(actionSheet, animated: true, completion: nil)
     }
 }
+
 
 extension ViewController: SwipeDelegate {
     func onSwipeSymbol() {

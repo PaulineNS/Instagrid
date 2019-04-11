@@ -50,5 +50,7 @@
 		<string>Delm-Medium.otf</string>
 		<string>ThirstySoftRegular.otf</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Use photos to create a beautiful grid!</string>
 </dict>
 </plist>
