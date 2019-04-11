@@ -126,8 +126,29 @@ extension ViewController: PicturesAddingDelegate {
         actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action:UIAlertAction) in
             
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
-                self.image.sourceType = .camera
-                self.present(self.image, animated: true, completion: nil)
+                switch AVCaptureDevice.authorizationStatus(for: AVMediaType.video) {
+                case .authorized:
+                    self.image.sourceType = .camera
+                    self.present(self.image, animated: true, completion: nil)
+                case .notDetermined:
+                    if AVCaptureDevice.authorizationStatus(for: AVMediaType.video) == AVAuthorizationStatus.authorized {
+                        self.image.sourceType = .camera
+                        self.present(self.image, animated: true, completion: nil)
+                    }
+                case .restricted:
+                    let alert = UIAlertController(title: "Camera Restricted", message: "Camera access is restricted and cannot be accessed", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "OK", style: .default)
+                    alert.addAction(okAction)
+                case .denied:
+                    let alert = UIAlertController(title: "Camera Denied", message: "Camera access was previously denied. Please update your Settings if you wish to change this.", preferredStyle: .alert)
+                    let goToSettingsAction = UIAlertAction(title: "Go to Settings", style: .default) { (action) in
+                        DispatchQueue.main.async {
+                            let url = URL(string: UIApplication.openSettingsURLString)!
+                            UIApplication.shared.open(url, options: [:])
+                        }
+                    }
+                    alert.addAction(goToSettingsAction)
+                }
             } else {
                 print ("The Camera is not available")
             }
@@ -168,9 +189,8 @@ extension ViewController: PicturesAddingDelegate {
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         self.present(actionSheet, animated: true, completion: nil)
+        }
     }
-}
-
 
 extension ViewController: SwipeDelegate {
     func onSwipeSymbol() {
