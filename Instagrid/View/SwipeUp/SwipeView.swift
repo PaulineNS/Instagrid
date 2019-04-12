@@ -17,19 +17,17 @@ class SwipeView: UIView {
     @IBOutlet weak var swipeLabel: UILabel!
     
     @IBAction func swipeUp(_ sender: UISwipeGestureRecognizer) {
-        if UIDevice.current.orientation.isLandscape && sender.direction == .left {
+        if UIDevice.current.orientation.isPortrait && sender.direction == .up {
             delegate?.onSwipeSymbol()
         }
     }
-    
     
     @IBAction func swipeLeft(_ sender: UISwipeGestureRecognizer) {
         if UIDevice.current.orientation.isLandscape && sender.direction == .left {
             delegate?.onSwipeSymbol()
         }
     }
-    
-    
+
     func swipeOrientation() {
         if UIDevice.current.orientation.isLandscape {
             swipeLabel.text = "Swipe left to share"

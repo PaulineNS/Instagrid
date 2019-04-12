@@ -366,7 +366,6 @@
                                     <constraint firstAttribute="trailing" secondItem="JKw-ph-UeG" secondAttribute="trailing" constant="8" id="hoA-Xq-7MC">
                                         <variation key="heightClass=compact" constant="15"/>
                                     </constraint>
-                                    <constraint firstAttribute="width" constant="299" id="iNp-rF-AHs"/>
                                     <constraint firstItem="d4A-Sy-FEf" firstAttribute="leading" secondItem="9Zy-Re-nnC" secondAttribute="trailing" constant="20" id="iif-G6-4JV">
                                         <variation key="heightClass=regular" constant="15"/>
                                     </constraint>
@@ -545,7 +544,6 @@
                                         <include reference="PcK-5E-Kx1"/>
                                         <exclude reference="TRd-Hj-ApI"/>
                                         <include reference="XGG-GE-4L8"/>
-                                        <exclude reference="iNp-rF-AHs"/>
                                         <exclude reference="0cH-ve-0R9"/>
                                         <include reference="4r2-TD-C5S"/>
                                         <include reference="7WZ-i8-dV2"/>
@@ -620,7 +618,6 @@
                                     <mask key="constraints">
                                         <exclude reference="1Pn-Wt-eJE"/>
                                         <include reference="885-ya-w2g"/>
-                                        <exclude reference="iNp-rF-AHs"/>
                                         <include reference="2MD-7I-Ms0"/>
                                         <include reference="6B0-MY-snn"/>
                                         <exclude reference="OFM-xu-B64"/>

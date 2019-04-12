@@ -76,29 +76,7 @@ class ViewController: UIViewController {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         swipe.swipeOrientation()
     }
-    
-    func openCamera(){
-        let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
-    
-        switch cameraAuthorizationStatus {
-        case .denied:
-            break
-        case .authorized:
-            break
-        case .restricted:
-            break
-        case .notDetermined:
-            AVCaptureDevice.requestAccess(for: .video) { granted in
-                if granted {
-                    print("Granted access to the camera")
-                } else {
-                    print("Denied access to the camera")
-                }
-            }
-        }
-    }
 }
-
 
 extension ViewController: ButtonBarDelegate {
     func onButtonClick(buttonType: ButtonType) {
