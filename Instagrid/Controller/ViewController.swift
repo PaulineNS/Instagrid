@@ -47,30 +47,44 @@ class ViewController: UIViewController {
         
         let firstGrid = FirstGrid(frame: picturesGrid.bounds)
         gridDisplay(grid: firstGrid)
+        displaySwipeLabel(grid: firstGrid)
     }
     
     private func selectSecondGrid() {
         
         let secondGrid = SecondGrid(frame: picturesGrid.bounds)
         gridDisplay(grid: secondGrid)
+        displaySwipeLabel(grid: secondGrid)
     }
     
     private func selectThirdGrid() {
         
         let thirdGrid = ThirdGrid(frame: picturesGrid.bounds)
         gridDisplay(grid: thirdGrid)
+        displaySwipeLabel(grid: thirdGrid)
     }
     
     private func selectFourthGrid() {
         
         let fourthGrid = FourthGrid(frame: picturesGrid.bounds)
         gridDisplay(grid: fourthGrid)
+        displaySwipeLabel(grid: fourthGrid)
     }
     
     private func selectFifthGrid() {
         
         let fifthGrid = FifthGrid(frame: picturesGrid.bounds)
         gridDisplay(grid: fifthGrid)
+        displaySwipeLabel(grid: fifthGrid)
+    }
+    
+    private func displaySwipeLabel(grid: GridHandler){
+        if grid.isGridCompleted() {
+            swipe.isHidden = false
+        } else {
+            swipe.isHidden = true
+        }
+    
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -162,11 +176,13 @@ extension ViewController: PicturesAddingDelegate {
                     }
                 }
             }
+            
         }))
         
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         self.present(actionSheet, animated: true, completion: nil)
+        
         }
     }
 
