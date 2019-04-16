@@ -57,8 +57,6 @@ class ThirdGrid: GridHandler {
         if picturesPosition[0].image != emptyPicture && picturesPosition[1].image != emptyPicture && picturesPosition[2].image != emptyPicture && picturesPosition[3].image != emptyPicture {
             return true
         } else {
-            let shareAlert = UIAlertController(title: "You need to set all images before sharing!", message: "", preferredStyle: .alert)
-            shareAlert.addAction(UIAlertAction(title: "Ok 👍", style: .default, handler: nil))
             return false
         }
     }

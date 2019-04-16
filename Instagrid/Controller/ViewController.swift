@@ -175,9 +175,13 @@ extension ViewController: SwipeDelegate {
         if let grid = picturesGrid.subviews[0] as? GridHandler, grid.isGridCompleted() {
         let activityController = UIActivityViewController(activityItems: [picturesGrid], applicationActivities: nil)
         present(activityController, animated: true, completion: nil)
-            }
+        } else {
+            let shareAlert = UIAlertController(title: "You need to set all images before sharing!", message: "", preferredStyle: .alert)
+            shareAlert.addAction(UIAlertAction(title: "Ok 👍", style: .default))
+            present(shareAlert, animated: true)
         }
     }
+}
 
 
 
