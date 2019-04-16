@@ -46,7 +46,7 @@ class FirstGrid: GridHandler {
     }
     
     override func isGridCompleted() -> Bool {
-        if picturesPosition[1] != emptyPicture && picturesPosition[2] != emptyPicture && picturesPosition[3] != emptyPicture {
+        if picturesPosition[0].image != emptyPicture && picturesPosition[1].image != emptyPicture && picturesPosition[2].image != emptyPicture {
                 return true
         } else {
             let shareAlert = UIAlertController(title: "You need to set all images before sharing!", message: "", preferredStyle: .alert)
