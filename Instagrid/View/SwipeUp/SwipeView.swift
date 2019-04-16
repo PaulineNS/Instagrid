@@ -31,7 +31,6 @@ class SwipeView: UIView {
     func swipeOrientation() {
         if UIDevice.current.orientation.isLandscape {
             swipeLabel.text = "Swipe left to share"
-            swipeSymbol.transform = CGAffineTransform(rotationAngle: .pi * 1.5)
         } else if UIDevice.current.orientation.isPortrait {
             swipeLabel.text = "Swipe up to share"
         }

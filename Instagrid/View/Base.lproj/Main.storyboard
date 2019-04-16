@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="landscape">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -27,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UiA-VA-EZq" userLabel="Pictures Grid">
-                                <rect key="frame" x="125" y="183" width="300" height="301"/>
+                                <rect key="frame" x="125" y="183.5" width="300" height="300"/>
                                 <color key="backgroundColor" red="0.14693871140480042" green="0.40562295913696289" blue="0.5872226357460022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="Jch-O9-mx5"/>
@@ -51,13 +51,13 @@
                                 </variation>
                             </view>
                             <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBa-Hd-EbA" userLabel="Buttons Scroll View" customClass="ButtonBar" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="455" y="25" width="80" height="460"/>
+                                <rect key="frame" x="3" y="536.5" width="460" height="110.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zEi-HR-ljE" userLabel="Buttons Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="460"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="460" height="110.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Er-w1-wP3" userLabel="FirstGridView">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <rect key="frame" x="0.0" y="15.5" width="80" height="80"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gT-nC-1jV" userLabel="FirstGrid">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -101,7 +101,7 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JcA-ee-ZOJ" userLabel="SecondGridView">
-                                                <rect key="frame" x="0.0" y="95" width="80" height="80"/>
+                                                <rect key="frame" x="95" y="15.5" width="80" height="80"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Zy-Re-nnC" userLabel="SecondGrid">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -145,7 +145,7 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l6d-B7-MOQ" userLabel="ThirdGridView">
-                                                <rect key="frame" x="0.0" y="190" width="80" height="80"/>
+                                                <rect key="frame" x="190" y="15.5" width="80" height="80"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4A-Sy-FEf" userLabel="ThirdGrid">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -189,7 +189,7 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ghm-6I-a85" userLabel="FourthGridView">
-                                                <rect key="frame" x="0.0" y="285" width="80" height="80"/>
+                                                <rect key="frame" x="285" y="15.5" width="80" height="80"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hR-Bw-2D0" userLabel="FourthGrid">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -233,7 +233,7 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZ8-eu-FOa" userLabel="FifthGridView">
-                                                <rect key="frame" x="0.0" y="380" width="80" height="80"/>
+                                                <rect key="frame" x="380" y="15.5" width="80" height="80"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gom-Za-uwg" userLabel="FifthGrid">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -346,7 +346,7 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBN-a9-GoC">
-                                <rect key="frame" x="225.5" y="25" width="99" height="30"/>
+                                <rect key="frame" x="225.5" y="37" width="99" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="VII-Bh-M5w"/>
                                 </constraints>
@@ -355,10 +355,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Odw-Un-JUH" userLabel="Swipe View" customClass="SwipeView" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="5" y="75" width="110" height="572"/>
+                                <rect key="frame" x="125" y="128.5" width="300" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zc-v1-S16">
-                                        <rect key="frame" x="2.5" y="276.5" width="105" height="19"/>
+                                        <rect key="frame" x="97.5" y="25" width="105" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="mkr-1E-qYt"/>
                                         </constraints>
@@ -371,12 +371,13 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="swipe symbol" translatesAutoresizingMaskIntoConstraints="NO" id="pua-DR-rsY">
-                                        <rect key="frame" x="47.5" y="253" width="15" height="15"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="swipe up" translatesAutoresizingMaskIntoConstraints="NO" id="pua-DR-rsY">
+                                        <rect key="frame" x="142.5" y="2" width="15" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="pua-DR-rsY" secondAttribute="height" multiplier="1:1" id="3JG-9C-JXz"/>
                                             <constraint firstAttribute="width" constant="15" id="D9p-Up-5go"/>
                                         </constraints>
+                                        <variation key="heightClass=compact" image="swipe left"/>
                                     </imageView>
                                 </subviews>
                                 <gestureRecognizers/>
@@ -451,7 +452,7 @@
                             <constraint firstItem="UiA-VA-EZq" firstAttribute="top" secondItem="Odw-Un-JUH" secondAttribute="bottom" constant="5" id="NwE-zX-G4F"/>
                             <constraint firstItem="UiA-VA-EZq" firstAttribute="bottom" secondItem="BBa-Hd-EbA" secondAttribute="bottom" id="OKk-QA-VPf"/>
                             <constraint firstItem="Odw-Un-JUH" firstAttribute="leading" secondItem="kdX-qk-rZk" secondAttribute="leading" constant="37" id="P4X-mn-ygV">
-                                <variation key="heightClass=compact" constant="5"/>
+                                <variation key="heightClass=compact" constant="7"/>
                             </constraint>
                             <constraint firstItem="BBa-Hd-EbA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PHX-15-Jlk"/>
                             <constraint firstItem="Odw-Un-JUH" firstAttribute="top" secondItem="IBN-a9-GoC" secondAttribute="bottom" constant="36" id="Ty2-vk-J2C"/>
@@ -654,6 +655,7 @@
         <image name="grille 3 bas" width="80" height="80"/>
         <image name="grille 3 haut" width="80" height="80"/>
         <image name="grille 4" width="80" height="80"/>
-        <image name="swipe symbol" width="15" height="10"/>
+        <image name="swipe left" width="10" height="15"/>
+        <image name="swipe up" width="15" height="10"/>
     </resources>
 </document>
