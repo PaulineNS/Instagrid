@@ -27,6 +27,7 @@
 		564B07AE224911E400A244D2 /* FourthGrid.xib in Resources */ = {isa = PBXBuildFile; fileRef = 564B07AD224911E400A244D2 /* FourthGrid.xib */; };
 		564B07B0224911FF00A244D2 /* FifthGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564B07AF224911FF00A244D2 /* FifthGrid.swift */; };
 		564B07B22249121200A244D2 /* FifthGrid.xib in Resources */ = {isa = PBXBuildFile; fileRef = 564B07B12249121200A244D2 /* FifthGrid.xib */; };
+		56B1E646226785C4002C34B5 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B1E645226785C4002C34B5 /* UIViewExtension.swift */; };
 		56E4A58F223A9D60001ED7D4 /* ButtonBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E4A58E223A9D60001ED7D4 /* ButtonBar.swift */; };
 		56E4A592223A9DA6001ED7D4 /* ButtonBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E4A591223A9DA6001ED7D4 /* ButtonBarDelegate.swift */; };
 		56E4A596223FF2C2001ED7D4 /* ButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E4A595223FF2C2001ED7D4 /* ButtonType.swift */; };
@@ -56,6 +57,7 @@
 		564B07AD224911E400A244D2 /* FourthGrid.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FourthGrid.xib; sourceTree = "<group>"; };
 		564B07AF224911FF00A244D2 /* FifthGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthGrid.swift; sourceTree = "<group>"; };
 		564B07B12249121200A244D2 /* FifthGrid.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FifthGrid.xib; sourceTree = "<group>"; };
+		56B1E645226785C4002C34B5 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		56E4A58E223A9D60001ED7D4 /* ButtonBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBar.swift; sourceTree = "<group>"; };
 		56E4A591223A9DA6001ED7D4 /* ButtonBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBarDelegate.swift; sourceTree = "<group>"; };
 		56E4A595223FF2C2001ED7D4 /* ButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonType.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				564B07A622451E7E00A244D2 /* Grids */,
 				564B07A422451E2A00A244D2 /* ButtonsGrids */,
 				564B07A522451E4C00A244D2 /* SwipeUp */,
+				56B1E645226785C4002C34B5 /* UIViewExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56B1E646226785C4002C34B5 /* UIViewExtension.swift in Sources */,
 				5612CB30222FFE5900E75A81 /* ViewController.swift in Sources */,
 				5612CB632239820300E75A81 /* ThirdGrid.swift in Sources */,
 				5612CB612237AE3200E75A81 /* GridHandler.swift in Sources */,

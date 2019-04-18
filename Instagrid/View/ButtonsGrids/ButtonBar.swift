@@ -10,9 +10,9 @@ import UIKit
 
 class ButtonBar: UIScrollView {
     
-    @IBOutlet var selectedGrid: [UIImageView]!
-    
     var buttonDelegate: ButtonBarDelegate?
+    
+    @IBOutlet var selectedGrid: [UIImageView]!
     
     private func unselectButton() {
         selectedGrid.forEach({ $0.isHidden = true })

@@ -28,21 +28,21 @@ class FourthGrid: GridHandler {
     }
     
     @objc func didTapFirstPicture() {
-        selectedImage = picturesPosition[0]
+        selectedUIImageView = picturesPosition[0]
         delegate?.onPictureClick(grid: self)
     }
     
     @objc func didTapSecondPicture() {
-        selectedImage = picturesPosition[1]
+        selectedUIImageView = picturesPosition[1]
         delegate?.onPictureClick(grid: self)
     }
     
     override func isGridCompleted() -> Bool {
-        if picturesPosition[0].image != emptyPicture && picturesPosition[1].image != emptyPicture {
-            return true
-        } else {
-            return false
+        for image in picturesPosition {
+            if image.image == emptyPicture {
+                return false
+            }
         }
+        return true
     }
-    
 }

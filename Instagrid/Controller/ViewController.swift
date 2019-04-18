@@ -12,17 +12,11 @@ import Photos
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var picturesGrid: UIView!
-    
-    @IBOutlet weak var buttonBar: ButtonBar!
-    
-    @IBOutlet weak var swipe: SwipeView!
-    
-    @IBAction func didDoubleTapToChangeGridColour(_ sender: UITapGestureRecognizer) {
-        picturesGrid.backgroundColor = UIColor (red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1.0)
-    }
-    
     let image = UIImagePickerController()
+    
+    @IBOutlet weak var picturesGrid: UIView!
+    @IBOutlet weak var buttonBar: ButtonBar!
+    @IBOutlet weak var swipe: SwipeView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,80 +30,53 @@ class ViewController: UIViewController {
         swipe.swipeOrientation()
     }
     
-    func gridDisplay(grid: GridHandler ) {
-        grid.delegate = self
-        self.picturesGrid.subviews.forEach({ $0.removeFromSuperview() })
-        picturesGrid.addSubview(grid)
-        picturesGrid.autoresizesSubviews = true
-    }
-    
-    private func selectFirstGrid() {
-        
-        let firstGrid = FirstGrid(frame: picturesGrid.bounds)
-        gridDisplay(grid: firstGrid)
-        displaySwipeLabel(grid: firstGrid)
-    }
-    
-    private func selectSecondGrid() {
-        
-        let secondGrid = SecondGrid(frame: picturesGrid.bounds)
-        gridDisplay(grid: secondGrid)
-        displaySwipeLabel(grid: secondGrid)
-    }
-    
-    private func selectThirdGrid() {
-        
-        let thirdGrid = ThirdGrid(frame: picturesGrid.bounds)
-        gridDisplay(grid: thirdGrid)
-        displaySwipeLabel(grid: thirdGrid)
-    }
-    
-    private func selectFourthGrid() {
-        
-        let fourthGrid = FourthGrid(frame: picturesGrid.bounds)
-        gridDisplay(grid: fourthGrid)
-        displaySwipeLabel(grid: fourthGrid)
-    }
-    
-    private func selectFifthGrid() {
-        
-        let fifthGrid = FifthGrid(frame: picturesGrid.bounds)
-        gridDisplay(grid: fifthGrid)
-        displaySwipeLabel(grid: fifthGrid)
-    }
-    
-    private func displaySwipeLabel(grid: GridHandler){
-        if grid.isGridCompleted() {
-            swipe.isHidden = false
-        } else {
-            swipe.isHidden = true
-        }
-    
-    }
-    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         swipe.swipeOrientation()
+    }
+    
+    @IBAction func didDoubleTapToChangeGridColour(_ sender: UITapGestureRecognizer) {
+        picturesGrid.backgroundColor = UIColor (red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1.0)
     }
 }
 
 extension ViewController: ButtonBarDelegate {
     func onButtonClick(buttonType: ButtonType) {
+        var grid: GridHandler
         switch buttonType {
         case .button1:
-            selectFirstGrid()
+            grid = FirstGrid(frame: picturesGrid.bounds)
         case .button2:
-            selectSecondGrid()
+            grid = SecondGrid(frame: picturesGrid.bounds)
         case .button3:
-            selectThirdGrid()
+            grid = ThirdGrid(frame: picturesGrid.bounds)
         case .button4:
-            selectFourthGrid()
+            grid = FourthGrid(frame: picturesGrid.bounds)
         case .button5:
-            selectFifthGrid()
+            grid = FifthGrid(frame: picturesGrid.bounds)
         }
+        gridDisplay(grid: grid)
+    }
+    
+    private func gridDisplay(grid: GridHandler ) {
+        grid.delegate = self
+        self.picturesGrid.subviews.forEach({ $0.removeFromSuperview() })
+        picturesGrid.addSubview(grid)
+        picturesGrid.autoresizesSubviews = true
     }
 }
 
 extension ViewController: PicturesAddingDelegate {
+    private func showDeniedAlertForPhotoLibrary() {
+        let alert = UIAlertController(title: "Photo Library Denied", message: "Photo Library access was previously denied. Please update your Settings if you wish to change this.", preferredStyle: .alert)
+        let goToSettingsAction = UIAlertAction(title: "Go to Settings", style: .default) { (action) in
+            DispatchQueue.main.async {
+                let url = URL(string: UIApplication.openSettingsURLString)!
+                UIApplication.shared.open(url, options: [:])
+            }
+        }
+        alert.addAction(goToSettingsAction)
+    }
+    
     func onPictureClick(grid: GridHandler) {
         image.delegate = grid
         
@@ -164,15 +131,7 @@ extension ViewController: PicturesAddingDelegate {
                         let okAction = UIAlertAction(title: "OK", style: .default)
                         alert.addAction(okAction)
                     case .denied:
-                        let alert = UIAlertController(title: "Photo Library Denied", message: "Photo Library access was previously denied. Please update your Settings if you wish to change this.", preferredStyle: .alert)
-                        let goToSettingsAction = UIAlertAction(title: "Go to Settings", style: .default) { (action) in
-                            DispatchQueue.main.async {
-                                let url = URL(string: UIApplication.openSettingsURLString)!
-                                UIApplication.shared.open(url, options: [:])
-                            }
-                        }
-                        alert.addAction(goToSettingsAction)
-                        
+                        self.showDeniedAlertForPhotoLibrary()
                     }
                 }
             }
@@ -189,8 +148,8 @@ extension ViewController: PicturesAddingDelegate {
 extension ViewController: SwipeDelegate {
     func onSwipeSymbol() {
         if let grid = picturesGrid.subviews[0] as? GridHandler, grid.isGridCompleted() {
-        let activityController = UIActivityViewController(activityItems: [picturesGrid], applicationActivities: nil)
-        present(activityController, animated: true, completion: nil)
+            let activityController = UIActivityViewController(activityItems: [picturesGrid.asImage()], applicationActivities: nil)
+            present(activityController, animated: true, completion: nil)
         } else {
             let shareAlert = UIAlertController(title: "You need to set all images before sharing!", message: "", preferredStyle: .alert)
             shareAlert.addAction(UIAlertAction(title: "Ok 👍", style: .default))

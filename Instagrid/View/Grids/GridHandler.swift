@@ -10,9 +10,12 @@ import UIKit
 
 class GridHandler: UIView, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    let emptyPicture = UIImage(named: "Blue Cross")
+
     var delegate : PicturesAddingDelegate?
-    var selectedImage: UIImageView?
-    private var gridHandler: UIView!
+    
+    var selectedUIImageView: UIImageView?
+    private var view: UIView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,10 +29,10 @@ class GridHandler: UIView, UIImagePickerControllerDelegate, UINavigationControll
     
     func setup() {
         if let xibName = self.getXibName() {
-            self.gridHandler = Bundle.main.loadNibNamed(xibName, owner: self, options: nil)?.first as? UIView
-            self.gridHandler.frame = self.bounds
-            self.gridHandler.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-            self.addSubview(gridHandler)
+            self.view = Bundle.main.loadNibNamed(xibName, owner: self, options: nil)?.first as? UIView
+            self.view.frame = self.bounds
+            self.view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+            self.addSubview(view)
         } else {
             print ("Missing Xib Name")
         }
@@ -41,12 +44,14 @@ class GridHandler: UIView, UIImagePickerControllerDelegate, UINavigationControll
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            if let imageView = selectedImage {
+            if let imageView = selectedUIImageView {
                 imageView.contentMode = .scaleAspectFill
                 imageView.image = pickedImage
+            } else {
+                // print + user message
             }
         } else {
-            print ("Error. Please try again later")
+            print ("Error. Please try again later") // making an alert
         }
         
         picker.dismiss(animated: true, completion: nil)
@@ -56,9 +61,7 @@ class GridHandler: UIView, UIImagePickerControllerDelegate, UINavigationControll
         picker.dismiss(animated: true, completion: nil)
     }
     
-    let emptyPicture = UIImage(named: "Blue Cross")
-    
     func isGridCompleted()  -> Bool {
         return true
-        }
     }
+}
