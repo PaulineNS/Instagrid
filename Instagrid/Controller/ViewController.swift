@@ -37,6 +37,14 @@ class ViewController: UIViewController {
     @IBAction func didDoubleTapToChangeGridColour(_ sender: UITapGestureRecognizer) {
         picturesGrid.backgroundColor = UIColor (red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1.0)
     }
+    
+    func animateSharing() {
+        
+        picturesGrid.transform = .identity
+        picturesGrid.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
+        
+        UIView.animate(withDuration: 1.0, delay: 0.0, options: [], animations: { self.picturesGrid.transform = .identity }, completion: nil)
+    }
 }
 
 extension ViewController: ButtonBarDelegate {
@@ -148,6 +156,7 @@ extension ViewController: PicturesAddingDelegate {
 extension ViewController: SwipeDelegate {
     func onSwipeSymbol() {
         if let grid = picturesGrid.subviews[0] as? GridHandler, grid.isGridCompleted() {
+            animateSharing()
             let activityController = UIActivityViewController(activityItems: [picturesGrid.asImage()], applicationActivities: nil)
             present(activityController, animated: true, completion: nil)
         } else {

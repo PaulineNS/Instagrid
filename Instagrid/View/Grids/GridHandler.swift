@@ -48,10 +48,14 @@ class GridHandler: UIView, UIImagePickerControllerDelegate, UINavigationControll
                 imageView.contentMode = .scaleAspectFill
                 imageView.image = pickedImage
             } else {
-                // print + user message
+                let alert = UIAlertController(title: "Error. Please Try again later !", message: "", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default)
+                alert.addAction(okAction)
             }
         } else {
-            print ("Error. Please try again later") // making an alert
+            let alert = UIAlertController(title: "Error. Please Try again later !", message: "", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default)
+            alert.addAction(okAction)
         }
         
         picker.dismiss(animated: true, completion: nil)
