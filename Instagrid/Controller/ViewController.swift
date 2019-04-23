@@ -168,7 +168,7 @@ extension ViewController: SwipeDelegate {
             translationTransform = CGAffineTransform(translationX: -screenWidth, y: 0)
         }
         
-        UIView.animate(withDuration: 2.0, animations: {
+        UIView.animate(withDuration: 1.0, animations: {
             self.picturesGrid.transform = translationTransform
         }) { (success) in
             if success {
