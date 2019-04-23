@@ -51,23 +51,23 @@
                                 </variation>
                             </view>
                             <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBa-Hd-EbA" userLabel="Buttons Scroll View" customClass="ButtonBar" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="455" y="25" width="80" height="460"/>
+                                <rect key="frame" x="445" y="25" width="90" height="460"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zEi-HR-ljE" userLabel="Buttons Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="460"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="460"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Er-w1-wP3" userLabel="FirstGridView">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <rect key="frame" x="8" y="15" width="74" height="74"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gT-nC-1jV" userLabel="FirstGrid">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
                                                         <state key="normal" backgroundImage="grille 3 haut"/>
                                                         <connections>
                                                             <action selector="didTapFirstGridButton" destination="BBa-Hd-EbA" eventType="touchUpInside" id="gw0-oz-Kok"/>
                                                         </connections>
                                                     </button>
                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="Selected Copy" translatesAutoresizingMaskIntoConstraints="NO" id="JKw-ph-UeG" userLabel="SelectedFirstGrid">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -101,17 +101,17 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JcA-ee-ZOJ" userLabel="SecondGridView">
-                                                <rect key="frame" x="0.0" y="95" width="80" height="80"/>
+                                                <rect key="frame" x="8" y="104" width="74" height="74"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Zy-Re-nnC" userLabel="SecondGrid">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
                                                         <state key="normal" backgroundImage="grille 3 bas"/>
                                                         <connections>
                                                             <action selector="didTapSecondGridButton" destination="BBa-Hd-EbA" eventType="touchUpInside" id="IVu-H6-NnF"/>
                                                         </connections>
                                                     </button>
                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="Selected Copy" translatesAutoresizingMaskIntoConstraints="NO" id="cAS-4Z-COS" userLabel="SelectedSecondGrid">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -145,17 +145,17 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l6d-B7-MOQ" userLabel="ThirdGridView">
-                                                <rect key="frame" x="0.0" y="190" width="80" height="80"/>
+                                                <rect key="frame" x="8" y="193" width="74" height="74"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4A-Sy-FEf" userLabel="ThirdGrid">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
                                                         <state key="normal" backgroundImage="grille 4"/>
                                                         <connections>
                                                             <action selector="didTapThirdGridButton" destination="BBa-Hd-EbA" eventType="touchUpInside" id="dzx-Ph-Hh7"/>
                                                         </connections>
                                                     </button>
                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="Selected Copy" translatesAutoresizingMaskIntoConstraints="NO" id="Twy-4Y-l9c" userLabel="SelectedThirdGrid">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -189,17 +189,18 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ghm-6I-a85" userLabel="FourthGridView">
-                                                <rect key="frame" x="0.0" y="285" width="80" height="80"/>
+                                                <rect key="frame" x="8" y="282" width="74" height="74"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hR-Bw-2D0" userLabel="FourthGrid">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
                                                         <state key="normal" backgroundImage="grille 2 verticaux"/>
                                                         <connections>
                                                             <action selector="didTapFourthGridButton" destination="BBa-Hd-EbA" eventType="touchUpInside" id="bse-7j-4zY"/>
                                                         </connections>
                                                     </button>
                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="Selected Copy" translatesAutoresizingMaskIntoConstraints="NO" id="g1g-ag-drD" userLabel="SelectedFourthGrid">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
+                                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -233,17 +234,17 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZ8-eu-FOa" userLabel="FifthGridView">
-                                                <rect key="frame" x="0.0" y="380" width="80" height="80"/>
+                                                <rect key="frame" x="8" y="371" width="74" height="74"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gom-Za-uwg" userLabel="FifthGrid">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
                                                         <state key="normal" backgroundImage="grille 2 horizontaux"/>
                                                         <connections>
                                                             <action selector="didTapFifthGridButton" destination="BBa-Hd-EbA" eventType="touchUpInside" id="Xte-xk-ktc"/>
                                                         </connections>
                                                     </button>
                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="Selected Copy" translatesAutoresizingMaskIntoConstraints="NO" id="Wg8-cN-jCb" userLabel="SelectedFifthGrid">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -277,7 +278,33 @@
                                                 </variation>
                                             </view>
                                         </subviews>
-                                        <variation key="heightClass=compact" axis="vertical"/>
+                                        <constraints>
+                                            <constraint firstItem="cAS-4Z-COS" firstAttribute="width" secondItem="JKw-ph-UeG" secondAttribute="width" id="QTU-ok-SNr"/>
+                                            <constraint firstItem="Wg8-cN-jCb" firstAttribute="width" secondItem="g1g-ag-drD" secondAttribute="width" id="Rdq-dq-WkH"/>
+                                            <constraint firstItem="Twy-4Y-l9c" firstAttribute="width" secondItem="cAS-4Z-COS" secondAttribute="width" id="h6v-Ad-LjA"/>
+                                            <constraint firstItem="g1g-ag-drD" firstAttribute="width" secondItem="Twy-4Y-l9c" secondAttribute="width" id="voj-vs-3Qv"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="QTU-ok-SNr"/>
+                                                <exclude reference="h6v-Ad-LjA"/>
+                                                <exclude reference="voj-vs-3Qv"/>
+                                                <exclude reference="Rdq-dq-WkH"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact" axis="vertical">
+                                            <edgeInsets key="layoutMargins" top="15" left="8" bottom="15" right="8"/>
+                                            <mask key="constraints">
+                                                <include reference="QTU-ok-SNr"/>
+                                                <include reference="h6v-Ad-LjA"/>
+                                                <include reference="voj-vs-3Qv"/>
+                                                <include reference="Rdq-dq-WkH"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular">
+                                            <edgeInsets key="layoutMargins" top="8" left="15" bottom="8" right="15"/>
+                                        </variation>
                                     </stackView>
                                 </subviews>
                                 <color key="tintColor" red="0.7361987829208374" green="0.83996206521987915" blue="0.89303964376449585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -385,10 +412,10 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="DUh-r9-cKX"/>
-                                        <exclude reference="Jhe-7u-HhJ"/>
                                         <exclude reference="RnU-PV-1mo"/>
                                         <exclude reference="VGd-Ic-RD9"/>
                                         <exclude reference="VQG-fn-uLp"/>
+                                        <exclude reference="Jhe-7u-HhJ"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact">
@@ -396,14 +423,14 @@
                                         <include reference="DUh-r9-cKX"/>
                                         <exclude reference="MQc-B2-pZ5"/>
                                         <exclude reference="et2-h7-PRX"/>
-                                        <include reference="Jhe-7u-HhJ"/>
-                                        <exclude reference="nWx-Qu-Bup"/>
                                         <exclude reference="KfC-MW-Rdn"/>
                                         <include reference="RnU-PV-1mo"/>
                                         <include reference="VGd-Ic-RD9"/>
                                         <include reference="VQG-fn-uLp"/>
                                         <exclude reference="psf-UY-9lp"/>
                                         <exclude reference="xrq-gs-go4"/>
+                                        <include reference="Jhe-7u-HhJ"/>
+                                        <exclude reference="nWx-Qu-Bup"/>
                                     </mask>
                                 </variation>
                                 <connections>
