@@ -37,14 +37,6 @@ class ViewController: UIViewController {
     @IBAction func didDoubleTapToChangeGridColour(_ sender: UITapGestureRecognizer) {
         picturesGrid.backgroundColor = UIColor (red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1.0)
     }
-    
-    func animateSharing() {
-        
-        picturesGrid.transform = .identity
-        picturesGrid.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
-        
-        UIView.animate(withDuration: 1.0, delay: 0.0, options: [], animations: { self.picturesGrid.transform = .identity }, completion: nil)
-    }
 }
 
 extension ViewController: ButtonBarDelegate {
@@ -157,13 +149,44 @@ extension ViewController: SwipeDelegate {
     func onSwipeSymbol() {
         if let grid = picturesGrid.subviews[0] as? GridHandler, grid.isGridCompleted() {
             animateSharing()
-            let activityController = UIActivityViewController(activityItems: [picturesGrid.asImage()], applicationActivities: nil)
-            present(activityController, animated: true, completion: nil)
         } else {
             let shareAlert = UIAlertController(title: "You need to set all images before sharing!", message: "", preferredStyle: .alert)
             shareAlert.addAction(UIAlertAction(title: "Ok 👍", style: .default))
             present(shareAlert, animated: true)
         }
+    }
+    
+    func animateSharing() {
+        let screenWidth = UIScreen.main.bounds.width //width of the screen
+        let screenHeight = UIScreen.main.bounds.height //height of the screen
+        
+        var translationTransform: CGAffineTransform
+        
+        if UIDevice.current.orientation.isPortrait {
+            translationTransform = CGAffineTransform(translationX: 0, y: -screenHeight)
+        } else {
+            translationTransform = CGAffineTransform(translationX: -screenWidth, y: 0)
+        }
+        
+        UIView.animate(withDuration: 2.0, animations: {
+            self.picturesGrid.transform = translationTransform
+        }) { (success) in
+            if success {
+                let activityController = UIActivityViewController(activityItems: [self.picturesGrid.asImage()], applicationActivities: nil)
+                self.present(activityController, animated: true, completion: nil)
+                self.animateTheGridDisplay()
+            }
+        }
+    }
+    
+    func animateTheGridDisplay() {
+        
+        picturesGrid.transform = .identity
+        picturesGrid.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
+        
+        UIView.animate(withDuration: 0.4, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
+            self.picturesGrid.transform = .identity
+        }, completion:nil)
     }
 }
 
