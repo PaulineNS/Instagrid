@@ -16,19 +16,21 @@ class SwipeView: UIView {
     @IBOutlet weak var swipeSymbol: UIImageView!
     @IBOutlet weak var swipeLabel: UILabel!
     
+    //Swipe according to the orientation of the screen
     @IBAction func swipeUp(_ sender: UISwipeGestureRecognizer) {
         if UIDevice.current.orientation.isPortrait && sender.direction == .up {
             delegate?.onSwipeSymbol()
         }
     }
     
+    //Swipe according to the orientation of the screen
     @IBAction func swipeLeft(_ sender: UISwipeGestureRecognizer) {
         if UIDevice.current.orientation.isLandscape && sender.direction == .left {
             delegate?.onSwipeSymbol()
         }
     }
 
-    // Direction of swipe according to orientation of screen
+    // Changing the display sentance according to orientation of screen
     func swipeOrientation() {
         if UIDevice.current.orientation.isLandscape {
             swipeLabel.text = "Swipe left to share"

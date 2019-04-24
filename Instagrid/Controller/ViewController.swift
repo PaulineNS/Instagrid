@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonBar: ButtonBar!
     @IBOutlet weak var swipe: SwipeView!
     
-    // View life Cycle
+    // View life Cycle. Notifies the view controller that its view was added to a view hierarchy.
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonBar.buttonDelegate = self
@@ -28,11 +28,13 @@ class ViewController: UIViewController {
         swipe.delegate = self
     }
     
+    // Called before the view is added to the windows’ view hierarchy.
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         swipe.swipeOrientation()
     }
     
+    //Notifies the container that the size of its view is about to change.
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         swipe.swipeOrientation()
     }
@@ -44,6 +46,9 @@ class ViewController: UIViewController {
     }
 }
 
+// ViewController's Extensions
+
+//Display the good grid according to the clicked button
 extension ViewController: ButtonBarDelegate {
     func onButtonClick(buttonType: ButtonType) {
         var grid: GridHandler
@@ -62,6 +67,7 @@ extension ViewController: ButtonBarDelegate {
         gridDisplay(grid: grid)
     }
     
+    // Adapting the size grid to the container square
     private func gridDisplay(grid: GridHandler ) {
         grid.delegate = self
         self.picturesGrid.subviews.forEach({ $0.removeFromSuperview() })
@@ -83,7 +89,39 @@ extension ViewController: PicturesAddingDelegate {
         alert.addAction(goToSettingsAction)
     }
     
-    // Tapping for adding pictures
+    private func showRestrictedAlertForPhotoLibrary() {
+        let alert = UIAlertController(title: "Photo Library Restricted", message: "Photo Library access is restricted and cannot be accessed", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+    }
+    
+    private func authorizedAccessToPhotoLibrary() {
+        self.image.sourceType = .photoLibrary
+        self.present(self.image, animated: true, completion: nil)
+    }
+    
+    private func showDeniedAlertForCamera() {
+        let alert = UIAlertController(title: "Camera Denied", message: "Camera access was previously denied. Please update your Settings if you wish to change this.", preferredStyle: .alert)
+        let goToSettingsAction = UIAlertAction(title: "Go to Settings", style: .default) { (action) in
+            DispatchQueue.main.async {
+                let url = URL(string: UIApplication.openSettingsURLString)!
+                UIApplication.shared.open(url, options: [:])
+            }
+        }
+        alert.addAction(goToSettingsAction)
+    }
+    
+    private func showRestrictedAlertForCamera() {
+        let alert = UIAlertController(title: "Camera Restricted", message: "Camera access is restricted and cannot be accessed", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+    }
+    
+    private func authorizedAccessToCamera() {
+        self.image.sourceType = .camera
+        self.present(self.image, animated: true, completion: nil)
+    }
+    
     func onPictureClick(grid: GridHandler) {
         image.delegate = grid
         
@@ -96,26 +134,15 @@ extension ViewController: PicturesAddingDelegate {
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
                 switch AVCaptureDevice.authorizationStatus(for: AVMediaType.video) {
                 case .authorized:
-                    self.image.sourceType = .camera
-                    self.present(self.image, animated: true, completion: nil)
+                    self.authorizedAccessToCamera()
                 case .notDetermined:
                     if AVCaptureDevice.authorizationStatus(for: AVMediaType.video) == AVAuthorizationStatus.authorized {
-                        self.image.sourceType = .camera
-                        self.present(self.image, animated: true, completion: nil)
+                        self.authorizedAccessToCamera()
                     }
                 case .restricted:
-                    let alert = UIAlertController(title: "Camera Restricted", message: "Camera access is restricted and cannot be accessed", preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "OK", style: .default)
-                    alert.addAction(okAction)
+                    self.showRestrictedAlertForCamera()
                 case .denied:
-                    let alert = UIAlertController(title: "Camera Denied", message: "Camera access was previously denied. Please update your Settings if you wish to change this.", preferredStyle: .alert)
-                    let goToSettingsAction = UIAlertAction(title: "Go to Settings", style: .default) { (action) in
-                        DispatchQueue.main.async {
-                            let url = URL(string: UIApplication.openSettingsURLString)!
-                            UIApplication.shared.open(url, options: [:])
-                        }
-                    }
-                    alert.addAction(goToSettingsAction)
+                    self.showDeniedAlertForCamera()
                 }
             } else {
                 print ("The Camera is not available")
@@ -129,17 +156,13 @@ extension ViewController: PicturesAddingDelegate {
                 PHPhotoLibrary.requestAuthorization { (status) in
                     switch status {
                     case .authorized:
-                        self.image.sourceType = .photoLibrary
-                        self.present(self.image, animated: true, completion: nil)
+                        self.authorizedAccessToPhotoLibrary()
                     case .notDetermined:
                         if status == PHAuthorizationStatus.authorized {
-                            self.image.sourceType = .photoLibrary
-                            self.present(self.image, animated: true, completion: nil)
+                            self.authorizedAccessToPhotoLibrary()
                         }
                     case .restricted:
-                        let alert = UIAlertController(title: "Photo Library Restricted", message: "Photo Library access is restricted and cannot be accessed", preferredStyle: .alert)
-                        let okAction = UIAlertAction(title: "OK", style: .default)
-                        alert.addAction(okAction)
+                        self.showRestrictedAlertForPhotoLibrary()
                     case .denied:
                         self.showDeniedAlertForPhotoLibrary()
                     }
