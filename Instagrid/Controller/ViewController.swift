@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     // View life Cycle. Notifies the view controller that its view was added to a view hierarchy.
     override func viewDidLoad() {
         super.viewDidLoad()
-        buttonBar.buttonDelegate = self
+        buttonBar.buttonDelegate = picturesGrid
         buttonBar.didTapFirstGridButton()
         swipe.delegate = self
     }
@@ -47,34 +47,6 @@ class ViewController: UIViewController {
 }
 
 // ViewController's Extensions
-//Display the good grid according to the clicked button
-extension ViewController: ButtonBarDelegate {
-    func onButtonClick(buttonType: ButtonType) {
-        var grid: GridHandler
-        switch buttonType {
-        case .button1:
-            grid = FirstGrid(frame: picturesGrid.bounds)
-        case .button2:
-            grid = SecondGrid(frame: picturesGrid.bounds)
-        case .button3:
-            grid = ThirdGrid(frame: picturesGrid.bounds)
-        case .button4:
-            grid = FourthGrid(frame: picturesGrid.bounds)
-        case .button5:
-            grid = FifthGrid(frame: picturesGrid.bounds)
-        }
-        gridDisplay(grid: grid)
-    }
-    
-    // Adapting the size grid to the container square
-    private func gridDisplay(grid: GridHandler ) {
-        grid.delegate = self
-        self.picturesGrid.subviews.forEach({ $0.removeFromSuperview() })
-        picturesGrid.addSubview(grid)
-        picturesGrid.autoresizesSubviews = true
-    }
-} //moove in picturesGrid
-
 // Tapping for adding pictures
 extension ViewController: PicturesAddingDelegate {
     private func showDeniedAlertForPhotoLibrary() {
