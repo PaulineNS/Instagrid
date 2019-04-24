@@ -12,12 +12,14 @@ class ButtonBar: UIScrollView {
     
     var buttonDelegate: ButtonBarDelegate?
     
+    // Outlet
     @IBOutlet var selectedGrid: [UIImageView]!
     
     private func unselectButton() {
         selectedGrid.forEach({ $0.isHidden = true })
     }
     
+    // Actions
     @IBAction func didTapFirstGridButton() {
         unselectButton()
         selectedGrid[0].isHidden = false

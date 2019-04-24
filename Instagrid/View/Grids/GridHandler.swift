@@ -38,7 +38,7 @@ class GridHandler: UIView, UIImagePickerControllerDelegate, UINavigationControll
         }
     }
     
-    func getXibName() -> String? {
+    func getXibName() -> String? { //Obtain the Xibname of the selected grid
         return nil
     }
 
@@ -58,14 +58,14 @@ class GridHandler: UIView, UIImagePickerControllerDelegate, UINavigationControll
             alert.addAction(okAction)
         }
         
-        picker.dismiss(animated: true, completion: nil)
+        picker.dismiss(animated: true, completion: nil) //Remove the view
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
-    }
+    } //Remove the view when the user click on cancel
     
-    func isGridCompleted()  -> Bool {
+    func isGridCompleted()  -> Bool { //Checking if the grid is completed
         return true
     }
 }

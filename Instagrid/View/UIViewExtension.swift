@@ -9,6 +9,7 @@
 import UIKit
 
 // source: https://stackoverflow.com/questions/30696307/how-to-convert-a-uiview-to-an-image
+// To convert an object in image
 
 extension UIView {
     

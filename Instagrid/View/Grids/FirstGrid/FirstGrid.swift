@@ -10,8 +10,10 @@ import UIKit
 
 class FirstGrid: GridHandler {
     
+    //Outlet
     @IBOutlet var picturesPosition: [UIImageView]!
     
+    // Overriding the GridHandler's method with the xib name of the first grid
     override func getXibName() -> String? {
         return "FirstGrid"
     }
@@ -44,6 +46,7 @@ class FirstGrid: GridHandler {
         delegate?.onPictureClick(grid: self)
     }
     
+    // Checking if the grid is completed
     override func isGridCompleted() -> Bool {
         for image in picturesPosition {
             if image.image == emptyPicture {

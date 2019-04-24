@@ -6,7 +6,7 @@
 //  Copyright © 2019 PaulineNomballais. All rights reserved.
 //
 
-protocol PicturesAddingDelegate {
+protocol PicturesAddingDelegate { 
     
     func onPictureClick(grid: GridHandler)
 }

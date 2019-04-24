@@ -12,12 +12,15 @@ import Photos
 
 class ViewController: UIViewController {
     
+    // Vars
     let image = UIImagePickerController()
     
+    // Outlets
     @IBOutlet weak var picturesGrid: UIView!
     @IBOutlet weak var buttonBar: ButtonBar!
     @IBOutlet weak var swipe: SwipeView!
     
+    // View life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonBar.buttonDelegate = self
@@ -34,6 +37,8 @@ class ViewController: UIViewController {
         swipe.swipeOrientation()
     }
     
+    // Action
+    // Changing the grid color when double tap
     @IBAction func didDoubleTapToChangeGridColour(_ sender: UITapGestureRecognizer) {
         picturesGrid.backgroundColor = UIColor (red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1.0)
     }
@@ -65,6 +70,7 @@ extension ViewController: ButtonBarDelegate {
     }
 }
 
+// Tapping for adding pictures
 extension ViewController: PicturesAddingDelegate {
     private func showDeniedAlertForPhotoLibrary() {
         let alert = UIAlertController(title: "Photo Library Denied", message: "Photo Library access was previously denied. Please update your Settings if you wish to change this.", preferredStyle: .alert)
@@ -77,13 +83,16 @@ extension ViewController: PicturesAddingDelegate {
         alert.addAction(goToSettingsAction)
     }
     
+    // Tapping for adding pictures
     func onPictureClick(grid: GridHandler) {
         image.delegate = grid
         
+        // Selecting source of pictures
         let actionSheet = UIAlertController(title: "Photo Source", message: "Choose a source", preferredStyle: .actionSheet)
         
         actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action:UIAlertAction) in
             
+            //Access to camera
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
                 switch AVCaptureDevice.authorizationStatus(for: AVMediaType.video) {
                 case .authorized:
@@ -115,6 +124,7 @@ extension ViewController: PicturesAddingDelegate {
         
         actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: { (action:UIAlertAction) in
             
+            // Access to photo library
             if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
                 PHPhotoLibrary.requestAuthorization { (status) in
                     switch status {
@@ -145,17 +155,20 @@ extension ViewController: PicturesAddingDelegate {
         }
     }
 
+// Swiping
 extension ViewController: SwipeDelegate {
     func onSwipeSymbol() {
         if let grid = picturesGrid.subviews[0] as? GridHandler, grid.isGridCompleted() {
             animateSharing()
         } else {
+            // The grid must be completed for the sharing
             let shareAlert = UIAlertController(title: "You need to set all images before sharing!", message: "", preferredStyle: .alert)
             shareAlert.addAction(UIAlertAction(title: "Ok 👍", style: .default))
             present(shareAlert, animated: true)
         }
     }
     
+    // Animate the grid when swipe according to orientation of screen
     func animateSharing() {
         let screenWidth = UIScreen.main.bounds.width //width of the screen
         let screenHeight = UIScreen.main.bounds.height //height of the screen
@@ -172,6 +185,7 @@ extension ViewController: SwipeDelegate {
             self.picturesGrid.transform = translationTransform
         }) { (success) in
             if success {
+                // To share the grid on other applications or to save it
                 let activityController = UIActivityViewController(activityItems: [self.picturesGrid.asImage()], applicationActivities: nil)
                 self.present(activityController, animated: true, completion: nil)
                 self.animateTheGridDisplay()
@@ -179,6 +193,7 @@ extension ViewController: SwipeDelegate {
         }
     }
     
+    // Animate the grid return after the swipe
     func animateTheGridDisplay() {
         
         picturesGrid.transform = .identity

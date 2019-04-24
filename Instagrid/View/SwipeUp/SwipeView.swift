@@ -12,8 +12,8 @@ class SwipeView: UIView {
     
     var delegate: SwipeDelegate?
 
+    // Outlets
     @IBOutlet weak var swipeSymbol: UIImageView!
-    
     @IBOutlet weak var swipeLabel: UILabel!
     
     @IBAction func swipeUp(_ sender: UISwipeGestureRecognizer) {
@@ -28,6 +28,7 @@ class SwipeView: UIView {
         }
     }
 
+    // Direction of swipe according to orientation of screen
     func swipeOrientation() {
         if UIDevice.current.orientation.isLandscape {
             swipeLabel.text = "Swipe left to share"
