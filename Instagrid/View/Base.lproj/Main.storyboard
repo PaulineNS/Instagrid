@@ -26,38 +26,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="550" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UiA-VA-EZq" userLabel="Pictures Grid">
-                                <rect key="frame" x="125" y="183.5" width="300" height="300"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UiA-VA-EZq" userLabel="Pictures Grid" customClass="PicturesGrid" customModule="Instagrid" customModuleProvider="target">
+                                <rect key="frame" x="110.5" y="169" width="329" height="329"/>
                                 <color key="backgroundColor" red="0.14693871140480042" green="0.40562295913696289" blue="0.5872226357460022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="Jch-O9-mx5"/>
-                                    <constraint firstAttribute="width" secondItem="UiA-VA-EZq" secondAttribute="height" multiplier="300:301" id="biX-La-oQS"/>
-                                    <constraint firstAttribute="width" constant="300" id="fJr-JA-5Cw"/>
+                                    <constraint firstAttribute="width" secondItem="UiA-VA-EZq" secondAttribute="height" multiplier="1:1" id="biX-La-oQS"/>
                                     <constraint firstAttribute="width" secondItem="UiA-VA-EZq" secondAttribute="height" multiplier="1:1" id="k3J-GR-0lg"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="Jch-O9-mx5"/>
                                         <exclude reference="biX-La-oQS"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact">
                                     <mask key="constraints">
-                                        <include reference="Jch-O9-mx5"/>
                                         <include reference="biX-La-oQS"/>
-                                        <exclude reference="fJr-JA-5Cw"/>
                                         <exclude reference="k3J-GR-0lg"/>
                                     </mask>
                                 </variation>
                             </view>
                             <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBa-Hd-EbA" userLabel="Buttons Scroll View" customClass="ButtonBar" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="3" y="536.5" width="490" height="110.5"/>
+                                <rect key="frame" x="3" y="551" width="490" height="96"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zEi-HR-ljE" userLabel="Buttons Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="490" height="110.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="490" height="96"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Er-w1-wP3" userLabel="FirstGridView">
-                                                <rect key="frame" x="15" y="15.5" width="80" height="80"/>
+                                                <rect key="frame" x="15" y="8" width="80" height="80"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gT-nC-1jV" userLabel="FirstGrid">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -101,7 +96,7 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JcA-ee-ZOJ" userLabel="SecondGridView">
-                                                <rect key="frame" x="110" y="15.5" width="80" height="80"/>
+                                                <rect key="frame" x="110" y="8" width="80" height="80"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Zy-Re-nnC" userLabel="SecondGrid">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -145,7 +140,7 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l6d-B7-MOQ" userLabel="ThirdGridView">
-                                                <rect key="frame" x="205" y="15.5" width="80" height="80"/>
+                                                <rect key="frame" x="205" y="8" width="80" height="80"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4A-Sy-FEf" userLabel="ThirdGrid">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -189,7 +184,7 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ghm-6I-a85" userLabel="FourthGridView">
-                                                <rect key="frame" x="300" y="15.5" width="80" height="80"/>
+                                                <rect key="frame" x="300" y="8" width="80" height="80"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hR-Bw-2D0" userLabel="FourthGrid">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -234,7 +229,7 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZ8-eu-FOa" userLabel="FifthGridView">
-                                                <rect key="frame" x="395" y="15.5" width="80" height="80"/>
+                                                <rect key="frame" x="395" y="8" width="80" height="80"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gom-Za-uwg" userLabel="FifthGrid">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -370,7 +365,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Odw-Un-JUH" userLabel="Swipe View" customClass="SwipeView" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="125" y="128.5" width="300" height="50"/>
+                                <rect key="frame" x="125" y="114" width="300" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zc-v1-S16">
                                         <rect key="frame" x="97.5" y="25" width="105" height="20"/>
@@ -412,10 +407,10 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="DUh-r9-cKX"/>
-                                        <exclude reference="Jhe-7u-HhJ"/>
                                         <exclude reference="RnU-PV-1mo"/>
                                         <exclude reference="VGd-Ic-RD9"/>
                                         <exclude reference="VQG-fn-uLp"/>
+                                        <exclude reference="Jhe-7u-HhJ"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact">
@@ -423,14 +418,14 @@
                                         <include reference="DUh-r9-cKX"/>
                                         <exclude reference="MQc-B2-pZ5"/>
                                         <exclude reference="et2-h7-PRX"/>
-                                        <include reference="Jhe-7u-HhJ"/>
-                                        <exclude reference="nWx-Qu-Bup"/>
                                         <exclude reference="KfC-MW-Rdn"/>
                                         <include reference="RnU-PV-1mo"/>
                                         <include reference="VGd-Ic-RD9"/>
                                         <include reference="VQG-fn-uLp"/>
                                         <exclude reference="psf-UY-9lp"/>
                                         <exclude reference="xrq-gs-go4"/>
+                                        <include reference="Jhe-7u-HhJ"/>
+                                        <exclude reference="nWx-Qu-Bup"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -451,8 +446,12 @@
                             <constraint firstItem="Odw-Un-JUH" firstAttribute="leading" secondItem="kdX-qk-rZk" secondAttribute="leading" constant="37" id="P4X-mn-ygV">
                                 <variation key="heightClass=compact" constant="7"/>
                             </constraint>
+                            <constraint firstItem="UiA-VA-EZq" firstAttribute="top" secondItem="IBN-a9-GoC" secondAttribute="bottom" constant="158" id="TIs-a0-y3c">
+                                <variation key="heightClass=compact" constant="20"/>
+                            </constraint>
                             <constraint firstItem="UiA-VA-EZq" firstAttribute="top" secondItem="BBa-Hd-EbA" secondAttribute="bottom" constant="-302" id="UPn-qI-7vN"/>
                             <constraint firstItem="BBa-Hd-EbA" firstAttribute="top" secondItem="UiA-VA-EZq" secondAttribute="bottom" constant="53" id="YKT-dm-PiF"/>
+                            <constraint firstItem="kdX-qk-rZk" firstAttribute="bottom" secondItem="UiA-VA-EZq" secondAttribute="bottom" constant="20" id="YQL-Re-EFv"/>
                             <constraint firstItem="IBN-a9-GoC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dpu-N4-B39"/>
                             <constraint firstItem="UiA-VA-EZq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dqC-d6-w1T"/>
                             <constraint firstItem="IBN-a9-GoC" firstAttribute="top" secondItem="kdX-qk-rZk" secondAttribute="top" constant="17" id="gzK-C9-xli">
@@ -476,6 +475,7 @@
                         <viewLayoutGuide key="safeArea" id="kdX-qk-rZk"/>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="YQL-Re-EFv"/>
                                 <exclude reference="vc6-Ml-IVl"/>
                                 <exclude reference="ywh-sV-5K9"/>
                                 <exclude reference="2Je-HC-tLl"/>
@@ -483,6 +483,7 @@
                                 <exclude reference="P4X-mn-ygV"/>
                                 <exclude reference="FhO-mD-axQ"/>
                                 <exclude reference="NwE-zX-G4F"/>
+                                <exclude reference="TIs-a0-y3c"/>
                                 <exclude reference="UPn-qI-7vN"/>
                                 <exclude reference="xfs-MI-PBV"/>
                                 <exclude reference="dpu-N4-B39"/>
@@ -494,12 +495,14 @@
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
+                                <include reference="YQL-Re-EFv"/>
                                 <include reference="vc6-Ml-IVl"/>
                                 <include reference="2Je-HC-tLl"/>
                                 <include reference="CnE-Tx-dLQ"/>
                                 <include reference="P4X-mn-ygV"/>
                                 <exclude reference="o3T-Gk-jxY"/>
-                                <include reference="FhO-mD-axQ"/>
+                                <exclude reference="FhO-mD-axQ"/>
+                                <include reference="TIs-a0-y3c"/>
                                 <include reference="UPn-qI-7vN"/>
                                 <exclude reference="dqC-d6-w1T"/>
                                 <exclude reference="waX-Ip-OeB"/>

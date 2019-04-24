@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     let image = UIImagePickerController()
     
     // Outlets
-    @IBOutlet weak var picturesGrid: UIView!
+    @IBOutlet weak var picturesGrid: PicturesGrid!
     @IBOutlet weak var buttonBar: ButtonBar!
     @IBOutlet weak var swipe: SwipeView!
     
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         buttonBar.didTapFirstGridButton()
         swipe.delegate = self
     }
-    
+
     // Called before the view is added to the windows’ view hierarchy.
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         swipe.swipeOrientation()
     }
-    
+   
     // Action
     // Changing the grid color when double tap
     @IBAction func didDoubleTapToChangeGridColour(_ sender: UITapGestureRecognizer) {
@@ -47,7 +47,6 @@ class ViewController: UIViewController {
 }
 
 // ViewController's Extensions
-
 //Display the good grid according to the clicked button
 extension ViewController: ButtonBarDelegate {
     func onButtonClick(buttonType: ButtonType) {
@@ -74,7 +73,7 @@ extension ViewController: ButtonBarDelegate {
         picturesGrid.addSubview(grid)
         picturesGrid.autoresizesSubviews = true
     }
-}
+} //moove in picturesGrid
 
 // Tapping for adding pictures
 extension ViewController: PicturesAddingDelegate {

@@ -21,6 +21,7 @@
 		5612CB5F2236B39000E75A81 /* SecondGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5612CB5E2236B39000E75A81 /* SecondGrid.swift */; };
 		5612CB612237AE3200E75A81 /* GridHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5612CB602237AE3200E75A81 /* GridHandler.swift */; };
 		5612CB632239820300E75A81 /* ThirdGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5612CB622239820300E75A81 /* ThirdGrid.swift */; };
+		5615F2642270C3B900A4D760 /* PicturesGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615F2632270C3B900A4D760 /* PicturesGrid.swift */; };
 		564B07A122451DCF00A244D2 /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564B07A022451DCF00A244D2 /* SwipeView.swift */; };
 		564B07A322451DF600A244D2 /* SwipeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564B07A222451DF600A244D2 /* SwipeDelegate.swift */; };
 		564B07AC2249118600A244D2 /* FourthGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564B07AB2249118600A244D2 /* FourthGrid.swift */; };
@@ -51,6 +52,7 @@
 		5612CB5E2236B39000E75A81 /* SecondGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondGrid.swift; sourceTree = "<group>"; };
 		5612CB602237AE3200E75A81 /* GridHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridHandler.swift; sourceTree = "<group>"; };
 		5612CB622239820300E75A81 /* ThirdGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdGrid.swift; sourceTree = "<group>"; };
+		5615F2632270C3B900A4D760 /* PicturesGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesGrid.swift; sourceTree = "<group>"; };
 		564B07A022451DCF00A244D2 /* SwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
 		564B07A222451DF600A244D2 /* SwipeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDelegate.swift; sourceTree = "<group>"; };
 		564B07AB2249118600A244D2 /* FourthGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthGrid.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				564B07AA224910FB00A244D2 /* FifthGrid */,
 				5612CB602237AE3200E75A81 /* GridHandler.swift */,
 				56E4A5A522414BFD001ED7D4 /* PicturesAddingDelegate.swift */,
+				5615F2632270C3B900A4D760 /* PicturesGrid.swift */,
 			);
 			path = Grids;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			files = (
 				56B1E646226785C4002C34B5 /* UIViewExtension.swift in Sources */,
 				5612CB30222FFE5900E75A81 /* ViewController.swift in Sources */,
+				5615F2642270C3B900A4D760 /* PicturesGrid.swift in Sources */,
 				5612CB632239820300E75A81 /* ThirdGrid.swift in Sources */,
 				5612CB612237AE3200E75A81 /* GridHandler.swift in Sources */,
 				56E4A58F223A9D60001ED7D4 /* ButtonBar.swift in Sources */,
