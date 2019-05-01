@@ -19,15 +19,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var picturesGrid: PicturesGrid!
     @IBOutlet weak var buttonBar: ButtonBar!
     @IBOutlet weak var swipe: SwipeView!
-    
-    // View life Cycle. Notifies the view controller that its view was added to a view hierarchy.
+
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonBar.buttonDelegate = picturesGrid
         buttonBar.didTapFirstGridButton()
         swipe.delegate = self
+        picturesGrid.delegate = self
     }
-
     // Called before the view is added to the windows’ view hierarchy.
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -49,49 +48,6 @@ class ViewController: UIViewController {
 // ViewController's Extensions
 // Tapping for adding pictures
 extension ViewController: PicturesAddingDelegate {
-    private func showDeniedAlertForPhotoLibrary() {
-        let alert = UIAlertController(title: "Photo Library Denied", message: "Photo Library access was previously denied. Please update your Settings if you wish to change this.", preferredStyle: .alert)
-        let goToSettingsAction = UIAlertAction(title: "Go to Settings", style: .default) { (action) in
-            DispatchQueue.main.async {
-                let url = URL(string: UIApplication.openSettingsURLString)!
-                UIApplication.shared.open(url, options: [:])
-            }
-        }
-        alert.addAction(goToSettingsAction)
-    }
-    
-    private func showRestrictedAlertForPhotoLibrary() {
-        let alert = UIAlertController(title: "Photo Library Restricted", message: "Photo Library access is restricted and cannot be accessed", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
-        alert.addAction(okAction)
-    }
-    
-    private func authorizedAccessToPhotoLibrary() {
-        self.image.sourceType = .photoLibrary
-        self.present(self.image, animated: true, completion: nil)
-    }
-    
-    private func showDeniedAlertForCamera() {
-        let alert = UIAlertController(title: "Camera Denied", message: "Camera access was previously denied. Please update your Settings if you wish to change this.", preferredStyle: .alert)
-        let goToSettingsAction = UIAlertAction(title: "Go to Settings", style: .default) { (action) in
-            DispatchQueue.main.async {
-                let url = URL(string: UIApplication.openSettingsURLString)!
-                UIApplication.shared.open(url, options: [:])
-            }
-        }
-        alert.addAction(goToSettingsAction)
-    }
-    
-    private func showRestrictedAlertForCamera() {
-        let alert = UIAlertController(title: "Camera Restricted", message: "Camera access is restricted and cannot be accessed", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
-        alert.addAction(okAction)
-    }
-    
-    private func authorizedAccessToCamera() {
-        self.image.sourceType = .camera
-        self.present(self.image, animated: true, completion: nil)
-    }
     
     func onPictureClick(grid: GridHandler) {
         image.delegate = grid
@@ -147,7 +103,53 @@ extension ViewController: PicturesAddingDelegate {
         self.present(actionSheet, animated: true, completion: nil)
         
         }
+    // Different access to the photo library
+    private func showDeniedAlertForPhotoLibrary() {
+        let alert = UIAlertController(title: "Photo Library Denied", message: "Photo Library access was previously denied. Please update your Settings if you wish to change this.", preferredStyle: .alert)
+        let goToSettingsAction = UIAlertAction(title: "Go to Settings", style: .default) { (action) in
+            DispatchQueue.main.async {
+                let url = URL(string: UIApplication.openSettingsURLString)!
+                UIApplication.shared.open(url, options: [:])
+            }
+        }
+        alert.addAction(goToSettingsAction)
     }
+    
+    private func showRestrictedAlertForPhotoLibrary() {
+        let alert = UIAlertController(title: "Photo Library Restricted", message: "Photo Library access is restricted and cannot be accessed", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+    }
+    
+    private func authorizedAccessToPhotoLibrary() {
+        self.image.sourceType = .photoLibrary
+        self.present(self.image, animated: true, completion: nil)
+    }
+    
+    // Different access to the camera
+    private func showDeniedAlertForCamera() {
+        let alert = UIAlertController(title: "Camera Denied", message: "Camera access was previously denied. Please update your Settings if you wish to change this.", preferredStyle: .alert)
+        let goToSettingsAction = UIAlertAction(title: "Go to Settings", style: .default) { (action) in
+            DispatchQueue.main.async {
+                let url = URL(string: UIApplication.openSettingsURLString)!
+                UIApplication.shared.open(url, options: [:])
+            }
+        }
+        alert.addAction(goToSettingsAction)
+    }
+    
+    private func showRestrictedAlertForCamera() {
+        let alert = UIAlertController(title: "Camera Restricted", message: "Camera access is restricted and cannot be accessed", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+    }
+    
+    private func authorizedAccessToCamera() {
+        self.image.sourceType = .camera
+        self.present(self.image, animated: true, completion: nil)
+    }
+    
+}
 
 // Swiping
 extension ViewController: SwipeDelegate {

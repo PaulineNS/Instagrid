@@ -10,6 +10,7 @@ import UIKit
 
 class PicturesGrid: UIView {
     
+    var delegate: PicturesAddingDelegate?
     var buttonBar: ButtonBar!
     
     override func layoutSubviews() {
@@ -41,7 +42,7 @@ extension PicturesGrid: ButtonBarDelegate {
     
     // Adapting the size grid to the container square
     private func gridDisplay(grid: GridHandler ) {
-        grid.delegate = ViewController()
+        grid.delegate = self.delegate
         self.subviews.forEach({ $0.removeFromSuperview() })
         self.addSubview(grid)
         self.autoresizesSubviews = true

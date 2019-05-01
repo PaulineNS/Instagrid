@@ -18,6 +18,7 @@ class FirstGrid: GridHandler {
         return "FirstGrid"
     }
     
+    // Creation of GestureRecognizer
     override func setup() {
         super.setup()
         let singleTap1 = UITapGestureRecognizer(target: self, action: #selector(didTapFirstPicture))

@@ -10,13 +10,13 @@ import UIKit
 
 class GridHandler: UIView, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    // Vars
     let emptyPicture = UIImage(named: "Blue Cross")
-
-    var delegate : PicturesAddingDelegate?
-    
     var selectedUIImageView: UIImageView?
     private var view: UIView!
-    
+    var delegate : PicturesAddingDelegate?
+
+    // GridHandler Initialisation
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setup()
@@ -27,18 +27,20 @@ class GridHandler: UIView, UIImagePickerControllerDelegate, UINavigationControll
         self.setup()
     }
     
+    // Adapt the grid to the container
     func setup() {
         if let xibName = self.getXibName() {
-            self.view = Bundle.main.loadNibNamed(xibName, owner: self, options: nil)?.first as? UIView
-            self.view.frame = self.bounds
+            self.view = Bundle.main.loadNibNamed(xibName, owner: self, options: nil)?.first as? UIView //Downloading the xibView
+            self.view.frame = self.bounds //Adapting the xib to the UIView size
             self.view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-            self.addSubview(view)
+            self.addSubview(view) //Adding the xib to the SubView
         } else {
             print ("Missing Xib Name")
         }
     }
     
-    func getXibName() -> String? { //Obtain the Xibname of the selected grid
+    //Obtain the Xibname of the selected grid
+    func getXibName() -> String? {
         return nil
     }
 
@@ -58,14 +60,17 @@ class GridHandler: UIView, UIImagePickerControllerDelegate, UINavigationControll
             alert.addAction(okAction)
         }
         
-        picker.dismiss(animated: true, completion: nil) //Remove the view
+        //Remove the view
+        picker.dismiss(animated: true, completion: nil)
     }
     
+    //Remove the view when the user click on cancel
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
-    } //Remove the view when the user click on cancel
+    }
     
-    func isGridCompleted()  -> Bool { //Checking if the grid is completed
+    //Checking if the grid is completed
+    func isGridCompleted()  -> Bool {
         return true
     }
 }

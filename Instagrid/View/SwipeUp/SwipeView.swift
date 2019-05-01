@@ -13,7 +13,6 @@ class SwipeView: UIView {
     var delegate: SwipeDelegate?
 
     // Outlets
-    @IBOutlet weak var swipeSymbol: UIImageView!
     @IBOutlet weak var swipeLabel: UILabel!
     
     //Swipe according to the orientation of the screen
