@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,11 +23,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UiA-VA-EZq" userLabel="Pictures Grid" customClass="PicturesGrid" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="-38" y="203" width="490" height="490"/>
+                                <rect key="frame" x="20" y="238.66666666666663" width="335" height="335"/>
                                 <color key="backgroundColor" red="0.14693871140480042" green="0.40562295913696289" blue="0.5872226357460022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UiA-VA-EZq" secondAttribute="height" multiplier="1:1" id="biX-La-oQS"/>
@@ -46,13 +46,13 @@
                                 </variation>
                             </view>
                             <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBa-Hd-EbA" userLabel="Buttons Scroll View" customClass="ButtonBar" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="3" y="746" width="490" height="96"/>
+                                <rect key="frame" x="3" y="626.66666666666663" width="490" height="131.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zEi-HR-ljE" userLabel="Buttons Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="490" height="96"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="490" height="131.33333333333334"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Er-w1-wP3" userLabel="FirstGridView">
-                                                <rect key="frame" x="15" y="8" width="80" height="80"/>
+                                                <rect key="frame" x="15" y="25.666666666666742" width="80" height="80"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gT-nC-1jV" userLabel="FirstGrid">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -96,7 +96,7 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JcA-ee-ZOJ" userLabel="SecondGridView">
-                                                <rect key="frame" x="110" y="8" width="80" height="80"/>
+                                                <rect key="frame" x="110" y="25.666666666666742" width="80" height="80"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Zy-Re-nnC" userLabel="SecondGrid">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -140,7 +140,7 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l6d-B7-MOQ" userLabel="ThirdGridView">
-                                                <rect key="frame" x="205" y="8" width="80" height="80"/>
+                                                <rect key="frame" x="205" y="25.666666666666742" width="80" height="80"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4A-Sy-FEf" userLabel="ThirdGrid">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -184,7 +184,7 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ghm-6I-a85" userLabel="FourthGridView">
-                                                <rect key="frame" x="300" y="8" width="80" height="80"/>
+                                                <rect key="frame" x="300" y="25.666666666666742" width="80" height="80"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hR-Bw-2D0" userLabel="FourthGrid">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -229,7 +229,7 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZ8-eu-FOa" userLabel="FifthGridView">
-                                                <rect key="frame" x="395" y="8" width="80" height="80"/>
+                                                <rect key="frame" x="395" y="25.666666666666742" width="80" height="80"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gom-Za-uwg" userLabel="FifthGrid">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -356,7 +356,7 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBN-a9-GoC">
-                                <rect key="frame" x="157.5" y="61" width="99" height="30"/>
+                                <rect key="frame" x="139" y="61" width="97.333333333333314" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="VII-Bh-M5w"/>
                                 </constraints>
@@ -365,10 +365,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Odw-Un-JUH" userLabel="Swipe View" customClass="SwipeView" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="57" y="148" width="300" height="50"/>
+                                <rect key="frame" x="37.666666666666657" y="183.66666666666666" width="300" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zc-v1-S16">
-                                        <rect key="frame" x="97.5" y="25" width="105" height="20"/>
+                                        <rect key="frame" x="81.333333333333329" y="25" width="137.33333333333337" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="mkr-1E-qYt"/>
                                         </constraints>
@@ -382,7 +382,7 @@
                                         </variation>
                                     </label>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="swipe up" translatesAutoresizingMaskIntoConstraints="NO" id="pua-DR-rsY">
-                                        <rect key="frame" x="142.5" y="2" width="15" height="15"/>
+                                        <rect key="frame" x="142.33333333333334" y="2" width="15" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="pua-DR-rsY" secondAttribute="height" multiplier="1:1" id="3JG-9C-JXz"/>
                                             <constraint firstAttribute="width" constant="15" id="D9p-Up-5go"/>
@@ -439,6 +439,8 @@
                             <constraint firstItem="BBa-Hd-EbA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" priority="250" id="0D5-X4-a0e"/>
                             <constraint firstItem="BBa-Hd-EbA" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" priority="250" id="0NV-rz-1O8"/>
                             <constraint firstAttribute="bottom" secondItem="Odw-Un-JUH" secondAttribute="bottom" constant="20" symbolic="YES" id="2Je-HC-tLl"/>
+                            <constraint firstItem="UiA-VA-EZq" firstAttribute="leading" secondItem="kdX-qk-rZk" secondAttribute="leading" constant="20" id="4yJ-zg-5Vk"/>
+                            <constraint firstAttribute="trailing" secondItem="UiA-VA-EZq" secondAttribute="trailing" constant="20" id="C2v-Ld-TUp"/>
                             <constraint firstItem="Odw-Un-JUH" firstAttribute="top" secondItem="kdX-qk-rZk" secondAttribute="top" constant="55" id="CnE-Tx-dLQ"/>
                             <constraint firstItem="UiA-VA-EZq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FhO-mD-axQ"/>
                             <constraint firstItem="UiA-VA-EZq" firstAttribute="top" secondItem="Odw-Un-JUH" secondAttribute="bottom" constant="5" id="NwE-zX-G4F"/>
@@ -477,10 +479,12 @@
                                 <exclude reference="YQL-Re-EFv"/>
                                 <exclude reference="vc6-Ml-IVl"/>
                                 <exclude reference="ywh-sV-5K9"/>
+                                <exclude reference="dpu-N4-B39"/>
                                 <exclude reference="2Je-HC-tLl"/>
                                 <exclude reference="CnE-Tx-dLQ"/>
                                 <exclude reference="P4X-mn-ygV"/>
-                                <exclude reference="dpu-N4-B39"/>
+                                <exclude reference="4yJ-zg-5Vk"/>
+                                <exclude reference="C2v-Ld-TUp"/>
                                 <exclude reference="FhO-mD-axQ"/>
                                 <exclude reference="NwE-zX-G4F"/>
                                 <exclude reference="TIs-a0-y3c"/>
@@ -496,12 +500,12 @@
                             <mask key="constraints">
                                 <include reference="YQL-Re-EFv"/>
                                 <include reference="vc6-Ml-IVl"/>
+                                <include reference="dpu-N4-B39"/>
+                                <exclude reference="zrJ-VP-ksW"/>
                                 <include reference="2Je-HC-tLl"/>
                                 <include reference="CnE-Tx-dLQ"/>
                                 <include reference="P4X-mn-ygV"/>
                                 <exclude reference="o3T-Gk-jxY"/>
-                                <include reference="dpu-N4-B39"/>
-                                <exclude reference="zrJ-VP-ksW"/>
                                 <exclude reference="FhO-mD-axQ"/>
                                 <include reference="TIs-a0-y3c"/>
                                 <include reference="UPn-qI-7vN"/>
@@ -516,6 +520,8 @@
                         <variation key="heightClass=regular">
                             <mask key="constraints">
                                 <include reference="ywh-sV-5K9"/>
+                                <include reference="4yJ-zg-5Vk"/>
+                                <include reference="C2v-Ld-TUp"/>
                                 <include reference="NwE-zX-G4F"/>
                                 <include reference="0D5-X4-a0e"/>
                                 <include reference="mlk-Ta-QBV"/>
