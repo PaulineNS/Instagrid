@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,11 +23,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UiA-VA-EZq" userLabel="Pictures Grid" customClass="PicturesGrid" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="23" y="169" width="329" height="329"/>
+                                <rect key="frame" x="-38" y="203" width="490" height="490"/>
                                 <color key="backgroundColor" red="0.14693871140480042" green="0.40562295913696289" blue="0.5872226357460022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UiA-VA-EZq" secondAttribute="height" multiplier="1:1" id="biX-La-oQS"/>
@@ -46,7 +46,7 @@
                                 </variation>
                             </view>
                             <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBa-Hd-EbA" userLabel="Buttons Scroll View" customClass="ButtonBar" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="3" y="551" width="490" height="96"/>
+                                <rect key="frame" x="3" y="746" width="490" height="96"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zEi-HR-ljE" userLabel="Buttons Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="490" height="96"/>
@@ -356,7 +356,7 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBN-a9-GoC">
-                                <rect key="frame" x="138" y="37" width="99" height="30"/>
+                                <rect key="frame" x="157.5" y="61" width="99" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="VII-Bh-M5w"/>
                                 </constraints>
@@ -365,7 +365,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Odw-Un-JUH" userLabel="Swipe View" customClass="SwipeView" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="37.5" y="114" width="300" height="50"/>
+                                <rect key="frame" x="57" y="148" width="300" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zc-v1-S16">
                                         <rect key="frame" x="97.5" y="25" width="105" height="20"/>

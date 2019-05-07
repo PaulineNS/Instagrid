@@ -111,7 +111,6 @@
 				564B07A622451E7E00A244D2 /* Grids */,
 				564B07A422451E2A00A244D2 /* ButtonsGrids */,
 				564B07A522451E4C00A244D2 /* SwipeUp */,
-				56B1E645226785C4002C34B5 /* UIViewExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -140,6 +139,7 @@
 		5612CB4A2231762400E75A81 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				56B1E645226785C4002C34B5 /* UIViewExtension.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
