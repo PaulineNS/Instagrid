@@ -50,14 +50,10 @@ class GridHandler: UIView, UIImagePickerControllerDelegate, UINavigationControll
                 imageView.contentMode = .scaleAspectFill
                 imageView.image = pickedImage
             } else {
-                let alert = UIAlertController(title: "Error. Please Try again later !", message: "", preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "OK", style: .default)
-                alert.addAction(okAction)
+                print ("selectedUIImageView is nil")
             }
         } else {
-            let alert = UIAlertController(title: "Error. Please Try again later !", message: "", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .default)
-            alert.addAction(okAction)
+            print ("info[UIImagePickerController.InfoKey.originalImage] isn't an UIImage")
         }
         
         //Remove the view
