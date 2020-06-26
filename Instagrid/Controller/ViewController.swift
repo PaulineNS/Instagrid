@@ -122,8 +122,10 @@ extension ViewController: PicturesAddingDelegate {
     }
     
     private func authorizedAccessToPhotoLibrary() {
-        self.image.sourceType = .photoLibrary
-        self.present(self.image, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.image.sourceType = .photoLibrary
+            self.present(self.image, animated: true, completion: nil)
+        }
     }
     
     // Different access to the camera
