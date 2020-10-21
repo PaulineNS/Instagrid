@@ -10,13 +10,11 @@ import UIKit
 
 class GridHandler: UIView, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    // Vars
     let emptyPicture = UIImage(named: "Blue Cross")
     var selectedUIImageView: UIImageView?
     private var view: UIView!
     var delegate : PicturesAddingDelegate?
 
-    // GridHandler Initialisation
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setup()
@@ -27,7 +25,6 @@ class GridHandler: UIView, UIImagePickerControllerDelegate, UINavigationControll
         self.setup()
     }
     
-    // Adapt the grid to the container
     func setup() {
         if let xibName = self.getXibName() {
             self.view = Bundle.main.loadNibNamed(xibName, owner: self, options: nil)?.first as? UIView //Downloading the xibView
@@ -39,7 +36,6 @@ class GridHandler: UIView, UIImagePickerControllerDelegate, UINavigationControll
         }
     }
     
-    //Obtain the Xibname of the selected grid
     func getXibName() -> String? {
         return nil
     }
@@ -67,6 +63,6 @@ class GridHandler: UIView, UIImagePickerControllerDelegate, UINavigationControll
     
     //Checking if the grid is completed
     func isGridCompleted()  -> Bool {
-        return true
+        return false
     }
 }

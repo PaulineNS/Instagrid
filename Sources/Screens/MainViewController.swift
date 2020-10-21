@@ -10,44 +10,40 @@ import UIKit
 import AVFoundation
 import Photos
 
-class ViewController: UIViewController {
+final class MainViewController: UIViewController {
     
-    // Vars
     let image = UIImagePickerController()
+    var viewModel: MainViewModel!
     
-    // Outlets
     @IBOutlet weak var picturesGrid: PicturesGrid!
     @IBOutlet weak var buttonBar: ButtonBar!
     @IBOutlet weak var swipe: SwipeView!
+    
+    // MARK: - View life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonBar.buttonDelegate = picturesGrid
-        buttonBar.didTapFirstGridButton()
         swipe.delegate = self
         picturesGrid.delegate = self
+        buttonBar.didTapFirstGridButton()
     }
-    // Called before the view is added to the windows’ view hierarchy.
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         swipe.swipeOrientation()
     }
     
-    //Notifies the container that the size of its view is about to change.
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         swipe.swipeOrientation()
     }
    
-    // Action
-    // Changing the grid color when double tap
     @IBAction func didDoubleTapToChangeGridColour(_ sender: UITapGestureRecognizer) {
         picturesGrid.backgroundColor = UIColor (red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1.0)
     }
 }
 
-// ViewController's Extensions
-// Tapping for adding pictures
-extension ViewController: PicturesAddingDelegate {
+extension MainViewController: PicturesAddingDelegate {
     
     func onPictureClick(grid: GridHandler) {
         image.delegate = grid
@@ -92,6 +88,8 @@ extension ViewController: PicturesAddingDelegate {
                         self.showRestrictedAlertForPhotoLibrary()
                     case .denied:
                         self.showDeniedAlertForPhotoLibrary()
+                    case .limited:
+                        self.showDeniedAlertForPhotoLibrary()
                     }
                 }
             }
@@ -103,6 +101,7 @@ extension ViewController: PicturesAddingDelegate {
         self.present(actionSheet, animated: true, completion: nil)
         
         }
+    
     // Different access to the photo library
     private func showDeniedAlertForPhotoLibrary() {
         let alert = UIAlertController(title: "Photo Library Denied", message: "Photo Library access was previously denied. Please update your Settings if you wish to change this.", preferredStyle: .alert)
@@ -153,24 +152,20 @@ extension ViewController: PicturesAddingDelegate {
     
 }
 
-// Swiping
-extension ViewController: SwipeDelegate {
+extension MainViewController: SwipeDelegate {
+    
     func onSwipeSymbol() {
-        if let grid = picturesGrid.subviews[0] as? GridHandler, grid.isGridCompleted() {
-            animateSharing()
-        } else {
-            // The grid must be completed for the sharing
-            let shareAlert = UIAlertController(title: "You need to set all images before sharing!", message: "", preferredStyle: .alert)
-            shareAlert.addAction(UIAlertAction(title: "Ok 👍", style: .default))
-            present(shareAlert, animated: true)
+        guard let grid = picturesGrid.subviews[0] as? GridHandler else { return }
+        viewModel.isGridCompleted(for: grid) { response in
+            if response {
+                self.animateSharing()
+            }
         }
     }
     
-    // Animate the grid when swipe according to orientation of screen
     func animateSharing() {
-        let screenWidth = UIScreen.main.bounds.width //width of the screen
-        let screenHeight = UIScreen.main.bounds.height //height of the screen
-        
+        let screenWidth = UIScreen.main.bounds.width
+        let screenHeight = UIScreen.main.bounds.height
         var translationTransform: CGAffineTransform
         
         if UIDevice.current.orientation.isPortrait {
@@ -193,7 +188,6 @@ extension ViewController: SwipeDelegate {
     
     // Animate the grid return after the swipe
     func animateTheGridDisplay() {
-        
         picturesGrid.transform = .identity
         picturesGrid.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
         
@@ -202,7 +196,3 @@ extension ViewController: SwipeDelegate {
         }, completion:nil)
     }
 }
-
-
-
-

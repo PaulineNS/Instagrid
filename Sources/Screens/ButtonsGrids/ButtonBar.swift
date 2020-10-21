@@ -8,6 +8,14 @@
 
 import UIKit
 
+enum ButtonType {
+    case button1
+    case button2
+    case button3
+    case button4
+    case button5
+}
+
 class ButtonBar: UIScrollView {
     
     var buttonDelegate: ButtonBarDelegate?

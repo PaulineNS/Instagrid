@@ -11,7 +11,7 @@ import UIKit
 class PicturesGrid: UIView {
     
     var delegate: PicturesAddingDelegate?
-    var buttonBar: ButtonBar!
+    var buttonBar: ButtonBar?
     
     override func layoutSubviews() {
         super.layoutSubviews()

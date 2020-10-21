@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5612CB2E222FFE5900E75A81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5612CB2D222FFE5900E75A81 /* AppDelegate.swift */; };
-		5612CB30222FFE5900E75A81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5612CB2F222FFE5900E75A81 /* ViewController.swift */; };
+		5612CB30222FFE5900E75A81 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5612CB2F222FFE5900E75A81 /* MainViewController.swift */; };
 		5612CB33222FFE5900E75A81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5612CB31222FFE5900E75A81 /* Main.storyboard */; };
 		5612CB35222FFE5C00E75A81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5612CB34222FFE5C00E75A81 /* Assets.xcassets */; };
 		5612CB38222FFE5C00E75A81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5612CB36222FFE5C00E75A81 /* LaunchScreen.storyboard */; };
@@ -22,29 +22,31 @@
 		5612CB612237AE3200E75A81 /* GridHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5612CB602237AE3200E75A81 /* GridHandler.swift */; };
 		5612CB632239820300E75A81 /* ThirdGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5612CB622239820300E75A81 /* ThirdGrid.swift */; };
 		5615F2642270C3B900A4D760 /* PicturesGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615F2632270C3B900A4D760 /* PicturesGrid.swift */; };
+		5643C366253E0C2C00286B53 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643C365253E0C2C00286B53 /* AppCoordinator.swift */; };
+		5643C36A253E0C5200286B53 /* Screens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643C369253E0C5200286B53 /* Screens.swift */; };
+		5643C36D253E0C7900286B53 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643C36C253E0C7900286B53 /* MainCoordinator.swift */; };
+		5643C38F25405ECE00286B53 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643C38E25405ECE00286B53 /* Alert.swift */; };
+		5643C3932540615C00286B53 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643C3922540615C00286B53 /* MainViewModel.swift */; };
 		564B07A122451DCF00A244D2 /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564B07A022451DCF00A244D2 /* SwipeView.swift */; };
-		564B07A322451DF600A244D2 /* SwipeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564B07A222451DF600A244D2 /* SwipeDelegate.swift */; };
 		564B07AC2249118600A244D2 /* FourthGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564B07AB2249118600A244D2 /* FourthGrid.swift */; };
 		564B07AE224911E400A244D2 /* FourthGrid.xib in Resources */ = {isa = PBXBuildFile; fileRef = 564B07AD224911E400A244D2 /* FourthGrid.xib */; };
 		564B07B0224911FF00A244D2 /* FifthGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564B07AF224911FF00A244D2 /* FifthGrid.swift */; };
 		564B07B22249121200A244D2 /* FifthGrid.xib in Resources */ = {isa = PBXBuildFile; fileRef = 564B07B12249121200A244D2 /* FifthGrid.xib */; };
-		56B1E646226785C4002C34B5 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B1E645226785C4002C34B5 /* UIViewExtension.swift */; };
+		56B1E646226785C4002C34B5 /* UIView+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B1E645226785C4002C34B5 /* UIView+UIImage.swift */; };
 		56E4A58F223A9D60001ED7D4 /* ButtonBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E4A58E223A9D60001ED7D4 /* ButtonBar.swift */; };
-		56E4A592223A9DA6001ED7D4 /* ButtonBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E4A591223A9DA6001ED7D4 /* ButtonBarDelegate.swift */; };
 		56E4A596223FF2C2001ED7D4 /* ButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E4A595223FF2C2001ED7D4 /* ButtonType.swift */; };
-		56E4A5A622414BFD001ED7D4 /* PicturesAddingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E4A5A522414BFD001ED7D4 /* PicturesAddingDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5612CB2A222FFE5900E75A81 /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5612CB2D222FFE5900E75A81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5612CB2F222FFE5900E75A81 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5612CB2F222FFE5900E75A81 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5612CB32222FFE5900E75A81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5612CB34222FFE5C00E75A81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5612CB37222FFE5C00E75A81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5612CB39222FFE5C00E75A81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5612CB3F223001AE00E75A81 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ThirstySoftRegular.otf; path = "Instagrid/Supporting Files/ThirstySoftRegular.otf"; sourceTree = SOURCE_ROOT; };
-		5612CB40223001AE00E75A81 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Delm-Medium.otf"; path = "Instagrid/Supporting Files/Delm-Medium.otf"; sourceTree = SOURCE_ROOT; };
+		5612CB3F223001AE00E75A81 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ThirstySoftRegular.otf; path = Ressources/ThirstySoftRegular.otf; sourceTree = SOURCE_ROOT; };
+		5612CB40223001AE00E75A81 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Delm-Medium.otf"; path = "Ressources/Delm-Medium.otf"; sourceTree = SOURCE_ROOT; };
 		5612CB4B22365E3D00E75A81 /* FirstGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstGrid.swift; sourceTree = "<group>"; };
 		5612CB4D22366C5100E75A81 /* SecondGrid.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondGrid.xib; sourceTree = "<group>"; };
 		5612CB4F22366C7E00E75A81 /* FirstGrid.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstGrid.xib; sourceTree = "<group>"; };
@@ -53,17 +55,19 @@
 		5612CB602237AE3200E75A81 /* GridHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridHandler.swift; sourceTree = "<group>"; };
 		5612CB622239820300E75A81 /* ThirdGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdGrid.swift; sourceTree = "<group>"; };
 		5615F2632270C3B900A4D760 /* PicturesGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesGrid.swift; sourceTree = "<group>"; };
+		5643C365253E0C2C00286B53 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		5643C369253E0C5200286B53 /* Screens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screens.swift; sourceTree = "<group>"; };
+		5643C36C253E0C7900286B53 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		5643C38E25405ECE00286B53 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		5643C3922540615C00286B53 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		564B07A022451DCF00A244D2 /* SwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
-		564B07A222451DF600A244D2 /* SwipeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDelegate.swift; sourceTree = "<group>"; };
 		564B07AB2249118600A244D2 /* FourthGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthGrid.swift; sourceTree = "<group>"; };
 		564B07AD224911E400A244D2 /* FourthGrid.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FourthGrid.xib; sourceTree = "<group>"; };
 		564B07AF224911FF00A244D2 /* FifthGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthGrid.swift; sourceTree = "<group>"; };
 		564B07B12249121200A244D2 /* FifthGrid.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FifthGrid.xib; sourceTree = "<group>"; };
-		56B1E645226785C4002C34B5 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		56B1E645226785C4002C34B5 /* UIView+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UIImage.swift"; sourceTree = "<group>"; };
 		56E4A58E223A9D60001ED7D4 /* ButtonBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBar.swift; sourceTree = "<group>"; };
-		56E4A591223A9DA6001ED7D4 /* ButtonBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBarDelegate.swift; sourceTree = "<group>"; };
 		56E4A595223FF2C2001ED7D4 /* ButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonType.swift; sourceTree = "<group>"; };
-		56E4A5A522414BFD001ED7D4 /* PicturesAddingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesAddingDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +84,8 @@
 		5612CB21222FFE5900E75A81 = {
 			isa = PBXGroup;
 			children = (
-				5612CB2C222FFE5900E75A81 /* Instagrid */,
+				5643C362253E08C000286B53 /* Ressources */,
+				5643C361253E08B800286B53 /* Sources */,
 				5612CB2B222FFE5900E75A81 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,57 +96,6 @@
 				5612CB2A222FFE5900E75A81 /* Instagrid.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		5612CB2C222FFE5900E75A81 /* Instagrid */ = {
-			isa = PBXGroup;
-			children = (
-				5612CB462230082C00E75A81 /* Supporting Files */,
-				5612CB4A2231762400E75A81 /* Model */,
-				5612CB44223007CD00E75A81 /* View */,
-				5612CB45223007DE00E75A81 /* Controller */,
-			);
-			path = Instagrid;
-			sourceTree = "<group>";
-		};
-		5612CB44223007CD00E75A81 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				56B1E645226785C4002C34B5 /* UIViewExtension.swift */,
-				5612CB31222FFE5900E75A81 /* Main.storyboard */,
-				564B07A622451E7E00A244D2 /* Grids */,
-				564B07A422451E2A00A244D2 /* ButtonsGrids */,
-				564B07A522451E4C00A244D2 /* SwipeUp */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		5612CB45223007DE00E75A81 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				5612CB2F222FFE5900E75A81 /* ViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		5612CB462230082C00E75A81 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5612CB39222FFE5C00E75A81 /* Info.plist */,
-				5612CB36222FFE5C00E75A81 /* LaunchScreen.storyboard */,
-				5612CB3F223001AE00E75A81 /* ThirstySoftRegular.otf */,
-				5612CB40223001AE00E75A81 /* Delm-Medium.otf */,
-				5612CB34222FFE5C00E75A81 /* Assets.xcassets */,
-				5612CB2D222FFE5900E75A81 /* AppDelegate.swift */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5612CB4A2231762400E75A81 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		5612CB5B2236B2F400E75A81 /* FirstGrid */ = {
@@ -171,12 +125,66 @@
 			path = ThirdGrid;
 			sourceTree = "<group>";
 		};
+		5643C361253E08B800286B53 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				5643C38D25405EC400286B53 /* Alert */,
+				5612CB2D222FFE5900E75A81 /* AppDelegate.swift */,
+				5643C365253E0C2C00286B53 /* AppCoordinator.swift */,
+				5643C368253E0C3B00286B53 /* Screens */,
+				5643C370253E0C9500286B53 /* Extensions */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		5643C362253E08C000286B53 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				5612CB34222FFE5C00E75A81 /* Assets.xcassets */,
+				5612CB40223001AE00E75A81 /* Delm-Medium.otf */,
+				5612CB3F223001AE00E75A81 /* ThirstySoftRegular.otf */,
+				5612CB36222FFE5C00E75A81 /* LaunchScreen.storyboard */,
+				5612CB39222FFE5C00E75A81 /* Info.plist */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		5643C368253E0C3B00286B53 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				5643C369253E0C5200286B53 /* Screens.swift */,
+				5643C36C253E0C7900286B53 /* MainCoordinator.swift */,
+				5612CB31222FFE5900E75A81 /* Main.storyboard */,
+				5612CB2F222FFE5900E75A81 /* MainViewController.swift */,
+				5643C3922540615C00286B53 /* MainViewModel.swift */,
+				564B07A622451E7E00A244D2 /* Grids */,
+				564B07A422451E2A00A244D2 /* ButtonsGrids */,
+				564B07A522451E4C00A244D2 /* SwipeUp */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		5643C370253E0C9500286B53 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				56B1E645226785C4002C34B5 /* UIView+UIImage.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5643C38D25405EC400286B53 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				5643C38E25405ECE00286B53 /* Alert.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		564B07A422451E2A00A244D2 /* ButtonsGrids */ = {
 			isa = PBXGroup;
 			children = (
 				56E4A58E223A9D60001ED7D4 /* ButtonBar.swift */,
 				56E4A595223FF2C2001ED7D4 /* ButtonType.swift */,
-				56E4A591223A9DA6001ED7D4 /* ButtonBarDelegate.swift */,
 			);
 			path = ButtonsGrids;
 			sourceTree = "<group>";
@@ -184,7 +192,6 @@
 		564B07A522451E4C00A244D2 /* SwipeUp */ = {
 			isa = PBXGroup;
 			children = (
-				564B07A222451DF600A244D2 /* SwipeDelegate.swift */,
 				564B07A022451DCF00A244D2 /* SwipeView.swift */,
 			);
 			path = SwipeUp;
@@ -193,14 +200,13 @@
 		564B07A622451E7E00A244D2 /* Grids */ = {
 			isa = PBXGroup;
 			children = (
+				5612CB602237AE3200E75A81 /* GridHandler.swift */,
+				5615F2632270C3B900A4D760 /* PicturesGrid.swift */,
 				5612CB5B2236B2F400E75A81 /* FirstGrid */,
 				5612CB5C2236B31100E75A81 /* SecondGrid */,
 				5612CB5D2236B32A00E75A81 /* ThirdGrid */,
 				564B07A9224910D200A244D2 /* FourthGrid */,
 				564B07AA224910FB00A244D2 /* FifthGrid */,
-				5612CB602237AE3200E75A81 /* GridHandler.swift */,
-				56E4A5A522414BFD001ED7D4 /* PicturesAddingDelegate.swift */,
-				5615F2632270C3B900A4D760 /* PicturesGrid.swift */,
 			);
 			path = Grids;
 			sourceTree = "<group>";
@@ -301,22 +307,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56B1E646226785C4002C34B5 /* UIViewExtension.swift in Sources */,
-				5612CB30222FFE5900E75A81 /* ViewController.swift in Sources */,
+				56B1E646226785C4002C34B5 /* UIView+UIImage.swift in Sources */,
+				5612CB30222FFE5900E75A81 /* MainViewController.swift in Sources */,
+				5643C366253E0C2C00286B53 /* AppCoordinator.swift in Sources */,
+				5643C38F25405ECE00286B53 /* Alert.swift in Sources */,
 				5615F2642270C3B900A4D760 /* PicturesGrid.swift in Sources */,
 				5612CB632239820300E75A81 /* ThirdGrid.swift in Sources */,
 				5612CB612237AE3200E75A81 /* GridHandler.swift in Sources */,
 				56E4A58F223A9D60001ED7D4 /* ButtonBar.swift in Sources */,
-				56E4A5A622414BFD001ED7D4 /* PicturesAddingDelegate.swift in Sources */,
+				5643C36D253E0C7900286B53 /* MainCoordinator.swift in Sources */,
 				5612CB5F2236B39000E75A81 /* SecondGrid.swift in Sources */,
-				564B07A322451DF600A244D2 /* SwipeDelegate.swift in Sources */,
 				56E4A596223FF2C2001ED7D4 /* ButtonType.swift in Sources */,
 				5612CB2E222FFE5900E75A81 /* AppDelegate.swift in Sources */,
 				564B07A122451DCF00A244D2 /* SwipeView.swift in Sources */,
 				564B07AC2249118600A244D2 /* FourthGrid.swift in Sources */,
 				564B07B0224911FF00A244D2 /* FifthGrid.swift in Sources */,
-				56E4A592223A9DA6001ED7D4 /* ButtonBarDelegate.swift in Sources */,
+				5643C36A253E0C5200286B53 /* Screens.swift in Sources */,
 				5612CB4C22365E3D00E75A81 /* FirstGrid.swift in Sources */,
+				5643C3932540615C00286B53 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,7 +471,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/Instagrid/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Ressources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,7 +488,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/Instagrid/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Ressources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
